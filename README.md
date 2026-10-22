@@ -34,7 +34,6 @@ git commit -m 'Update HCL market snapshots'
 
 | ID | 项目 | 简介 | 状态 | 本地目录 |
 | --- | --- | --- | --- | --- |
-
 | 30 | 分布式EVPN网关配置举例 | Router A、Router B为分布式EVPN网关设备；Router C为与广域网连接的边界网关设备；Router D为RR，负责在路由器之间反射BGP路由。虚拟机VM 1和VM 3属于VXLAN 10；VM 2和VM 4属于VXLAN 20。相同VXLAN之间可以二层互通；不同VXLAN之间通过分布式EVPN网关实现三层互通；VXLAN与广域网之间通过边界网关实现三层互通。 | 已归档 | [projects/30](projects/30/) |
 | 49 | DHCP Relay+DRNI组网配置举例 | DRNI组网中，DR设备使能DHCP Relay，Device D设备作为dhcp client，Device C设备作为dhcp server，client从server获取地址。 | 已归档 | [projects/49](projects/49/) |
 | 50 | 动态分配IPv6地址配置举例 | Switch作为DHCPv6服务器，DHCPv6客户端从DHCPv6服务器获取IPv6地址前缀，以及网络配置参数：DNS服务器地址、域名、SIP服务器地址和SIP服务器域名。 | 已归档 | [projects/50](projects/50/) |

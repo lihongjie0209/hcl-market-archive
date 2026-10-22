@@ -7,9 +7,9 @@ cd "$repo_dir"
 grep -q '^<!-- PROJECT_INDEX_START -->$' README.md || { echo 'README index marker missing' >&2; exit 1; }
 
 temp=$(mktemp .runs/index.XXXXXXXX)
-trap 'rm -f -- "$temp"' EXIT
+rows_file=$(mktemp .runs/rows.XXXXXXXX)
+trap 'rm -f -- "$temp" "$rows_file"' EXIT
 sed '/^<!-- PROJECT_INDEX_START -->/,$d' README.md >"$temp"
-printf '<!-- PROJECT_INDEX_START -->\n\n' >>"$temp"
 total=$(jq -r '.total' catalog.json)
 archived=0
 while IFS=$'\t' read -r id name description; do
@@ -22,10 +22,12 @@ while IFS=$'\t' read -r id name description; do
     link='—'
     status='未归档'
   fi
-  printf '| %s | %s | %s | %s | %s |\n' "$id" "$name" "$description" "$status" "$link" >>"$temp"
+  printf '| %s | %s | %s | %s | %s |\n' "$id" "$name" "$description" "$status" "$link" >>"$rows_file"
 done < <(jq -r '.rows[] | [.projectId, ((.name // "") | gsub("[\\r\\n\\t|]"; " ")), ((.projectDesc // "") | gsub("[\\r\\n\\t|]"; " "))] | @tsv' catalog.json)
 
-sed -i "/^<!-- PROJECT_INDEX_START -->$/a\\\n市场项目：$total；已归档：$archived。\n\n| ID | 项目 | 简介 | 状态 | 本地目录 |\n| --- | --- | --- | --- | --- |" "$temp"
+printf '<!-- PROJECT_INDEX_START -->\n\n市场项目：%s；已归档：%s。\n\n| ID | 项目 | 简介 | 状态 | 本地目录 |\n| --- | --- | --- | --- | --- |\n' \
+  "$total" "$archived" >>"$temp"
+sed -n 'p' "$rows_file" >>"$temp"
 printf '\n<!-- PROJECT_INDEX_END -->\n' >>"$temp"
 mv -- "$temp" README.md
 printf 'README index: archived=%s catalog=%s\n' "$archived" "$total"

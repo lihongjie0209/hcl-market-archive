@@ -13,6 +13,8 @@ while (($#)); do
   esac
 done
 [[ $max_projects =~ ^[0-9]+$ ]] || { echo 'max-projects must be a nonnegative integer' >&2; exit 2; }
+min_free_gib=${HCL_MIN_FREE_GIB:-10}
+[[ $min_free_gib =~ ^[1-9][0-9]*$ ]] || { echo 'HCL_MIN_FREE_GIB must be a positive integer' >&2; exit 2; }
 for command in curl jq git rsync df awk date mktemp flock rm; do
   command -v "$command" >/dev/null || { printf 'Missing command: %s\n' "$command" >&2; exit 2; }
 done
@@ -94,8 +96,8 @@ while IFS=$'\t' read -r project_id raw_url branch; do
     url=${url%/}
     [[ $url == *.git ]] || url="$url.git"
     free_kib=$(df -Pk . | awk 'NR==2 {print $4}')
-    if ((free_kib < 10 * 1024 * 1024)); then
-      printf 'Stopped: less than 10 GiB free\n' >"$log_file"
+    if ((free_kib < min_free_gib * 1024 * 1024)); then
+      printf 'Stopped: less than %s GiB free\n' "$min_free_gib" >"$log_file"
       printf '%s\t%s\tdisk_low\t-\n' "$checked_at" "$project_id" >>"$run_dir/state.tsv"
       echo 'Disk guard reached; stopping before the next project' >&2
       failed=$((failed + 1))

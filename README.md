@@ -22,7 +22,9 @@ git add catalog.json projects
 git commit -m 'Update HCL market snapshots'
 ```
 
-脚本不自动提交或推送。只有提交后的文件才会出现在下一次 `git clone` 中；历史快照可用 `git log -- projects/<ID>` 查询。磁盘剩余低于 10 GiB 时停止；下载失败、目录冲突均保留原有文件并在日志中报告。未归档上游分支、标签和完整提交历史。
+脚本不自动提交或推送。只有提交后的文件才会出现在下一次 `git clone` 中；历史快照可用 `git log -- projects/<ID>` 查询。本地默认在剩余空间低于 10 GiB 时停止，CI runner 使用 3 GiB 的门槛；可用 `HCL_MIN_FREE_GIB` 调整。下载失败、目录冲突均保留原有文件并在日志中报告。未归档上游分支、标签和完整提交历史。
+
+`.github/workflows/daily-update.yml` 每天北京时间 03:30 自动运行，也可在 GitHub Actions 页面手动触发。CI 检出时跳过现有 LFS 文件下载，随后逐项目拉取 HCLHub 的最新默认分支；提交时只上传有变化的 LFS 对象。GitHub 的定时任务可能延迟，公共仓库长期无活动时也可能被自动停用，应以 Actions 运行记录为准。
 
 ## 项目目录
 

@@ -1,0 +1,53 @@
+name: Update HCL market snapshots
+
+on:
+  schedule:
+    # 03:30 Asia/Shanghai (UTC+8); GitHub schedules use UTC.
+    - cron: '30 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hcl-market-daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GIT_LFS_SKIP_SMUDGE: '1'
+      GIT_TERMINAL_PROMPT: '0'
+      HCL_MIN_FREE_GIB: '3'
+    steps:
+      - name: Checkout without downloading existing LFS objects
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          lfs: false
+          clean: false
+          persist-credentials: true
+
+      - name: Install required tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq git-lfs jq rsync
+          git lfs install --local
+          bash -n update.sh generate-index.sh
+
+      - name: Refresh all public market projects
+        run: ./update.sh
+
+      - name: Commit and publish refreshed snapshots
+        run: |
+          git add catalog.json README.md projects
+          if git diff --cached --quiet; then
+            echo 'No snapshot changes.'
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m "Update HCL market snapshots ($(date -u +%F))"
+          git push origin HEAD:main

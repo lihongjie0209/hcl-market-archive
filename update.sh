@@ -27,7 +27,7 @@ run_dir=$(mktemp -d .runs/run.XXXXXXXX)
 trap 'rm -rf -- "$run_dir"' EXIT
 api='https://hclhub.h3c.com/api/Pubhclhub/projects'
 page_size=100
-page=1
+page=0
 total=-1
 received=0
 pages=()

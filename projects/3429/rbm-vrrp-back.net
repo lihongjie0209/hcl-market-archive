@@ -1,0 +1,103 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\rbm-vrrp-back\working
+    udp = 10000
+    [[F1090 F1090_1]]
+        device_id = 1
+        bridge_mac = 80-52-9a-a9-01-00
+        slot0 = F1060 768
+        GE_0/2 = F1090_2 GE_0/2
+        GE_0/3 = S5820V2-54QS-GE_3 GE_0/1
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/1
+        x = -469.0
+        y = -8.0
+        z = 5.0
+    [[F1090 F1090_2]]
+        device_id = 2
+        bridge_mac = 80-52-9d-f0-02-00
+        slot0 = F1060 768
+        GE_0/2 = F1090_1 GE_0/2
+        GE_0/3 = S5820V2-54QS-GE_3 GE_0/2
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        x = 114.0
+        y = -11.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 80-52-a9-ce-03-00
+        slot0 = S5800 384
+        GE_0/1 = F1090_1 GE_0/3
+        GE_0/2 = F1090_2 GE_0/3
+        x = -179.0
+        y = -294.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 80-52-af-27-04-00
+        slot0 = S5800 384
+        GE_0/1 = F1090_1 GE_0/4
+        GE_0/2 = F1090_2 GE_0/4
+        x = -187.0
+        y = 258.0
+        z = 5.0
+[Non-vBox-DATA]
+    [[NOTE 1]]
+        text = "vlan interface 2.2.2.3/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -318.0
+        y = -351.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan interface 4.4.4.3/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -249.0
+        y = 355.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -362.0
+        y = -12.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -33.0
+        y = -16.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -494.0
+        y = -67.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 113.0
+        y = -58.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "4.4.4.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -489.0
+        y = 72.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "4.4.4.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 94.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "vrrp 2.2.2.254"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -218.0
+        y = -85.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "vrrp 4.4.4.254"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -232.0
+        y = 68.0
+        z = 6.0

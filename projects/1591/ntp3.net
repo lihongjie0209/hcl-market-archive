@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Device-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 50-dd-9d-bd-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-B GE_0/0
+        x = -249.0
+        y = -36.0
+        z = 5.0
+    [[MSR36-20 Device-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 50-dd-a1-6b-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-A GE_0/0
+        x = 87.0
+        y = -36.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "配置NTP对等体模式"
+        x = -161.0
+        y = -175.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Symmetric passive peer"
+        x = 12.0
+        y = -83.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Symmetric active peer"
+        x = -328.0
+        y = -83.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.0/30"
+        x = -119.0
+        y = -48.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Device-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Device-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,116 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC PC-1]]
+        image = .
+        device_id = 3
+        bridge_mac = 0c-92-c7-9e-03-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = -236.0
+        y = 104.0
+        z = 5.0
+    [[PC PC-2]]
+        image = .
+        device_id = 4
+        bridge_mac = 0c-92-cd-7b-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/4
+        symbol = PC
+        x = 77.0
+        y = 104.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 2
+        bridge_mac = 0c-92-bc-14-02-00
+        slot0 = S5800 512
+        GE_0/1 = Router GE_0/0
+        GE_0/2 = Router GE_0/1
+        GE_0/3 = PC-1 GE_0/1
+        GE_0/4 = PC-2 GE_0/1
+        x = -92.0
+        y = -45.0
+        z = 5.0
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 1
+        bridge_mac = 0c-92-ae-dc-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        GE_0/1 = SW GE_0/2
+        x = -92.0
+        y = -237.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "VLAN 20\n192.168.20.1/24\nGW:20.254"
+        x = 80.0
+        y = 15.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "VLAN 10\n192.168.10.1/24\nGW:10.254"
+        x = -365.0
+        y = 11.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        x = -67.8566463078
+        y = -33.0
+        interface = PC-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 53.1882304076
+        y = -33.0
+        interface = PC-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/4"
+        x = 54.8566463078
+        y = 51.6191786359
+        interface = SW GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        x = -66.1882304076
+        y = 53.379987077
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        x = 20.0
+        y = -33.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 20.0
+        y = 65.0
+        interface = Router GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 25.0
+        y = 65.0
+        interface = Router GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

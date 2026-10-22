@@ -1,0 +1,128 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host-B]]
+        image = .
+        device_id = 4
+        bridge_mac = 3c-19-30-da-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 32.0
+        y = 45.0
+        z = 5.0
+    [[MSR36-20 Host-A]]
+        image = .
+        device_id = 3
+        bridge_mac = 3c-19-2e-a5-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = -297.0
+        y = 45.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 3c-19-29-4b-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = Host-A GE_0/0
+        x = -297.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 3c-19-2c-0e-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = Host-B GE_0/0
+        x = 30.0
+        y = -154.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "6over4 relay"
+        x = -24.0
+        y = -188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2002:0101:0101:1::1/64"
+        x = -372.0
+        y = -40.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.0/30"
+        x = -150.0
+        y = -164.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "6over4 router"
+        x = -352.0
+        y = -188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "6to4中继典型配置"
+        x = -215.0
+        y = -257.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "2003::1/64"
+        x = -10.0
+        y = -36.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "6to4专用地址：2002:IPv4::/48"
+        x = -281.0
+        y = 153.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -77.9998129613
+        y = 25.122323587
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 25.4019897488
+        y = 64.997980002
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 64.9998129613
+        y = 24.877676413
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 25.2030430694
+        y = 64.9994846656
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = 24.7969569306
+        y = -33.0
+        interface = Host-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 24.5980102512
+        y = -33.0
+        interface = Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

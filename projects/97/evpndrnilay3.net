@@ -1,0 +1,122 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SWA]]
+        image = .
+        device_id = 2
+        bridge_mac = 28-c2-81-bb-02-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/1
+        GE_0/2 = SWB GE_0/2
+        GE_0/4 = SWB GE_0/4
+        GE_0/5 = Server1 GE_0/1
+        GE_0/6 = Server2 GE_0/1
+        x = -587.585786438
+        y = -156.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 1
+        bridge_mac = 28-c2-75-57-01-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/1
+        GE_0/2 = SWB GE_0/1
+        GE_0/3 = SWD GE_0/1
+        x = -102.0
+        y = -467.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 3
+        bridge_mac = 28-c2-87-45-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/2
+        GE_0/2 = SWA GE_0/2
+        GE_0/4 = SWA GE_0/4
+        GE_0/5 = Server1 GE_0/2
+        GE_0/6 = Server2 GE_0/2
+        x = -103.0
+        y = -149.0
+        z = 5.0
+    [[S6850 Server1]]
+        image = .
+        device_id = 5
+        bridge_mac = 28-c8-32-12-05-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/5
+        GE_0/2 = SWB GE_0/5
+        GE_0/3 = VM1 GE_0/1
+        x = -598.0
+        y = 156.0
+        z = 5.0
+    [[S6850 Server2]]
+        image = .
+        device_id = 6
+        bridge_mac = 28-c8-36-34-06-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/6
+        GE_0/2 = SWB GE_0/6
+        GE_0/4 = VM4 GE_0/1
+        x = -91.5857864376
+        y = 152.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 4
+        bridge_mac = 28-c2-92-b0-04-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/3
+        GE_0/2 = VM5 GE_0/1
+        x = 304.485281374
+        y = -148.313708499
+        z = 5.0
+    [[S6850 VM4]]
+        image = .
+        device_id = 11
+        bridge_mac = 28-ca-e2-69-0b-00
+        slot0 = S5800 384
+        GE_0/1 = Server2 GE_0/4
+        x = -90.5807358037
+        y = 383.313708499
+        z = 5.0
+    [[S6850 VM5]]
+        image = .
+        device_id = 9
+        bridge_mac = 28-c2-b4-16-09-00
+        slot0 = S5800 384
+        GE_0/1 = SWD GE_0/2
+        x = 306.0
+        y = 172.0
+        z = 5.0
+    [[S6850 VM1]]
+        image = .
+        device_id = 7
+        bridge_mac = 28-ca-d7-7c-07-00
+        slot0 = S5800 384
+        GE_0/1 = Server1 GE_0/3
+        x = -604.850721701
+        y = 388.970562748
+        z = 5.0
+[GNS3-DATA]
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "10.1.1.10"
+        x = -525.844804516
+        y = 404.678282274
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.1.1.30"
+        x = 380.666088965
+        y = 216.587878479
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.1.2.20"
+        x = -25.2132034356
+        y = 401.84985515
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,140 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = a0-43-5f-4a-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -388.0
+        y = -101.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = a0-43-62-fd-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 181.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = a0-43-61-ec-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -90.0
+        y = -99.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "3.3.3.3/32"
+        x = 153.0
+        y = -135.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2.2.2.2/32"
+        x = -108.0
+        y = -134.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "9.1.1.0/24"
+        x = 6.0
+        y = -109.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "8.1.1.1/32"
+        x = -495.0
+        y = -59.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.1/32"
+        x = -497.0
+        y = -98.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "3.1.1.0/24"
+        x = -283.0
+        y = -110.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "AS 65008"
+        x = -450.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "1、peer 3.3.3.3 next-hop-local，但RTA此时没有路由\n2、import-route direct，RTA路由会生效，RTA有路由"
+        x = -183.0
+        y = 17.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "AS 65009"
+        x = 19.0
+        y = -149.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "BGP基本配置"
+        x = -215.0
+        y = -281.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -77.9990991701
+        y = 24.73154967
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 64.9990991701
+        y = 25.26845033
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -495.0
+        y = -145.0
+        width = 251.0
+        height = 136.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -153.0
+        y = -147.0
+        width = 446.0
+        height = 140.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

@@ -1,0 +1,86 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\2022-09-19 测试hcl\projects\接口通过dhcpv6协议无状态获取ip地址配置举例\dhcpv6_no_status\working
+    udp = 10000
+    [[AC AC]]
+        device_id = 2
+        bridge_mac = 1c-ef-2a-bf-02-00
+        slot0 = AC 768
+        GE_0/0 = SWA GE_0/1
+        x = -255.0
+        y = -111.0
+        z = 5.0
+    [[S6850 SWA]]
+        device_id = 1
+        bridge_mac = 1c-ef-20-55-01-00
+        slot0 = S5800 512
+        GE_0/1 = AC GE_0/0
+        GE_0/2 = AP1 GE_0/0
+        GE_0/3 = AP2 GE_0/0
+        x = -48.0
+        y = -111.0
+        z = 5.0
+    [[AP AP1]]
+        device_id = 3
+        bridge_mac = 1c-ef-36-d5-03-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SWA GE_0/2
+        x = 151.0
+        y = -112.0
+        z = 5.0
+    [[AP AP2]]
+        device_id = 4
+        bridge_mac = 1c-ef-4c-6e-04-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SWA GE_0/3
+        x = -48.0
+        y = 72.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/0"
+        interface = AP2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -33.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        interface = AP1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -70.0
+        y = 26.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        interface = AC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/3"
+        interface = SWA GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 27.0
+        y = 73.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 53.0
+        y = -3.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -70.0
+        y = -4.0
+        z = 6.0

@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 46-4e-44-cb-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -211.0
+        y = -92.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 46-4e-48-4c-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = 103.0
+        y = -92.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "1.1.1.0/24"
+        x = -84.0
+        y = -104.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "RIP基本功能配置举例"
+        x = -156.0
+        y = -234.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "2.1.1.1/24\n3.1.1.1/24"
+        x = -320.0
+        y = -101.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.1.1.1/24\n10.2.1.1/24"
+        x = 152.0
+        y = -98.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

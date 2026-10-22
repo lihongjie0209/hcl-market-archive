@@ -1,0 +1,129 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l19938\hcl\projects\hcl_ogvbfz\working
+    udp = 16000
+    [[S6850 SWA]]
+        device_id = 2
+        bridge_mac = 66-80-00-6c-02-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/1
+        GE_0/2 = SWC GE_0/1
+        x = -316.0
+        y = -297.0
+        z = 5.0
+    [[S6850 SWC]]
+        device_id = 1
+        bridge_mac = 66-7f-e7-3c-01-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/2
+        x = -313.0
+        y = -92.0
+        z = 5.0
+    [[S6850 SWB]]
+        device_id = 3
+        bridge_mac = 66-80-07-61-03-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/1
+        GE_0/2 = SWD GE_0/1
+        x = -16.0
+        y = -296.0
+        z = 5.0
+    [[S6850 SWD]]
+        device_id = 4
+        bridge_mac = 66-80-11-41-04-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/2
+        x = -16.0
+        y = -92.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "Area2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -77.0
+        y = -188.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "Area1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -280.0
+        y = -181.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "Area0"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -193.0
+        y = -321.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SWD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -37.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        interface = SWB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = SWB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9997777796
+        y = 24.8666674074
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.5853031833
+        y = 64.9957175231
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9997777796
+        y = 25.1333325926
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = SWC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.4146968167
+        y = -37.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        width = 102.0
+        height = 153.0
+        border_color = "#666666"
+        border_style = 2
+        x = -339.0
+        y = -244.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        width = 101.0
+        height = 166.0
+        border_color = "#666666"
+        border_style = 2
+        x = -41.0
+        y = -256.0
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        width = 244.0
+        height = 106.0
+        border_color = "#666666"
+        border_style = 2
+        x = -263.0
+        y = -326.0
+        z = 3.0

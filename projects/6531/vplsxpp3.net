@@ -1,0 +1,155 @@
+version = 5.2.0
+[vbox 127.0.0.1:16600]
+    workingdir = C:\Users\x18711\Desktop\vpls1453\vpls
+    udp = 16000
+    [[MSR36-20 MSR36-20_7]]
+        device_id = 7
+        bridge_mac = 90-100-cd-68-07-00
+        slot0 = MSR36 384
+        GE_0/1 = S5820V2-54QS-GE_13 GE_0/1
+        GE_0/2 = MSR36-20_34 GE_0/0
+        x = -549.0
+        y = -746.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_6]]
+        device_id = 6
+        bridge_mac = 90-100-c5-15-06-00
+        slot0 = MSR36 384
+        GE_0/1 = S5820V2-54QS-GE_9 GE_0/1
+        GE_0/2 = MSR36-20_34 GE_0/1
+        x = -105.0
+        y = -746.0
+        z = 5.0
+    [[PC PC_36]]
+        device_id = 36
+        bridge_mac = 94-86-42-a2-24-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_9 GE_0/2
+        symbol = PC
+        x = -105.0
+        y = -410.0
+        z = 5.0
+    [[PC PC_35]]
+        device_id = 35
+        bridge_mac = 94-85-df-3f-23-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_13 GE_0/2
+        symbol = PC
+        x = -549.0
+        y = -410.0
+        z = 5.0
+    [[PC PC_39]]
+        device_id = 39
+        bridge_mac = 94-86-84-26-27-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_37 GE_0/3
+        symbol = PC
+        x = 405.0
+        y = -986.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_9]]
+        device_id = 9
+        bridge_mac = 84-f5-30-92-09-00
+        slot0 = S5800 384
+        GE_0/1 = MSR36-20_6 GE_0/1
+        GE_0/2 = PC_36 GE_0/1
+        symbol = S5820V2-54QS-GE
+        x = -105.0
+        y = -575.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_33]]
+        device_id = 33
+        bridge_mac = 94-85-69-46-21-00
+        slot0 = MSR36 384
+        GE_0/0 = MSR36-20_34 GE_0/2
+        GE_0/1 = S5820V2-54QS-GE_37 GE_0/1
+        x = -99.0
+        y = -986.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_34]]
+        device_id = 34
+        bridge_mac = 94-85-6f-e7-22-00
+        slot0 = MSR36 384
+        GE_0/0 = MSR36-20_7 GE_0/2
+        GE_0/1 = MSR36-20_6 GE_0/2
+        GE_0/2 = MSR36-20_33 GE_0/0
+        x = -329.0
+        y = -986.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_13]]
+        device_id = 13
+        bridge_mac = 84-1d-29-03-0d-00
+        slot0 = S5800 384
+        GE_0/1 = MSR36-20_7 GE_0/1
+        GE_0/2 = PC_35 GE_0/1
+        symbol = S5820V2-54QS-GE
+        x = -549.0
+        y = -575.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_37]]
+        device_id = 37
+        bridge_mac = 94-86-75-1c-25-00
+        slot0 = S5800 384
+        GE_0/3 = PC_39 GE_0/1
+        GE_0/1 = MSR36-20_33 GE_0/1
+        symbol = S5820V2-54QS-GE
+        x = 128.0
+        y = -986.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.2
+    m22 = 1.2
+    [[NOTE 1]]
+        text = "CE3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 138.72727272727275
+        y = -924.3636363636365
+        z = 6.0
+    [[NOTE 2]]
+        text = "CE2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -43.99999999999999
+        y = -572.5454545454547
+        z = 6.0
+    [[NOTE 3]]
+        text = "CE1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -605.818181818182
+        y = -568.909090909091
+        z = 6.0
+    [[NOTE 4]]
+        text = "P"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -305.18181818181813
+        y = -913.2272727272726
+        z = 6.0
+    [[NOTE 5]]
+        text = "33.1.1.0/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -384.72727272727275
+        y = -485.40909090909093
+        z = 6.0
+    [[NOTE 6]]
+        text = "PE1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -613.0
+        y = -741.5
+        z = 6.0
+    [[NOTE 7]]
+        text = "BGP"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -368.090909090909
+        y = -632.6818181818182
+        z = 6.0
+    [[NOTE 8]]
+        text = "PE3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -90.18181818181817
+        y = -926.5
+        z = 6.0
+    [[NOTE 9]]
+        text = "PE2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -31.0
+        y = -736.5
+        z = 6.0

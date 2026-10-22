@@ -1,0 +1,128 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PC-1]]
+        image = .
+        device_id = 3
+        bridge_mac = 34-c7-9a-cb-03-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        x = -278.0
+        y = 104.0
+        z = 5.0
+    [[MSR36-20 PC-2]]
+        image = .
+        device_id = 4
+        bridge_mac = 34-c7-9c-e2-04-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        x = -67.0
+        y = 104.0
+        z = 5.0
+    [[MSR36-20 PC-3]]
+        image = .
+        device_id = 5
+        bridge_mac = 34-c7-e7-d0-05-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/4
+        x = 162.0
+        y = 104.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 2
+        bridge_mac = 34-c7-81-42-02-00
+        slot0 = S5800 512
+        GE_0/1 = Gateway GE_0/0
+        GE_0/2 = PC-1 GE_0/0
+        GE_0/3 = PC-2 GE_0/0
+        GE_0/4 = PC-3 GE_0/0
+        x = -67.0
+        y = -56.0
+        z = 5.0
+    [[MSR36-20 Gateway]]
+        image = .
+        device_id = 1
+        bridge_mac = 34-c6-d3-00-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -68.0
+        y = -246.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "静态绑定地址配置举例"
+        x = -144.0
+        y = -308.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "hardware-address \n34c7-9acb-0305"
+        x = -415.0
+        y = 196.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "client-identifier \n0033-3463-372e-3963-\n6532-2e30-3430-352d-\n4745-302f-30"
+        x = -115.0
+        y = 188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = 25.0
+        y = 65.0
+        interface = Gateway GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/4"
+        x = 57.7894446245
+        y = 47.9096556328
+        interface = SW GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/3"
+        x = 25.0
+        y = 65.0
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = -69.8726663258
+        y = 49.168846503
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -70.7894446245
+        y = 2.09034436715
+        interface = PC-3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = PC-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 56.8726663258
+        y = 0.831153497025
+        interface = PC-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

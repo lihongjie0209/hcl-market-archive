@@ -1,0 +1,118 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC HOSTB]]
+        image = .
+        device_id = 8
+        bridge_mac = 42-28-4c-0e-08-00
+        slot0 = PC 250
+        GE_0/1 = S6850_6 GE_0/2
+        symbol = PC
+        x = 411.0
+        y = -62.0
+        z = 5.0
+    [[PC HOSTA]]
+        image = .
+        device_id = 7
+        bridge_mac = 42-28-46-98-07-00
+        slot0 = PC 250
+        GE_0/1 = S6850_1 GE_0/1
+        symbol = PC
+        x = -521.0
+        y = -64.0
+        z = 5.0
+    [[S6850 SWA]]
+        image = .
+        device_id = 2
+        bridge_mac = 42-25-c8-fb-02-00
+        slot0 = S5800 384
+        GE_0/1 = S6850_1 GE_0/2
+        GE_0/2 = SWC GE_0/1
+        x = -154.0
+        y = -185.0
+        z = 5.0
+    [[S6850 S6850_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 42-25-c3-72-01-00
+        slot0 = S5800 384
+        GE_0/1 = HOSTA GE_0/1
+        GE_0/2 = SWA GE_0/1
+        GE_0/3 = SWB GE_0/2
+        x = -302.0
+        y = -63.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 4
+        bridge_mac = 42-25-d6-c7-04-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/2
+        GE_0/2 = S6850_6 GE_0/1
+        x = -3.0
+        y = -185.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 3
+        bridge_mac = 42-25-cf-0e-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWD GE_0/2
+        GE_0/2 = S6850_1 GE_0/3
+        x = -153.0
+        y = 69.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 5
+        bridge_mac = 42-26-57-95-05-00
+        slot0 = S5800 384
+        GE_0/1 = S6850_6 GE_0/3
+        GE_0/2 = SWB GE_0/1
+        x = -3.0
+        y = 69.0
+        z = 5.0
+    [[S6850 S6850_6]]
+        image = .
+        device_id = 6
+        bridge_mac = 42-26-5c-04-06-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/2
+        GE_0/2 = HOSTB GE_0/1
+        GE_0/3 = SWD GE_0/1
+        x = 136.0
+        y = -63.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.1.1.1/24"
+        x = -342.0
+        y = -156.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.1.3.0/24"
+        x = -132.0
+        y = 23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.1.2.0/24"
+        x = -121.0
+        y = -103.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "virtual ip 10.1.1.10/24"
+        x = -227.0
+        y = -242.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.1.1.2/24"
+        x = -345.0
+        y = 68.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

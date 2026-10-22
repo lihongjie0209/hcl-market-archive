@@ -1,0 +1,170 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = b0-88-e9-70-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/1
+        x = 133.0
+        y = -32.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = b0-88-de-22-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -388.0
+        y = -32.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = b0-88-e5-3c-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        GE_0/1 = RTD GE_0/0
+        x = -118.0
+        y = -32.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = b0-88-e1-37-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -260.0
+        y = -169.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "192.168.64.0/24\n192.168.74.0/24\n192.168.84.0/24"
+        x = -441.0
+        y = 58.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "AS 65106"
+        x = -440.0
+        y = -190.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "AS 64631"
+        x = 26.0
+        y = -85.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "172.16.1.0/30"
+        x = -242.0
+        y = -90.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "192.168.1.0/30"
+        x = -423.0
+        y = -92.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "3.3.3.3/32"
+        x = -228.0
+        y = -23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2/32"
+        x = -289.0
+        y = -204.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "1.1.1.1/32"
+        x = -498.0
+        y = -21.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "10.1.1.0/30"
+        x = -43.0
+        y = -42.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "BGP路由聚合配置"
+        x = -158.0
+        y = -321.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "4.4.4.4/32"
+        x = 182.0
+        y = -23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 53.7865355501
+        y = 52.7729251434
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -65.307928929
+        y = 54.2280176818
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -66.7865355501
+        y = -33.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = 52.307928929
+        y = -33.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -440.0
+        y = -201.0
+        width = 399.0
+        height = 259.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = 27.0
+        y = -84.0
+        width = 266.0
+        height = 140.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

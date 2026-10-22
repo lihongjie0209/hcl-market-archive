@@ -1,0 +1,279 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTE]]
+        image = .
+        device_id = 5
+        bridge_mac = 40-42-8b-84-05-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_5/0
+        GE_0/1 = RTD GE_0/1
+        x = -38.0
+        y = 57.0
+        z = 5.0
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = 40-42-87-17-04-00
+        slot0 = MSR36 512
+        GE_0/1 = RTE GE_0/1
+        GE_0/2 = RTA GE_0/2
+        x = 84.0
+        y = -53.0
+        z = 5.0
+    [[MSR36-20 RTF]]
+        image = .
+        device_id = 6
+        bridge_mac = 40-42-94-50-06-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = -467.0
+        y = -279.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 40-42-63-68-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTF GE_0/0
+        GE_0/1 = RTB GE_0/0
+        GE_0/2 = RTD GE_0/2
+        GE_5/1 = RTC GE_0/0
+        GE_5/0 = RTE GE_0/0
+        x = -169.0
+        y = -53.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 40-42-6e-54-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_5/1
+        x = 84.0
+        y = -279.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 40-42-68-23-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = -169.0
+        y = -279.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "  BGP联盟配置"
+        x = -238.0
+        y = -378.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "AS 200"
+        x = -275.0
+        y = 106.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "AS 65003"
+        x = -26.0
+        y = -292.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "AS 65001"
+        x = 14.0
+        y = 66.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.1.4.1/24"
+        x = -219.0
+        y = 21.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "200.1.1.1/24"
+        x = -280.0
+        y = -87.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "10.1.2.1/24"
+        x = -97.0
+        y = -116.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "10.1.3.1/24"
+        x = -120.0
+        y = -63.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "9.1.1.1/24"
+        x = -578.0
+        y = -275.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "10.1.1.1/24"
+        x = -215.0
+        y = -139.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "10.1.5.1/24"
+        x = -28.0
+        y = -11.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "AS 200中有多台BGP路由器，为了减少IBGP的连接数，现将他们划分为3个子自治系统：\nAS 65001、AS 65002和AS 65003。其中AS 65001内的三台路由器建立IBGP全连接。"
+        x = -553.0
+        y = 156.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "AS 100"
+        x = -529.0
+        y = -313.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "AS 65002"
+        x = -277.0
+        y = -280.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/0"
+        x = 25.0
+        y = 65.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -67.8312293774
+        y = 51.6476594438
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_5/1"
+        x = 54.8312293774
+        y = -33.0
+        interface = RTA GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = -17.0
+        y = -58.0
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/0"
+        x = -69.8712020508
+        y = 0.829222605802
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_5/0"
+        x = 50.8460844616
+        y = 55.5283461394
+        interface = RTA GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/0"
+        x = 56.8712020508
+        y = 49.1707773942
+        interface = RTF GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/2"
+        x = -78.0
+        y = 25.0
+        interface = RTD GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/1"
+        x = -67.707537767
+        y = 51.7854848719
+        interface = RTD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/1"
+        x = 54.707537767
+        y = -33.0
+        interface = RTE GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/0"
+        x = -63.8460844616
+        y = -33.0
+        interface = RTE GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -538.0
+        y = -312.0
+        width = 200.0
+        height = 122.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -188.0
+        y = -133.0
+        width = 336.0
+        height = 268.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = -242.0
+        y = -300.0
+        width = 184.0
+        height = 117.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 4]]
+        type = rectangle
+        x = -282.0
+        y = -313.0
+        width = 447.0
+        height = 459.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 5]]
+        type = ellipse
+        x = -22.0
+        y = -301.0
+        width = 176.0
+        height = 117.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

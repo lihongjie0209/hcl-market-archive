@@ -1,0 +1,110 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\2022-09-19 测试hcl\projects\if-match ap组\if_match_ap_group\working
+    udp = 10000
+    [[S6850 SWA]]
+        device_id = 5
+        bridge_mac = 80-36-dc-c0-05-00
+        slot0 = S5800 512
+        GE_0/1 = AC GE_0/1
+        GE_0/2 = AP1 GE_0/0
+        GE_0/3 = AP2 GE_0/0
+        GE_0/4 = AP3 GE_0/0
+        x = 31.0
+        y = -110.0
+        z = 5.0
+    [[AP AP3]]
+        device_id = 4
+        bridge_mac = 80-36-cc-c2-04-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SWA GE_0/4
+        x = 31.0
+        y = -268.0
+        z = 5.0
+    [[AP AP1]]
+        device_id = 2
+        bridge_mac = 80-36-bc-b7-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SWA GE_0/2
+        x = 244.0
+        y = -110.0
+        z = 5.0
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = 80-36-b2-4f-01-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/1
+        x = -192.0
+        y = -110.0
+        z = 5.0
+    [[AP AP2]]
+        device_id = 3
+        bridge_mac = 80-36-c3-e0-03-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SWA GE_0/3
+        x = 31.0
+        y = 68.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/4"
+        interface = SWA GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -33.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/3"
+        interface = SWA GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 29.0
+        y = 71.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        interface = AP3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        interface = AP GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 30.0
+        y = -31.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        interface = AP1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = AC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0

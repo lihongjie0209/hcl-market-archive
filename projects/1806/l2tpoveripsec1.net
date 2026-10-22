@@ -1,0 +1,86 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 1
+        bridge_mac = 78-85-e6-2f-01-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/1
+        x = -462.0
+        y = -134.0
+        z = 5.0
+    [[MSR36-20 LNS]]
+        image = .
+        device_id = 3
+        bridge_mac = 78-86-06-8b-03-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/0
+        x = 65.0
+        y = -134.0
+        z = 5.0
+    [[MSR36-20 LAC]]
+        image = .
+        device_id = 2
+        bridge_mac = 78-86-01-3c-02-00
+        slot0 = MSR36 512
+        GE_0/0 = LNS GE_0/0
+        GE_0/1 = Host GE_0/0
+        x = -203.0
+        y = -134.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "15.0.0.1/24"
+        x = 115.0
+        y = -129.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.0.0/24"
+        x = -105.0
+        y = -145.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "14.0.0.0/24"
+        x = -378.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "L2TP over IPsec 典型配置举例"
+        x = -354.0
+        y = -274.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LNS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = LAC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = LAC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

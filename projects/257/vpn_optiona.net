@@ -1,0 +1,242 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PE-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 84-e4-7e-69-05-00
+        slot0 = MSR36 512
+        GE_0/0 = ASBR-2 GE_0/0
+        GE_0/1 = CE-2 GE_0/1
+        x = 170.0
+        y = -164.0
+        z = 5.0
+    [[MSR36-20 PE-1]]
+        image = .
+        device_id = 2
+        bridge_mac = 84-e4-66-2c-02-00
+        slot0 = MSR36 512
+        GE_0/0 = ASBR-1 GE_0/0
+        GE_0/1 = CE-1 GE_0/1
+        x = -371.0
+        y = -164.0
+        z = 5.0
+    [[MSR36-20 CE-2]]
+        image = .
+        device_id = 6
+        bridge_mac = 84-e4-89-69-06-00
+        slot0 = MSR36 512
+        GE_0/1 = PE-2 GE_0/1
+        x = 170.0
+        y = 3.0
+        z = 5.0
+    [[MSR36-20 CE-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 84-e4-5d-1b-01-00
+        slot0 = MSR36 512
+        GE_0/1 = PE-1 GE_0/1
+        x = -371.0
+        y = 3.0
+        z = 5.0
+    [[MSR36-20 ASBR-1]]
+        image = .
+        device_id = 3
+        bridge_mac = 84-e4-6c-dc-03-00
+        slot0 = MSR36 512
+        GE_0/0 = PE-1 GE_0/0
+        GE_0/1 = ASBR-2 GE_0/1
+        x = -220.0
+        y = -274.0
+        z = 5.0
+    [[MSR36-20 ASBR-2]]
+        image = .
+        device_id = 4
+        bridge_mac = 84-e4-73-b4-04-00
+        slot0 = MSR36 512
+        GE_0/0 = PE-2 GE_0/0
+        GE_0/1 = ASBR-1 GE_0/1
+        x = 20.0
+        y = -275.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "4.4.4.9/32"
+        x = 220.0
+        y = -160.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.2.1.0/24"
+        x = 70.0
+        y = -66.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "172.1.1.0/24"
+        x = -369.0
+        y = -204.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "192.1.1.0/24"
+        x = -139.0
+        y = -286.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.9/32"
+        x = -479.0
+        y = -159.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.9/32"
+        x = -252.0
+        y = -312.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "3.3.3.9/32"
+        x = -21.0
+        y = -309.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "跨域VPN-OptionA"
+        x = -183.0
+        y = -409.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "10.1.1.0/24"
+        x = -344.0
+        y = -70.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "MPLS backbone\n\n           AS 200"
+        x = 85.0
+        y = -324.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "AS 65002"
+        x = 146.0
+        y = 71.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "AS 65001"
+        x = -400.0
+        y = 72.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "MPLS backbone\n\n          AS 100"
+        x = -450.0
+        y = -318.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "VRF-TO-VRF方式（背靠背方式）"
+        x = -240.0
+        y = -443.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "162.1.1.0/24 "
+        x = 114.0
+        y = -210.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = -77.9996527823
+        y = 25.1666652199
+        interface = ASBR-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 57.1536759681
+        y = 48.7937202164
+        interface = ASBR-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = 64.9996527823
+        y = 24.8333347801
+        interface = ASBR-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/0"
+        x = -70.330915555
+        y = 48.5523225898
+        interface = ASBR-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = CE-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = CE-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = PE-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        x = 57.330915555
+        y = 1.44767741023
+        interface = PE-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = PE-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/0"
+        x = -70.1536759681
+        y = 1.20627978359
+        interface = PE-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -471.0
+        y = -330.0
+        width = 316.0
+        height = 221.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -43.0
+        y = -332.0
+        width = 316.0
+        height = 221.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

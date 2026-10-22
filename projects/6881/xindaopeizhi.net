@@ -1,0 +1,80 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\hclhub\无线工程文件\xindaopeizhi\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 34-e4-a5-d0-01-00
+        slot0 = AC 768
+        GE_0/1 = S6850_3 GE_0/3
+        x = -388.0
+        y = -76.33333333333337
+        z = 5.0
+    [[S6850 S6850_3]]
+        device_id = 3
+        bridge_mac = 34-e5-1b-92-03-00
+        slot0 = S5800 512
+        GE_0/3 = AC_1 GE_0/1
+        GE_0/6 = AP_4 GE_0/1
+        x = -128.0
+        y = -73.0
+        z = 5.0
+    [[AP AP_4]]
+        device_id = 4
+        bridge_mac = 34-e5-2d-d5-04-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = S6850_3 GE_0/6
+        x = 130.0
+        y = -73.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.5999999999999999
+    m22 = 1.5999999999999999
+    [[NOTE 1]]
+        text = "vlan2：192.168.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 94.99494936611663
+        y = 3.6291486010002743
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan1：192.168.1.3\nvlan2：192.168.2.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -214.4682536943488
+        y = 16.939393893923494
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan1 :192.168.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -481.51659390382633
+        y = 22.79798014658644
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = AP_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/6"
+        interface = S6850_3 GE_0/6
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        interface = S6850_3 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.9967130942054
+        y = 24.48722162699736
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = AC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9967130942054
+        y = 25.51277837300264
+        z = 6.0

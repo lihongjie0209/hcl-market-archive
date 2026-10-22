@@ -1,0 +1,50 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Device-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 74-da-1c-0a-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-B GE_0/0
+        x = -189.0
+        y = -108.0
+        z = 5.0
+    [[MSR36-20 Device-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 74-da-1d-53-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-A GE_0/0
+        x = 133.0
+        y = -108.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "ARP测试配置举例"
+        x = -118.0
+        y = -282.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.1.1.0/16"
+        x = -63.0
+        y = -120.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -77.9876605095
+        y = 24.0065177513
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = 64.9876605095
+        y = 25.9934822487
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,107 @@
+version = 5.8.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\cys44579\desktop\gcs\qosongsai\working
+    udp = 10000
+    [[MSR36-20 Gateway]]
+        device_id = 19
+        bridge_mac = 0e-03-76-71-13-00
+        slot0 = MSR36 384
+        GE_0/0 = Device-3 GE_0/3
+        x = -75.9116882454314
+        y = 795.2438661763952
+        z = 5.0
+    [[S6850 Device-3]]
+        device_id = 16
+        bridge_mac = 0e-03-5a-91-10-00
+        slot0 = S5800 512
+        GE_0/3 = Gateway GE_0/0
+        GE_0/1 = SWA GE_0/3
+        GE_0/2 = SWB GE_0/4
+        x = -78.7401153701776
+        y = 991.8195513462553
+        z = 5.0
+    [[S6850 SWA]]
+        device_id = 17
+        bridge_mac = 0e-03-62-da-11-00
+        slot0 = S5800 512
+        GE_0/3 = Device-3 GE_0/1
+        GE_0/1 = VLAN2 GE_0/1
+        GE_0/2 = VLAN4 GE_0/1
+        GE_0/4 = VLAN6 GE_0/1
+        x = -265.41630560342617
+        y = 1177.081528017131
+        z = 5.0
+    [[S6850 SWB]]
+        device_id = 18
+        bridge_mac = 0e-03-66-b0-12-00
+        slot0 = S5800 512
+        GE_0/4 = Device-3 GE_0/2
+        GE_0/1 = vlan2 GE_0/1
+        GE_0/2 = vlan4 GE_0/1
+        GE_0/3 = vlan6 GE_0/1
+        x = 115.00714267493635
+        y = 1195.4663043279807
+        z = 5.0
+    [[PC VLAN2]]
+        device_id = 20
+        bridge_mac = 0e-03-b8-5b-14-00
+        slot0 = PC 250
+        GE_0/1 = SWA GE_0/1
+        symbol = PC
+        x = -467.6488450227788
+        y = 1360.9292911256334
+        z = 5.0
+    [[PC VLAN4]]
+        device_id = 21
+        bridge_mac = 0e-03-ba-cd-15-00
+        slot0 = PC 250
+        GE_0/1 = SWA GE_0/2
+        symbol = PC
+        x = -271.0731598529186
+        y = 1360.9292911256334
+        z = 5.0
+    [[PC VLAN6]]
+        device_id = 22
+        bridge_mac = 0e-03-bd-25-16-00
+        slot0 = PC 250
+        GE_0/1 = SWA GE_0/4
+        symbol = PC
+        x = -64.59797974644671
+        y = 1360.9292911256334
+        z = 5.0
+    [[PC vlan2]]
+        device_id = 23
+        bridge_mac = 0e-03-c0-13-17-00
+        slot0 = PC 250
+        GE_0/1 = SWB GE_0/1
+        symbol = PC
+        x = 76.82337649086276
+        y = 1360.9292911256334
+        z = 5.0
+    [[PC vlan4]]
+        device_id = 24
+        bridge_mac = 0e-03-c1-e6-18-00
+        slot0 = PC 250
+        GE_0/1 = SWB GE_0/2
+        symbol = PC
+        x = 206.93102422918753
+        y = 1360.9292911256334
+        z = 5.0
+    [[PC vlan6]]
+        device_id = 25
+        bridge_mac = 0e-03-c3-c9-19-00
+        slot0 = PC 250
+        GE_0/1 = SWB GE_0/3
+        symbol = PC
+        x = 382.2935059634512
+        y = 1358.1008640008874
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.0999999999999999
+    m22 = 1.0999999999999999
+    [[NOTE 1]]
+        text = "拥塞避免与队列调度典型配置举例"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -250.07315985291848
+        y = 1487.965871052092
+        z = 6.0

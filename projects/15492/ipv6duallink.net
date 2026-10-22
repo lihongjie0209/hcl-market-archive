@@ -1,0 +1,84 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\111\hcl_lsargpjh\working
+    udp = 10000
+    [[AP AP]]
+        device_id = 2
+        bridge_mac = ac-0a-aa-02-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = SWA GE_0/3
+        x = -123.0
+        y = -75.0
+        z = 5.0
+    [[S5820V2-54QS-GE SWA]]
+        device_id = 3
+        bridge_mac = ac-0a-b6-62-03-00
+        slot0 = S5800 384
+        GE_0/3 = AP GE_0/1
+        GE_0/1 = AC1 GE_0/1
+        GE_0/2 = AC2 GE_0/1
+        x = -123.0
+        y = -227.0
+        z = 5.0
+    [[AC AC1]]
+        device_id = 1
+        bridge_mac = ac-0a-93-bd-01-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/1
+        x = -231.0
+        y = -344.0
+        z = 5.0
+    [[AC AC2]]
+        device_id = 4
+        bridge_mac = ac-30-da-88-04-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/2
+        x = -27.0
+        y = -344.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = AC2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.7256056435915
+        y = 34.15822893695071
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = AC1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 53.30767469755793
+        y = 34.980373079217145
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 48.019723290650305
+        y = -15.941176470588232
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -61.01355705049912
+        y = -17.117647058823536
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/3"
+        interface = SWA GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 69.70588235294119
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = AP GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 27.352941176470587
+        y = -25.352941176470594
+        z = 6.0

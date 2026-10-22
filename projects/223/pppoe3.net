@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RouterB]]
+        image = .
+        device_id = 2
+        bridge_mac = 6e-92-c6-f4-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RouterA GE_0/0
+        x = 66.0
+        y = -226.0
+        z = 5.0
+    [[MSR36-20 RouterA]]
+        image = .
+        device_id = 1
+        bridge_mac = 6e-92-bf-b4-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RouterB GE_0/0
+        x = -280.0
+        y = -226.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "[RouterB] interface dialer 1\n[RouterB-Dialer1] dialer bundle enable\n# 配置Dialer1接口通过协商获取IP地址。\n[RouterB-Dialer1] ip address ppp-negotiate\n[RouterB-Dialer1] quit\n# 配置一个PPPoE会话，该会话对应Dialer bundle 1（Dialer bundle 1对应Dialer1接口）。\n[RouterB] interface gigabitethernet 0/0\n[RouterB-GigabitEthernet1/0/1] pppoe-client dial-bundle-number 1\n[RouterB-GigabitEthernet1/0/1] quit\n\nPPPoE Client诊断模式配置\n# PPPoE Client工作在诊断模式，诊断时间间隔为200秒。\n[RouterB] interface dialer 1\n[RouterB-Dialer1] dialer diagnose interval 200\n# 配置自动拨号的时间间隔为10秒。\n[RouterB-Dialer1] dialer timer autodial 10"
+        x = -449.0
+        y = -86.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "PPPoE Client"
+        x = 15.0
+        y = -264.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "PPPoE Server"
+        x = -322.0
+        y = -264.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "PPPoE Client诊断模式配置"
+        x = -231.0
+        y = -350.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RouterA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RouterB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

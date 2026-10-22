@@ -1,0 +1,104 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 78-67-64-10-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/1
+        x = -360.0
+        y = 63.0
+        z = 5.0
+    [[MSR36-20 Host-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 78-67-5e-54-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/0
+        x = -360.0
+        y = -235.0
+        z = 5.0
+    [[MSR36-20 LNS]]
+        image = .
+        device_id = 4
+        bridge_mac = 78-67-83-35-04-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/2
+        x = 192.0
+        y = -93.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 3
+        bridge_mac = 78-67-7c-de-03-00
+        slot0 = MSR36 512
+        GE_0/0 = Host-A GE_0/0
+        GE_0/1 = Host-B GE_0/0
+        GE_0/2 = LNS GE_0/0
+        x = -119.0
+        y = -93.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "192.168.2.4/24"
+        x = -363.0
+        y = 28.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.1.4/24"
+        x = -374.0
+        y = -154.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "172.31.123.101/24"
+        x = -8.0
+        y = -104.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LNS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = Internet GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -71.5790676074
+        y = 46.7358279948
+        interface = Internet GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -72.4626553213
+        y = 4.69420308868
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 58.5790676074
+        y = 3.26417200519
+        interface = Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 59.4626553213
+        y = 45.3057969113
+        interface = Host-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

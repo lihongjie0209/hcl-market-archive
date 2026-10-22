@@ -1,0 +1,89 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 10000
+    [[F1090 FW1_1]]
+        device_id = 1
+        bridge_mac = 12-56-bf-98-01-00
+        slot0 = F1060 768
+        GE_0/1 = SW1_2 GE_0/1
+        x = -150.0
+        y = -274.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW1_2]]
+        device_id = 2
+        bridge_mac = 12-56-d9-ec-02-00
+        slot0 = S5800 384
+        GE_0/1 = FW1_1 GE_0/1
+        GE_0/3 = PC1_3 GE_0/0
+        GE_0/4 = PC2_4 GE_0/0
+        x = -152.0
+        y = -50.0
+        z = 5.0
+    [[MSR36-20 PC1_3]]
+        device_id = 3
+        bridge_mac = 12-57-07-92-03-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_2 GE_0/3
+        x = -301.0
+        y = 176.0
+        z = 5.0
+    [[MSR36-20 PC2_4]]
+        device_id = 4
+        bridge_mac = 12-57-0d-26-04-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_2 GE_0/4
+        x = 25.0
+        y = 174.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.3
+    m22 = 1.3
+    [[NOTE 1]]
+        text = "2022:8:3::1/64"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -90.0
+        y = -255.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        interface = PC2_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 6.2006023847674925
+        y = -26.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        interface = PC1_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -10.982783175391347
+        y = -24.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/4"
+        interface = SW1_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 60.79939761523251
+        y = 51.384548394418545
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/3"
+        interface = SW1_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -57.01721682460865
+        y = 40.39524162658762
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = SW1_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.357128622388984
+        y = -29.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = FW1_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.642871377611016
+        y = 64.99840570756629
+        z = 6.0

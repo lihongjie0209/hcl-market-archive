@@ -1,0 +1,1 @@
+{"projectInfo":{"name":"SNMP剔除某一OID节点配置举例","path":"hcl_d_evcg","visibility":2,"categoryId":103,"introduction":"","label":["snmp"]},"deviceInfoList":[{"resourceName":"SW1","resourceCategory":"交换机","resourceModel":"S6850","resourceVersion":"CMW7.1.070-A7170","configPath":""}]}

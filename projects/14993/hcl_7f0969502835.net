@@ -1,0 +1,81 @@
+version = 5.8.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\cys44579\desktop\gcs\hcl_7f0969502835\working
+    udp = 10000
+    [[PC HostA]]
+        device_id = 26
+        bridge_mac = 0e-53-b1-9f-1a-00
+        slot0 = PC 250
+        GE_0/1 = Device-4 GE_0/1
+        symbol = PC
+        x = -477.54833995939043
+        y = 1711.6542545941604
+        z = 5.0
+    [[MSR36-20 Device-4]]
+        device_id = 27
+        bridge_mac = 0e-53-c1-a5-1b-00
+        slot0 = MSR36 384
+        GE_0/1 = HostA GE_0/1
+        GE_0/0 = DataServer GE_0/0
+        GE_0/2 = MailServer GE_0/2
+        GE_5/0 = FileServer GE_0/0
+        x = -180.56349186104046
+        y = 1708.8258274694147
+        z = 5.0
+    [[MSR36-20 DataServer]]
+        device_id = 28
+        bridge_mac = 0e-53-c6-87-1c-00
+        slot0 = MSR36 384
+        GE_0/0 = Device-4 GE_0/0
+        x = 177.23253941935246
+        y = 1553.2623356083739
+        z = 5.0
+    [[MSR36-20 FileServer]]
+        device_id = 30
+        bridge_mac = 0e-53-e2-85-1e-00
+        slot0 = MSR36 384
+        GE_0/0 = Device-4 GE_5/0
+        x = 180.06096654409868
+        y = 1894.08780414029
+        z = 5.0
+    [[MSR36-20 MailServer]]
+        device_id = 29
+        bridge_mac = 0e-53-de-6e-1d-00
+        slot0 = MSR36 384
+        GE_0/2 = Device-4 GE_0/2
+        x = 184.30360723121788
+        y = 1722.9679630931457
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.4
+    m22 = 1.4
+    [[NOTE 1]]
+        text = "192.168.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 270.35743110038044
+        y = 1565.747616982612
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 274.60007178749964
+        y = 1742.5243122792492
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.3.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 281.6711395993652
+        y = 1912.2299397640206
+        z = 6.0
+    [[NOTE 4]]
+        text = "192.168.4.1/2 24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -412.70771952582453
+        y = 1685.9557697843254
+        z = 6.0
+    [[NOTE 5]]
+        text = "重标记"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -268.45793616376875
+        y = 1923.5436482630055
+        z = 6.0

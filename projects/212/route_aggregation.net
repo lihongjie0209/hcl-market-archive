@@ -1,0 +1,60 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 DeviceA]]
+        image = .
+        device_id = 1
+        bridge_mac = ac-20-e2-7d-01-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceB GE_0/0
+        GE_0/1 = DeviceB GE_0/1
+        x = -213.0
+        y = -96.0
+        z = 5.0
+    [[MSR36-20 DeviceB]]
+        image = .
+        device_id = 2
+        bridge_mac = ac-20-e7-79-02-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceA GE_0/0
+        GE_0/1 = DeviceA GE_0/1
+        x = 124.0
+        y = -96.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "三层动态聚合配置举例"
+        x = -154.0
+        y = -198.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = -80.0
+        y = 30.0
+        interface = DeviceB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -81.0
+        y = -6.0
+        interface = DeviceB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 63.0
+        y = 28.0
+        interface = DeviceA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 60.0
+        y = 0.0
+        interface = DeviceA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

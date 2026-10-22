@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.3
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 switchC]]
+        image = .
+        device_id = 3
+        bridge_mac = aa-fa-4c-a9-03-00
+        slot0 = S5800 384
+        GE_0/1 = switchB GE_0/2
+        x = 227.0
+        y = -131.0
+        z = 5.0
+    [[S6850 switchB]]
+        image = .
+        device_id = 2
+        bridge_mac = aa-fa-45-fe-02-00
+        slot0 = S5800 384
+        GE_0/1 = switchA GE_0/1
+        GE_0/2 = switchC GE_0/1
+        x = -106.0
+        y = -135.0
+        z = 5.0
+    [[S6850 switchA]]
+        image = .
+        device_id = 1
+        bridge_mac = aa-fa-3f-19-01-00
+        slot0 = S5800 384
+        GE_0/1 = switchB GE_0/1
+        x = -417.0
+        y = -133.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = -92.9971145436
+        y = 24.5195541797
+        interface = switchC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        x = 64.9971145436
+        y = 25.4804458203
+        interface = switchB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        x = -92.9991729043
+        y = 25.2572294077
+        interface = switchB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 64.9991729043
+        y = 24.7427705923
+        interface = switchA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

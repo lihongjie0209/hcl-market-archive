@@ -1,0 +1,185 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PE-2]]
+        image = .
+        device_id = 3
+        bridge_mac = 74-37-01-5c-03-00
+        slot0 = MSR36 512
+        GE_0/0 = CE-2 GE_0/0
+        GE_0/1 = PE-1 GE_0/1
+        x = 116.0
+        y = -234.0
+        z = 5.0
+    [[MSR36-20 PE-1]]
+        image = .
+        device_id = 2
+        bridge_mac = 74-36-e7-5e-02-00
+        slot0 = MSR36 512
+        GE_0/0 = CE-1 GE_0/0
+        GE_0/1 = PE-2 GE_0/1
+        x = -256.0
+        y = -234.0
+        z = 5.0
+    [[MSR36-20 CE-2]]
+        image = .
+        device_id = 4
+        bridge_mac = 74-37-06-0d-04-00
+        slot0 = MSR36 512
+        GE_0/0 = PE-2 GE_0/0
+        x = 272.0
+        y = -47.0
+        z = 5.0
+    [[MSR36-20 CE-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 74-36-e2-c3-01-00
+        slot0 = MSR36 512
+        GE_0/0 = PE-1 GE_0/0
+        x = -388.0
+        y = -47.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "20::/64"
+        x = 136.0
+        y = -142.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10::64"
+        x = -291.0
+        y = -156.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "4::4/128"
+        x = 248.0
+        y = -83.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1::1/128"
+        x = -407.0
+        y = -82.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.0/30"
+        x = -89.0
+        y = -245.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "3.3.3.3/32"
+        x = 93.0
+        y = -269.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2/32"
+        x = -287.0
+        y = -270.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "IPv4/MPLS network"
+        x = -152.0
+        y = -167.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "IPv6 network"
+        x = 233.0
+        y = 26.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "IPv6 network"
+        x = -445.0
+        y = 24.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "AS 65100"
+        x = -101.0
+        y = -299.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "6PE配置"
+        x = -90.0
+        y = -380.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -63.6235285183
+        y = -33.0
+        interface = CE-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 50.6235285183
+        y = 55.7153835443
+        interface = PE-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = PE-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = PE-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 1.93267209605
+        y = 57.6787145306
+        interface = PE-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        x = 48.0673279039
+        y = -33.0
+        interface = CE-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = 197.0
+        y = -122.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -473.0
+        y = -128.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = -235.0
+        y = -311.0
+        width = 383.0
+        height = 205.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

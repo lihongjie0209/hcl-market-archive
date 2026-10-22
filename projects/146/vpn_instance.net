@@ -1,0 +1,151 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[F1060 F1060_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 68-83-7f-aa-01-00
+        slot0 = F1060 512
+        GE_0/0 = F1060_2 GE_0/0
+        symbol = F1060
+        x = -518.0
+        y = -149.0
+        z = 5.0
+    [[F1060 F1060_3]]
+        image = .
+        device_id = 3
+        bridge_mac = 68-83-8a-71-03-00
+        slot0 = F1060 512
+        GE_0/0 = F1060_2 GE_0/1
+        symbol = F1060
+        x = 335.0
+        y = -453.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        image = .
+        device_id = 2
+        bridge_mac = 68-83-83-40-02-00
+        slot0 = F1060 512
+        GE_0/0 = F1060_1 GE_0/0
+        GE_0/1 = F1060_3 GE_0/0
+        GE_0/2 = F1060_4 GE_0/0
+        GE_0/3 = F1060_5 GE_0/0
+        symbol = F1060
+        x = -30.0
+        y = -149.0
+        z = 5.0
+    [[F1060 F1060_5]]
+        image = .
+        device_id = 5
+        bridge_mac = 68-bb-32-81-05-00
+        slot0 = F1060 512
+        GE_0/0 = F1060_2 GE_0/3
+        symbol = F1060
+        x = 366.0
+        y = 161.0
+        z = 5.0
+    [[F1060 F1060_4]]
+        image = .
+        device_id = 4
+        bridge_mac = 68-ba-d4-8b-04-00
+        slot0 = F1060 512
+        GE_0/0 = F1060_2 GE_0/2
+        symbol = F1060
+        x = 510.0
+        y = -149.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.1.1.0/24"
+        x = 97.0
+        y = -305.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "vpn1"
+        x = -146.0
+        y = -36.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.0/24"
+        x = -361.0
+        y = -181.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.3.3.0"
+        x = 163.0
+        y = 23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vpn2"
+        x = -2.0
+        y = -236.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "10.2.2.0"
+        x = 206.0
+        y = -169.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -93.0
+        y = 25.0
+        interface = F1060_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -84.4968429495
+        y = 0.343380519331
+        interface = F1060_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        x = 56.4968429495
+        y = 49.6566194807
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 55.7357523251
+        y = -37.0
+        interface = F1060_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -93.0
+        y = 25.0
+        interface = F1060_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -83.7357523251
+        y = 50.5990923474
+        interface = F1060_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = F1060_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

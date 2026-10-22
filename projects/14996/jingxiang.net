@@ -1,0 +1,93 @@
+version = 5.10.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\cys46935\desktop\jingxiang\working
+    udp = 10000
+    [[PC PC_15]]
+        device_id = 15
+        bridge_mac = 74-fe-b8-35-0f-00
+        slot0 = PC 250
+        GE_0/1 = A GE_0/1
+        symbol = PC
+        x = -370.5555555555555
+        y = 670.5555555555557
+        z = 5.0
+    [[PC PC_16]]
+        device_id = 16
+        bridge_mac = 74-fe-e8-61-10-00
+        slot0 = PC 250
+        GE_0/1 = A GE_0/2
+        symbol = PC
+        x = -364.9999999999999
+        y = 900.5555555555555
+        z = 5.0
+    [[PC PC_17]]
+        device_id = 17
+        bridge_mac = 74-ff-08-2c-11-00
+        slot0 = PC 250
+        GE_0/1 = B GE_0/5
+        symbol = PC
+        x = 337.22222222222234
+        y = 677.2222222222222
+        z = 5.0
+    [[PC PC_18]]
+        device_id = 18
+        bridge_mac = 74-ff-16-2d-12-00
+        slot0 = PC 250
+        GE_0/1 = B GE_0/2
+        symbol = PC
+        x = 340.5555555555556
+        y = 903.8888888888889
+        z = 5.0
+    [[S5820V2-54QS-GE A]]
+        device_id = 13
+        bridge_mac = 74-fe-75-04-0d-00
+        slot0 = S5800 384
+        GE_0/1 = PC_15 GE_0/1
+        GE_0/2 = PC_16 GE_0/1
+        GE_0/24 = B GE_0/24
+        x = -119.4444444444444
+        y = 801.6666666666667
+        z = 5.0
+    [[S5820V2-54QS-GE B]]
+        device_id = 14
+        bridge_mac = 74-fe-89-68-0e-00
+        slot0 = S5800 384
+        GE_0/5 = PC_17 GE_0/1
+        GE_0/2 = PC_18 GE_0/1
+        GE_0/24 = A GE_0/24
+        x = 110.5555555555556
+        y = 802.7777777777776
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.1
+    m22 = 1.1
+    [[NOTE 1]]
+        text = "PC15:10.10.10.1/24\nPC16:20.20.20.1/24\nPC17:10.10.10.2/24\nPC18:20.20.20.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -130.66666666666669
+        y = 631.2222222222222
+        z = 6.0
+    [[NOTE 2]]
+        text = "基于IP子网划分vlan"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -758.9999999999999
+        y = 772.7499999999999
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        width = 867.6666666666667
+        height = 141.22222222222229
+        border_color = "#666666"
+        border_style = 2
+        x = -418.77777777777794
+        y = 630.0000000000001
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        width = 876.6666666666667
+        height = 134.33333333333326
+        border_color = "#666666"
+        border_style = 2
+        x = -416.66666666666663
+        y = 867.8888888888887
+        z = 3.0

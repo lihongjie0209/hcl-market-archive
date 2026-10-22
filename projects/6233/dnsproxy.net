@@ -1,0 +1,37 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25813\hcl\projects\dnsproxy\working
+    udp = 11000
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = 16-3a-e9-9f-01-00
+        slot0 = AC 768
+        GE_0/0 = AP GE_0/0
+        x = -191.0
+        y = -225.0
+        z = 5.0
+    [[AP AP]]
+        device_id = 2
+        bridge_mac = 16-3b-10-5d-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = AC GE_0/0
+        x = -191.0
+        y = -51.58823529411765
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "1.1.1.2\nDNS client"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -105.76470588235294
+        y = -52.76470588235294
+        z = 6.0
+    [[NOTE 2]]
+        text = "1.1.1.1/24\nDNS proxy"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -118.11764705882356
+        y = -221.58823529411768
+        z = 6.0

@@ -1,0 +1,172 @@
+autostart = False
+version = 2.1.3
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 32000
+    [[S6850 SWA]]
+        image = .
+        device_id = 1
+        bridge_mac = 58-44-db-ce-01-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/1
+        GE_0/2 = SWB GE_0/1
+        x = -428.0
+        y = -250.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 3
+        bridge_mac = 58-45-16-18-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/1
+        GE_0/2 = S6850_5 GE_0/1
+        x = -616.0
+        y = 2.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 2
+        bridge_mac = 58-44-e6-61-02-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/2
+        GE_0/2 = SWD GE_0/1
+        x = -95.0
+        y = -249.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 4
+        bridge_mac = 58-45-1f-f5-04-00
+        slot0 = S5800 384
+        GE_0/1 = SWB GE_0/2
+        GE_0/2 = S6850_6 GE_0/1
+        x = 88.0
+        y = 53.0
+        z = 5.0
+    [[S6850 S6850_6]]
+        image = .
+        device_id = 6
+        bridge_mac = 58-d1-2d-b1-06-00
+        slot0 = S5800 384
+        GE_0/1 = SWD GE_0/2
+        x = 113.0
+        y = 220.0
+        z = 5.0
+    [[S6850 S6850_5]]
+        image = .
+        device_id = 5
+        bridge_mac = 58-a9-b4-dd-05-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/2
+        x = -619.0
+        y = 194.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "Area2"
+        x = 31.0
+        y = -168.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan-200:\n10.3.1.1/24"
+        x = -27.0
+        y = -260.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Area0"
+        x = -326.0
+        y = -301.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Area1"
+        x = -595.0
+        y = -182.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan-200:\n10.2.1.1/24"
+        x = -585.0
+        y = -270.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "vlan-200:\n10.2.1.2/24"
+        x = -552.0
+        y = -16.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "vlan-300:\n10.4.1.2/24"
+        x = -782.0
+        y = 146.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "vlan-300:\n10.4.1.1/24"
+        x = -784.0
+        y = 23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "vlan-100:\n10.1.1.2/24"
+        x = -204.0
+        y = -329.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "vlan-100:\n10.1.1.1/24"
+        x = -370.0
+        y = -217.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "vlan-500\n10.5.1.2/24"
+        x = -69.0
+        y = 169.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "vlan-200:\n10.3.1.2/24"
+        x = -74.0
+        y = -17.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "vlan-500\n10.5.1.1/24"
+        x = 160.0
+        y = 102.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -623.0
+        y = -296.0
+        width = 238.0
+        height = 385.0
+        fill_color = "#aaff7f"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -409.0
+        y = -335.0
+        width = 343.0
+        height = 200.0
+        fill_color = "#ffff00"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = -79.0
+        y = -259.0
+        width = 238.0
+        height = 382.0
+        fill_color = "#eeacf9"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

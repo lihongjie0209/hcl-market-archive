@@ -1,0 +1,122 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\lb-httprelocation\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 7a-00-3d-76-01-00
+        slot0 = F1060 512
+        GE_0/2 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/3 = F1060_2 GE_0/2
+        GE_0/4 = F1060_3 GE_0/2
+        x = -128.0
+        y = -95.0
+        z = 5.0
+    [[F1060 F1060_3]]
+        device_id = 3
+        bridge_mac = 7a-00-5c-b6-03-00
+        slot0 = F1060 512
+        GE_0/2 = F1060_1 GE_0/4
+        x = 215.0
+        y = 55.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 7a-00-52-06-02-00
+        slot0 = F1060 512
+        GE_0/2 = F1060_1 GE_0/3
+        x = 222.0
+        y = -234.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = F1060_1 GE_0/2
+        x = -502.0
+        y = -99.0
+        z = 5.0
+    [[NOTE 1]]
+        text = "VSIP 5.5.5.5"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -171.0
+        y = -221.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "3.3.3.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -83.0
+        y = -17.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -79.0
+        y = -153.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "4.4.4.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -243.0
+        y = -136.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "3.3.3.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 184.0
+        y = 0.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 190.0
+        y = -289.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "4.4.4.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -532.0
+        y = -137.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        interface = F1060_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -76.6487452087
+        y = 8.97285194956
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.1755809471
+        y = 39.7640164333
+        z = 6.0
+    [[NOTE 10]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -106.002287544
+        y = 86.4277830209
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/4"
+        interface = F1060_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 61.6487452087
+        y = 41.0271480504
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 62.1755809471
+        y = 10.2359835667
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.9977124557
+        y = 24.5722169791
+        z = 6.0

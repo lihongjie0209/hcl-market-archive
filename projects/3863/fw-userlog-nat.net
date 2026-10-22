@@ -1,0 +1,135 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\fw-userlog-nat\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 24-4f-1e-48-01-00
+        slot0 = F1060 512
+        GE_0/2 = PC_2 GE_0/1
+        GE_0/3 = PC_3 GE_0/1
+        GE_0/4 = PC_4 GE_0/1
+        x = -148.0
+        y = -37.0
+        z = 5.0
+    [[PC PC_2]]
+        device_id = 2
+        bridge_mac = 24-4f-28-c9-02-00
+        slot0 = PC 250
+        GE_0/1 = F1060_1 GE_0/2
+        symbol = PC
+        x = -457.0
+        y = -35.0
+        z = 5.0
+    [[PC PC_3]]
+        device_id = 3
+        bridge_mac = 24-4f-2e-85-03-00
+        slot0 = PC 250
+        GE_0/1 = F1060_1 GE_0/3
+        symbol = PC
+        x = 157.0
+        y = -39.0
+        z = 5.0
+    [[PC PC_4]]
+        device_id = 4
+        bridge_mac = 24-4f-33-ab-04-00
+        slot0 = PC 250
+        GE_0/1 = F1060_1 GE_0/4
+        symbol = PC
+        x = -151.0
+        y = -320.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "log host"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -177.0
+        y = -358.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "nat outbound"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -106.0
+        y = 30.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "3.3.3.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -178.0
+        y = -234.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "3.3.3.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -177.0
+        y = -96.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 49.0
+        y = -12.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -85.0
+        y = -13.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -263.0
+        y = -10.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -407.0
+        y = -5.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.424004445474353
+        y = 64.9977526897477
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99914004385766
+        y = 25.262289442910543
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = PC_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99916216329427
+        y = 24.741105746515895
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/4"
+        interface = F1060_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -8.424004445474353
+        y = -30.0
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 60.999140043857665
+        y = 3.737710557089457
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -72.99916216329427
+        y = 5.258894253484101
+        z = 6.0

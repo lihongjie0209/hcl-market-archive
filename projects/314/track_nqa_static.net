@@ -1,0 +1,114 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RouterB]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-df-a9-08-02-00
+        slot0 = MSR36 384
+        GE_0/0 = RouterA GE_0/0
+        GE_0/1 = RouterD GE_0/0
+        x = -225.0
+        y = -247.0
+        z = 5.0
+    [[MSR36-20 RouterC]]
+        image = .
+        device_id = 3
+        bridge_mac = 8a-df-ab-27-03-00
+        slot0 = MSR36 384
+        GE_0/0 = RouterD GE_0/1
+        GE_0/1 = RouterA GE_0/1
+        x = -223.0
+        y = 53.0
+        z = 5.0
+    [[MSR36-20 RouterA]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-df-a5-cf-01-00
+        slot0 = MSR36 384
+        GE_0/0 = RouterB GE_0/0
+        GE_0/1 = RouterC GE_0/1
+        x = -521.0
+        y = -120.0
+        z = 5.0
+    [[MSR36-20 RouterD]]
+        image = .
+        device_id = 4
+        bridge_mac = 8a-df-ad-37-04-00
+        slot0 = MSR36 384
+        GE_0/0 = RouterB GE_0/1
+        GE_0/1 = RouterC GE_0/0
+        x = 73.0
+        y = -116.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "loop0\n30.1.1.1"
+        x = 76.0
+        y = -178.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Loop0\n20.1.1.1"
+        x = -539.0
+        y = -177.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        x = -60.7156878276
+        y = 58.5232988715
+        interface = RouterD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = -62.2676629852
+        y = -26.8717699602
+        interface = RouterD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 58.7156878276
+        y = 3.47670112851
+        interface = RouterC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -61.5931838376
+        y = 4.91737985269
+        interface = RouterC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 61.2676629852
+        y = 41.8717699602
+        interface = RouterB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -63.7593746762
+        y = 40.7717587293
+        interface = RouterB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 54.5931838376
+        y = 77.0826201473
+        interface = RouterA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 55.7593746762
+        y = -23.7717587293
+        interface = RouterA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

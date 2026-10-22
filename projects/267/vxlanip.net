@@ -1,0 +1,251 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 VTEP-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 84-9c-5b-6a-01-00
+        slot0 = MSR36 512
+        GE_0/0 = VM-1 GE_0/0
+        GE_0/1 = P GE_0/0
+        x = -194.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 VTEP-B]]
+        image = .
+        device_id = 4
+        bridge_mac = 84-9c-72-1a-04-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/2
+        GE_0/1 = Internet GE_0/0
+        x = 7.0
+        y = -12.0
+        z = 5.0
+    [[MSR36-20 VTEP-C]]
+        image = .
+        device_id = 3
+        bridge_mac = 84-9c-69-80-03-00
+        slot0 = MSR36 512
+        GE_0/0 = VM-2 GE_0/0
+        GE_0/1 = P GE_0/1
+        x = 207.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 P]]
+        image = .
+        device_id = 2
+        bridge_mac = 84-9c-64-18-02-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-A GE_0/1
+        GE_0/1 = VTEP-C GE_0/1
+        GE_0/2 = VTEP-B GE_0/0
+        x = 7.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 VM-1]]
+        image = .
+        device_id = 6
+        bridge_mac = 84-9c-79-b3-06-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-A GE_0/0
+        x = -399.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 VM-2]]
+        image = .
+        device_id = 7
+        bridge_mac = 84-9c-7e-41-07-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-C GE_0/0
+        x = 410.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 5
+        bridge_mac = 84-9c-75-d0-05-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-B GE_0/1
+        x = 9.0
+        y = 139.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "Transport\n  network"
+        x = -22.0
+        y = -218.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "12.1.1.0/30"
+        x = -16.0
+        y = -72.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "13.1.1.0/30"
+        x = 71.0
+        y = -163.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "VSI-int1\n1::1/64 anycast\n4::1/64 anycast"
+        x = -236.0
+        y = -279.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "VSI-int1\n1::1/64 anycast\n4::1/64 anycast"
+        x = 162.0
+        y = -284.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "3.3.3.3/32"
+        x = 188.0
+        y = -188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2/32"
+        x = -103.0
+        y = -5.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "3::/64"
+        x = 34.0
+        y = 77.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "VSI-int1\n1::2/64 anycast\n4::2/64 anycast"
+        x = 64.0
+        y = -25.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "4::100/64"
+        x = 354.0
+        y = -188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "分布式VXLAN IP网关连接IPv6网络配置"
+        x = -184.0
+        y = -375.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "1::100/64"
+        x = -399.0
+        y = -188.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "1.1.1.1/32"
+        x = -227.0
+        y = -189.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "11.1.1.0/30"
+        x = -130.0
+        y = -162.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = VM-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = VM-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = P GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/2"
+        x = 26.3150781669
+        y = 64.9783762729
+        interface = P GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/0"
+        x = -77.9995194243
+        y = 24.8039239244
+        interface = P GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = VTEP-C GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = VTEP-C GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/1"
+        x = -37.0
+        y = 76.0
+        interface = VTEP-B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/0"
+        x = -38.0
+        y = -25.0
+        interface = VTEP-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/1"
+        x = 64.9995194243
+        y = 25.1960760756
+        interface = VTEP-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = VTEP-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -183.0
+        y = -259.0
+        width = 431.0
+        height = 269.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

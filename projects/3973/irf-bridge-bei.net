@@ -1,0 +1,128 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\irf-bridge-bei\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 2e-80-97-ef-01-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_2 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/1
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/1
+        x = -327.0
+        y = -56.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 2e-80-9b-ca-02-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_1 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/2
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        x = 159.0
+        y = -57.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 2e-80-b2-57-03-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/2
+        GE_0/2 = F1060_2 GE_0/2
+        x = -86.0
+        y = -272.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 2e-80-bb-8b-04-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/4
+        GE_0/2 = F1060_2 GE_0/4
+        x = -79.0
+        y = 147.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.2
+    m22 = 1.2
+    [[NOTE 1]]
+        text = "vlan 10 interface 1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -188.0
+        y = 228.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan 10 interface 1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -195.0
+        y = -334.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 55.316022260619825
+        y = -33.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -69.00262372824395
+        y = -33.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 60.01145446236623
+        y = 67.44451930085549
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.84188198735838
+        y = 69.63572937714633
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/4"
+        interface = F1060_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -64.31602226061983
+        y = 69.09480397116641
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -68.01145446236623
+        y = -33.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99991532482983
+        y = 25.082304352520225
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/4"
+        interface = F1060_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 49.00262372824392
+        y = 83.27523139290571
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.84188198735836
+        y = -33.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99991532482983
+        y = 24.917695647479775
+        z = 6.0

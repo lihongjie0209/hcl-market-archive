@@ -1,0 +1,62 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 终端]]
+        image = .
+        device_id = 3
+        bridge_mac = 88-29-c6-22-03-00
+        slot0 = S5800 384
+        GE_0/1 = deviceb GE_0/1
+        x = -317.0
+        y = 29.0
+        z = 5.0
+    [[S6850 devicea]]
+        image = .
+        device_id = 1
+        bridge_mac = 88-29-b8-b8-01-00
+        slot0 = S5800 384
+        GE_0/1 = deviceb GE_0/2
+        x = -317.0
+        y = -338.0
+        z = 5.0
+    [[S6850 deviceb]]
+        image = .
+        device_id = 2
+        bridge_mac = 88-29-be-f0-02-00
+        slot0 = S5800 384
+        GE_0/1 = 终端 GE_0/1
+        GE_0/2 = devicea GE_0/1
+        x = -317.0
+        y = -158.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -37.0
+        interface = S6850_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        x = 25.0
+        y = -37.0
+        interface = S6850_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        x = 31.0
+        y = 78.0
+        interface = S6850_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 22.0
+        y = 81.0
+        interface = S6850_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

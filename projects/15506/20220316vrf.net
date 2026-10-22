@@ -1,0 +1,90 @@
+version = 5.9.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\配置手册\vpn互引\动态路由下的不通vpn实例之间的路由互引\20220316vrf
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 5c-6d-02-01-01-00
+        slot0 = F1060 512
+        GE_0/1 = MSR36-20_2 GE_0/0
+        GE_0/2 = MSR36-20_3 GE_0/0
+        symbol = F1060
+        x = -66.0
+        y = -203.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 5c-6d-0d-af-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/1
+        x = -444.0
+        y = -208.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 5c-6d-13-3d-03-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = 328.0
+        y = -203.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.4
+    m22 = 1.4
+    [[NOTE 1]]
+        text = "2.2.2.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4.0
+        y = -214.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "2.2.2.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 262.0
+        y = -219.5
+        z = 6.0
+    [[NOTE 3]]
+        text = "lp0:11.11.11.11"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -589.0
+        y = -254.5
+        z = 6.0
+    [[NOTE 4]]
+        text = "ospf\narea0"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -277.0
+        y = -273.5
+        z = 6.0
+    [[NOTE 5]]
+        text = "vpn1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -127.0
+        y = -244.5
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -392.0
+        y = -228.5
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -151.0
+        y = -218.5
+        z = 6.0
+    [[NOTE 8]]
+        text = "vpn2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -7.0
+        y = -243.5
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        width = 397.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        x = -435.0
+        y = -286.0
+        z = 3.0

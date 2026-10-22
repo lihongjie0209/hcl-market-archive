@@ -1,0 +1,168 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\ipsec-normal-both\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 52-8f-7d-fc-01-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_4 GE_0/0
+        GE_0/3 = MSR36-20_3 GE_0/0
+        x = -329.0
+        y = -110.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 52-91-46-32-03-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/3
+        GE_0/1 = F1060_2 GE_0/2
+        x = -83.0
+        y = -109.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 52-91-37-66-02-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_3 GE_0/1
+        GE_0/3 = MSR36-20_5 GE_0/0
+        x = 213.0
+        y = -115.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_5]]
+        device_id = 5
+        bridge_mac = 52-91-60-dc-05-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_2 GE_0/3
+        x = 448.0
+        y = -115.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        device_id = 4
+        bridge_mac = 52-91-4a-ec-04-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -572.0
+        y = -110.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "IPSEC VPN"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -124.0
+        y = -196.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 411.0
+        y = -154.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 232.0
+        y = -153.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 128.0
+        y = -43.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -31.0
+        y = -44.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -171.0
+        y = -42.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -329.0
+        y = -34.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "192.168.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -426.0
+        y = -151.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "192.168.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -602.0
+        y = -146.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.9683552078
+        y = 23.4092196932
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        interface = MSR36-20_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        interface = MSR36-20_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9917848544
+        y = 24.1893557124
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.999669513
+        y = 24.8373997174
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9683552078
+        y = 26.5907803068
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.9917848544
+        y = 25.8106442876
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.999669513
+        y = 25.1626002826
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -80.0
+        y = 25.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 546.0
+        height = 225.0
+        border_color = "#666666"
+        border_style = 2
+        x = -303.0
+        y = -197.0
+        z = 3.0

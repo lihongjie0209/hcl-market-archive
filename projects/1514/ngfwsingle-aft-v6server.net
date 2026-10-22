@@ -1,0 +1,159 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\ngfwsingle-aft-v6server\working
+    udp = 16000
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 40-a9-dd-af-03-00
+        slot0 = MSR36 384
+        GE_0/0 = S5820V2-54QS-GE_4 GE_0/2
+        x = -235.0
+        y = 247.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 40-9f-b9-8f-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/3
+        x = -107.0
+        y = -320.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_5]]
+        device_id = 5
+        bridge_mac = 40-a9-e2-a0-05-00
+        slot0 = MSR36 384
+        GE_0/0 = S5820V2-54QS-GE_4 GE_0/3
+        x = 18.0
+        y = 250.0
+        z = 5.0
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 40-9f-a8-bc-01-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_4 GE_0/1
+        GE_0/3 = MSR36-20_2 GE_0/0
+        x = -106.0
+        y = -108.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 40-9f-d4-51-04-00
+        slot0 = S5800 600
+        GE_0/1 = F1060_1 GE_0/2
+        GE_0/2 = MSR36-20_3 GE_0/0
+        GE_0/3 = MSR36-20_5 GE_0/0
+        x = -105.0
+        y = 66.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "AFT目的地址是利用V6server实现映射\n220.1.2.2-2000::2\n220.1.2.3-2000::3\nAFT源地址是利用前缀动态转换实现\n2001::/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 162.0
+        y = -124.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "2000::3/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -38.0
+        y = 193.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "2000::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -253.0
+        y = 194.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2000::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -207.0
+        y = -38.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "220.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -215.0
+        y = -152.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "220.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -218.0
+        y = -250.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 4.77030282343
+        y = -26.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 37.3075829942
+        y = -29.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_4 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 50.2296971766
+        y = 81.2541811422
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -76.3075829942
+        y = 76.2019839913
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.6935373489
+        y = -33.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 26.1263137907
+        y = 64.9841395711
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 23.8736862093
+        y = -33.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 14.3064626511
+        y = 69.9939871224
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 415.0
+        height = 425.0
+        border_color = "#666666"
+        border_style = 2
+        x = -270.0
+        y = -80.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 414.0
+        height = 254.0
+        border_color = "#666666"
+        border_style = 2
+        x = -269.0
+        y = -336.0
+        z = 3.0

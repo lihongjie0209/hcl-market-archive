@@ -1,0 +1,68 @@
+version = 5.9.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\k20306\hcl\projects\20221227tcpoption\working
+    udp = 16000
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 9a-76-0d-13-03-00
+        slot0 = MSR36 384
+        GE_0/0 = F1090_1 GE_0/2
+        x = 211.0
+        y = -94.0
+        z = 5.0
+    [[F1090 F1090_1]]
+        device_id = 1
+        bridge_mac = 9a-75-e2-be-01-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_3 GE_0/0
+        GE_0/1 = MSR36-20_2 GE_0/0
+        x = -38.0
+        y = -93.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 9a-76-07-4c-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1090_1 GE_0/1
+        x = -302.0
+        y = -96.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "10.0.0.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -293.0
+        y = -131.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.0.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -130.0
+        y = -134.5
+        z = 6.0
+    [[NOTE 3]]
+        text = "100.0.0.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 3.0
+        y = -138.5
+        z = 6.0
+    [[NOTE 4]]
+        text = "100.0.0.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 146.0
+        y = -132.5
+        z = 6.0
+    [[NOTE 5]]
+        text = "vsip:192.168.0.1:2000\nsnat 1.1.1.1---1.1.1.2\nreal-server:100.0.0.2:23"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -109.0
+        y = -18.5
+        z = 6.0
+    [[NOTE 6]]
+        text = "telnet"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 208.0
+        y = -18.5
+        z = 6.0

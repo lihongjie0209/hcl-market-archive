@@ -1,0 +1,135 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S5820V2-54QS-GE L2-Switch]]
+        image = .
+        device_id = 4
+        bridge_mac = 3a-ce-42-ce-04-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/0
+        GE_0/2 = RTB GE_0/0
+        x = -48.0
+        y = -296.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 9a-85-9d-3e-01-00
+        slot0 = MSR36 512
+        GE_0/0 = L2-Switch GE_0/1
+        GE_0/1 = RTC GE_0/0
+        x = -256.0
+        y = -296.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 9a-85-a6-ea-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        GE_0/1 = RTB GE_0/1
+        x = -48.0
+        y = -121.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 9a-85-a0-a6-02-00
+        slot0 = MSR36 512
+        GE_0/0 = L2-Switch GE_0/2
+        GE_0/1 = RTC GE_0/1
+        x = 149.0
+        y = -296.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "120.1.1.1/32"
+        x = 198.0
+        y = -290.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "12.1.1.1/32"
+        x = -377.0
+        y = -284.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "BFD"
+        x = -54.0
+        y = -332.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "IS-IS与BFD联动配置"
+        x = -152.0
+        y = -405.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = L2-Switch GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = L2-Switch GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = -68.3258542145
+        y = 51.0833772
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 55.3258542145
+        y = -33.0
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -69.4939293548
+        y = 0.339659090088
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 56.4939293548
+        y = 49.6603409099
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -229.0
+        y = -294.0
+        width = 401.0
+        height = 46.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

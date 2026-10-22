@@ -1,0 +1,317 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PE-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 84-99-54-7e-05-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/1
+        GE_0/1 = CE-3 GE_0/1
+        GE_0/2 = CE-4 GE_0/1
+        x = 216.0
+        y = -71.0
+        z = 5.0
+    [[MSR36-20 PE-1]]
+        image = .
+        device_id = 2
+        bridge_mac = 84-99-43-e8-02-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/0
+        GE_0/1 = CE-1 GE_0/1
+        GE_0/2 = CE-2 GE_0/2
+        x = -364.0
+        y = -71.0
+        z = 5.0
+    [[MSR36-20 CE-4]]
+        image = .
+        device_id = 7
+        bridge_mac = 84-99-5f-09-07-00
+        slot0 = MSR36 512
+        GE_0/1 = PE-2 GE_0/2
+        x = 216.0
+        y = 187.0
+        z = 5.0
+    [[MSR36-20 CE-3]]
+        image = .
+        device_id = 6
+        bridge_mac = 84-99-5a-2e-06-00
+        slot0 = MSR36 512
+        GE_0/1 = PE-2 GE_0/1
+        x = 216.0
+        y = -270.0
+        z = 5.0
+    [[MSR36-20 CE-2]]
+        image = .
+        device_id = 3
+        bridge_mac = 84-99-49-bc-03-00
+        slot0 = MSR36 512
+        GE_0/2 = PE-1 GE_0/2
+        x = -364.0
+        y = 187.0
+        z = 5.0
+    [[MSR36-20 CE-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 84-99-23-fe-01-00
+        slot0 = MSR36 512
+        GE_0/1 = PE-1 GE_0/1
+        x = -364.0
+        y = -270.0
+        z = 5.0
+    [[MSR36-20 P]]
+        image = .
+        device_id = 4
+        bridge_mac = 84-99-50-12-04-00
+        slot0 = MSR36 512
+        GE_0/0 = PE-1 GE_0/0
+        GE_0/1 = PE-2 GE_0/0
+        x = -81.0
+        y = -71.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "VPN2"
+        x = 213.0
+        y = 264.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "VPN1"
+        x = -373.0
+        y = -307.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "AS 65410"
+        x = -391.0
+        y = -338.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "AS 65440"
+        x = 185.0
+        y = 121.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Loop:1.1.1.9"
+        x = -507.0
+        y = -65.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "VPN1"
+        x = 207.0
+        y = -309.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "AS 65430"
+        x = 178.0
+        y = -339.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "Loop:2.2.2.9"
+        x = -132.0
+        y = -131.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "AS 65420"
+        x = -402.0
+        y = 120.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "VPN2"
+        x = -369.0
+        y = 262.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "10.1.1.0/24"
+        x = -465.0
+        y = -141.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "MPLS backbone"
+        x = -139.0
+        y = -8.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "Loop:3.3.3.9"
+        x = 267.0
+        y = -64.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "172.2.1.0/24"
+        x = 17.0
+        y = -80.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "172.1.1.0/24"
+        x = -271.0
+        y = -82.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "10.2.1.0/24"
+        x = -468.0
+        y = 37.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "10.4.1.0/24"
+        x = 251.0
+        y = 40.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "MPLS L3VPN"
+        x = -134.0
+        y = -221.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "10.3.1.0/24"
+        x = 246.0
+        y = -146.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = P GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = P GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = CE-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/2"
+        x = 25.0
+        y = -33.0
+        interface = CE-2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 24]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = CE-3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 25]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = CE-4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE-1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 27]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PE-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 28]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = PE-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 29]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE-2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 30]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PE-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 31]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = PE-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -368.0
+        y = -142.0
+        width = 621.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -448.0
+        y = 106.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = 144.0
+        y = 103.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 4]]
+        type = ellipse
+        x = 135.0
+        y = -355.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 5]]
+        type = ellipse
+        x = -442.0
+        y = -353.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

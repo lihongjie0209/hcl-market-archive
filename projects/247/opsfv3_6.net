@@ -1,0 +1,111 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 8e-22-2d-29-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -351.0
+        y = -58.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 8e-22-36-ff-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 32.0
+        y = -212.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 8e-22-32-3f-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -195.0
+        y = -212.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "OSPFv3 IPsec安全框架配置"
+        x = -212.0
+        y = -363.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Area 0"
+        x = -92.0
+        y = -283.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "2001:1::/64"
+        x = -250.0
+        y = -120.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Area 1"
+        x = -332.0
+        y = -136.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "2001::1/64"
+        x = -146.0
+        y = -222.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -66.4661579951
+        y = 53.1012072516
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 53.4661579951
+        y = -33.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -168.0
+        y = -293.0
+        width = 238.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -249.0
+        y = -251.0
+        width = 200.0
+        height = 200.0
+        rotate = 45
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

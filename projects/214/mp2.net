@@ -1,0 +1,72 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-39-bf-1f-01-00
+        slot0 = MSR36 512
+        Ser_1/0 = RTB Ser_1/0
+        Ser_2/0 = RTB Ser_2/0
+        x = -247.0
+        y = -80.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-39-c4-5b-02-00
+        slot0 = MSR36 512
+        Ser_1/0 = RTA Ser_1/0
+        Ser_2/0 = RTA Ser_2/0
+        x = 110.0
+        y = -80.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "8.1.1.0/30"
+        x = -108.0
+        y = -93.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "# 查看MP的相关信息。\n[RouterA] display ppp mp\n# 查看VA状态。\n[RouterA] display interface virtual-access"
+        x = -285.0
+        y = 37.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "通过按用户名找VT方式进行MP捆绑配置"
+        x = -280.0
+        y = -209.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Ser_2/0"
+        x = -81.0
+        y = 30.0
+        interface = RTB Ser_2/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Ser_1/0"
+        x = -81.0
+        y = 25.0
+        interface = RTB Ser_1/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "Ser_2/0"
+        x = 65.0
+        y = 30.0
+        interface = RTA Ser_2/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "Ser_1/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA Ser_1/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

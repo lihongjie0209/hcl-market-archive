@@ -1,0 +1,71 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\x29173\hcl\projects\hcl_cumouf_5\working
+    udp = 10000
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = 6e-fb-bd-cd-01-00
+        slot0 = AC 768
+        GE_0/0 = SW GE_0/1
+        x = -436.7647058823529
+        y = -465.44444444444457
+        z = 5.0
+    [[S6850 SW]]
+        device_id = 3
+        bridge_mac = 6e-fc-45-d4-03-00
+        slot0 = S5800 512
+        GE_0/1 = AC GE_0/0
+        GE_0/2 = AP1 GE_0/0
+        GE_0/3 = PC GE_0/1
+        GE_0/4 = AP2 GE_0/0
+        x = -436.3071895424837
+        y = -279.7581699346406
+        z = 5.0
+    [[PC PC]]
+        device_id = 4
+        bridge_mac = 6e-fc-ac-4f-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = -652.7908496732027
+        y = -277.94117647058806
+        z = 5.0
+    [[AP AP1]]
+        device_id = 2
+        bridge_mac = 6e-fb-ce-4b-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SW GE_0/2
+        x = -544.6732026143793
+        y = -71.45751633986916
+        z = 5.0
+    [[AP AP2]]
+        device_id = 6
+        bridge_mac = 7a-06-b6-bf-06-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SW GE_0/4
+        x = -298.85620915032666
+        y = -74.26797385620907
+        z = 5.0
+    [[Phone Client1]]
+        device_id = 5
+        bridge_mac = 6e-fc-cb-07-05-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 6efb-ce4b-0210
+        x = -631.9934640522877
+        y = 26.84313725490199
+        z = 6.0
+    [[Phone Client2]]
+        device_id = 7
+        bridge_mac = 7a-07-9c-9b-07-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 7a06-b6bf-0610
+        x = -202.61846405228766
+        y = 25.013071895424645
+        z = 6.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

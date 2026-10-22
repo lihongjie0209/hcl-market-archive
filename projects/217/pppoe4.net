@@ -1,0 +1,74 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 2
+        bridge_mac = 66-23-a0-53-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Host GE_0/0
+        GE_0/1 = Internet GE_0/0
+        x = -86.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 1
+        bridge_mac = 66-23-9c-d6-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Router GE_0/0
+        x = -311.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 3
+        bridge_mac = 66-23-a3-ed-03-00
+        slot0 = MSR36 512
+        GE_0/0 = Router GE_0/1
+        x = 161.0
+        y = -99.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "PPPoE Server"
+        x = -145.0
+        y = -133.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "PPPoE Server通过ND协议、IPv6CP协商生成信息用于用户生成IPv6地址配置"
+        x = -429.0
+        y = -237.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = Router GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Router GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

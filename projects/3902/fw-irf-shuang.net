@@ -1,0 +1,146 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\fw-irf-shuang\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 2a-94-2a-76-01-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_2 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/1
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/1
+        x = -370.0
+        y = -21.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 2a-94-31-2c-02-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_1 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/2
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        x = 71.0
+        y = -19.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 2a-94-46-58-03-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/2
+        GE_0/2 = F1060_2 GE_0/2
+        x = -142.0
+        y = -272.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 2a-94-4b-7e-04-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/4
+        GE_0/2 = F1060_2 GE_0/4
+        x = -151.0
+        y = 221.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.1
+    m22 = 1.1
+    [[NOTE 1]]
+        text = "vlan 20 interface 2.2.2.1/24\n接口加入聚合口20"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -258.0
+        y = 295.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "route-agg20 2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -249.0
+        y = 42.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "route-agg10 1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -243.0
+        y = -69.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan 10 interface 1.1.1.1/24\n接口加入聚合口10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -247.0
+        y = -341.0
+        z = 6.0
+    [[NOTE 5]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -178.0
+        y = -165.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 52.161679264697085
+        y = -33.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -64.8397418713767
+        y = -33.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 52.76170517934622
+        y = 67.59958408626571
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -68.8951668924771
+        y = 77.60827583338488
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/4"
+        interface = F1060_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.16167926469709
+        y = 54.363977583456304
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -63.76170517934622
+        y = -33.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/3"
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99958865510786
+        y = 24.818595969818105
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/4"
+        interface = F1060_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 51.8397418713767
+        y = 54.65852754736602
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 51.89516689247711
+        y = -33.0
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99958865510786
+        y = 25.181404030181895
+        z = 6.0

@@ -1,0 +1,106 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC PC-1]]
+        image = .
+        device_id = 3
+        bridge_mac = b2-9c-2a-c3-03-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -365.0
+        y = 12.0
+        z = 5.0
+    [[PC PC-2]]
+        image = .
+        device_id = 4
+        bridge_mac = b2-9c-30-a0-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = 115.0
+        y = 12.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 2
+        bridge_mac = b2-9c-19-eb-02-00
+        slot0 = S5800 512
+        GE_0/1 = Router GE_0/0
+        GE_0/2 = PC-1 GE_0/1
+        GE_0/3 = PC-2 GE_0/1
+        x = -135.0
+        y = -144.0
+        z = 5.0
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 1
+        bridge_mac = b2-9c-0c-bb-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -136.0
+        y = -280.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "单臂路由"
+        x = -152.0
+        y = -336.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "VLAN 2"
+        x = -301.0
+        y = -85.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "VLAN 3"
+        x = 7.0
+        y = -88.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 58.1038069298
+        y = 2.54698312584
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 25.2941096965
+        y = 64.998918729
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/2"
+        x = -60.1038069298
+        y = 47.4530168742
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 24.7058903035
+        y = -29.0
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/3"
+        x = 58.0945655456
+        y = 47.4666359598
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = -60.0945655456
+        y = 2.5333640402
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,23 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l19938\hcl\projects\hcl_c9rx9t
+    udp = 16000
+    [[S6850 DHCPclient]]
+        device_id = 2
+        bridge_mac = 68-96-5b-7f-02-00
+        slot0 = S5800 384
+        GE_0/1 = DHCPserver GE_0/1
+        x = -33.0
+        y = -133.0
+        z = 5.0
+    [[S6850 DHCPserver]]
+        device_id = 1
+        bridge_mac = 68-96-58-79-01-00
+        slot0 = S5800 384
+        GE_0/1 = DHCPclient GE_0/1
+        x = -349.0
+        y = -133.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

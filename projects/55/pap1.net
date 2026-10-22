@@ -1,0 +1,50 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Router-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 2e-41-50-fa-02-00
+        slot0 = MSR36 512
+        Ser_2/0 = Router-A Ser_2/0
+        x = 42.0
+        y = -164.0
+        z = 5.0
+    [[MSR36-20 Router-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 2e-41-4d-8d-01-00
+        slot0 = MSR36 512
+        Ser_2/0 = Router-B Ser_2/0
+        x = -285.0
+        y = -164.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "200.1.1.0/16"
+        x = -162.0
+        y = -175.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "PAP单向认证配置举例"
+        x = -225.0
+        y = -331.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Ser_2/0"
+        x = -80.9998577785
+        y = 25.1066662874
+        interface = Router-B Ser_2/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Ser_2/0"
+        x = 64.9998577785
+        y = 24.8933337126
+        interface = Router-A Ser_2/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

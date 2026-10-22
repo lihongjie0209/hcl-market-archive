@@ -1,0 +1,37 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 10000
+    [[S5820V2-54QS-GE SW1_1]]
+        device_id = 1
+        bridge_mac = 64-8d-8a-b3-01-00
+        slot0 = S5800 384
+        GE_0/1 = logserver_2 GE_0/1
+        x = -175.0
+        y = -149.70588235294122
+        z = 5.0
+    [[MSR36-20 logserver_2]]
+        device_id = 2
+        bridge_mac = 64-8d-b0-bd-02-00
+        slot0 = MSR36 384
+        GE_0/1 = SW1_1 GE_0/1
+        x = 249.11764705882356
+        y = -149.1176470588235
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = logserver_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.99996152675311
+        y = 24.944521551280502
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = SW1_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99996152675308
+        y = 25.055478448719498
+        z = 6.0

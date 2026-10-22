@@ -1,0 +1,95 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = E:\HCLHub\03Firewall\v7_ngfw_ipsec_main_multi-branc
+    udp = 10000
+    [[F1090 FW1_1]]
+        device_id = 1
+        bridge_mac = ac-df-9f-70-01-00
+        slot0 = F1060 768
+        GE_0/1 = SW1_2 GE_0/1
+        x = -150.29411764705884
+        y = -252.64705882352942
+        z = 5.0
+    [[S5820V2-54QS-GE SW1_2]]
+        device_id = 2
+        bridge_mac = ac-df-b4-15-02-00
+        slot0 = S5800 384
+        GE_0/1 = FW1_1 GE_0/1
+        GE_0/3 = PC1_3 GE_0/0
+        GE_0/4 = PC2_4 GE_0/0
+        x = -150.29411764705884
+        y = -73.8235294117647
+        z = 5.0
+    [[MSR36-20 PC1_3]]
+        device_id = 3
+        bridge_mac = ac-df-db-19-03-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_2 GE_0/3
+        x = -299.11764705882354
+        y = 124.41176470588235
+        z = 5.0
+    [[MSR36-20 PC2_4]]
+        device_id = 4
+        bridge_mac = ac-df-e0-ab-04-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_2 GE_0/4
+        x = -0.29411764705882604
+        y = 125.58823529411765
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.5
+    m22 = 1.5
+    [[NOTE 1]]
+        text = "vlan 10:172.16.10.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -75.33333333333334
+        y = -232.83333333333331
+        z = 6.0
+    [[NOTE 2]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -60.0
+        y = -234.16666666666666
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        interface = PC2_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.9547623834653969
+        y = -29.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        interface = PC1_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 49.01518476558877
+        y = -29.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/4"
+        interface = SW1_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 58.37857094986795
+        y = 41.632688439236205
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        interface = SW1_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -61.681851432255456
+        y = 40.988605794479895
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = SW1_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -29.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = FW1_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0

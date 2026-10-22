@@ -1,0 +1,147 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\irf-bridge-shuang\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 36-0b-4b-d2-01-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_2 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/1
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/1
+        x = -376.0
+        y = -75.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 36-0b-55-fd-02-00
+        slot0 = F1060 512
+        GE_0/3 = F1060_1 GE_0/3
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/2
+        x = 124.0
+        y = -74.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 36-0b-63-31-03-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/2
+        GE_0/2 = F1060_2 GE_0/2
+        x = -125.0
+        y = -297.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 36-0b-69-26-04-00
+        slot0 = S5800 384
+        GE_0/1 = F1060_1 GE_0/4
+        GE_0/2 = F1060_2 GE_0/4
+        x = -126.0
+        y = 153.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "vlan 10 "
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -132.0
+        y = -61.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan 10 interface 1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -206.0
+        y = 277.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan 10 interface 1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -266.0
+        y = -355.0
+        z = 6.0
+    [[NOTE 4]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 197.0
+        y = 352.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.6136774755104
+        y = -33.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -67.55477126260485
+        y = -33.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 63.79713022822841
+        y = 73.6857832967668
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -74.9621408410328
+        y = 69.50037954864257
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -67.7971302282284
+        y = -33.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/4"
+        interface = F1060_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -67.6136774755104
+        y = 51.88921914776344
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/3"
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99992000024
+        y = 24.920000159999518
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/4"
+        interface = F1060_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.554771262604845
+        y = 51.95395139149561
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.962140841032806
+        y = -33.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99992000024002
+        y = 25.079999840000482
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 635.0
+        height = 310.0
+        border_color = "#666666"
+        border_style = 2
+        x = -429.0
+        y = -192.0
+        z = 3.0

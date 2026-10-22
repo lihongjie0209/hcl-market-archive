@@ -1,0 +1,221 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 4
+        bridge_mac = 84-36-e9-2e-04-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceA GE_0/2
+        x = -310.0
+        y = 72.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 5
+        bridge_mac = 84-37-06-3b-05-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceB GE_0/2
+        x = -53.0
+        y = 72.0
+        z = 5.0
+    [[MSR36-20 DeviceA]]
+        image = .
+        device_id = 2
+        bridge_mac = 84-36-a1-08-02-00
+        slot0 = MSR36 512
+        GE_5/1 = DeviceB GE_5/1
+        GE_0/1 = DeviceB GE_0/1
+        GE_0/2 = RTA GE_0/0
+        GE_0/0 = DeviceC GE_0/0
+        GE_5/0 = DeviceB GE_5/0
+        x = -310.0
+        y = -147.0
+        z = 5.0
+    [[MSR36-20 DeviceC]]
+        image = .
+        device_id = 1
+        bridge_mac = 84-36-9b-f9-01-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceA GE_0/0
+        GE_0/1 = DeviceB GE_0/0
+        x = -200.0
+        y = -324.0
+        z = 5.0
+    [[MSR36-20 DeviceB]]
+        image = .
+        device_id = 3
+        bridge_mac = 84-36-a5-6b-03-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceC GE_0/1
+        GE_0/1 = DeviceA GE_0/1
+        GE_0/2 = RTB GE_0/0
+        GE_5/1 = DeviceA GE_5/1
+        GE_5/0 = DeviceA GE_5/0
+        x = -53.0
+        y = -147.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "BFD MAD检测方式"
+        x = -291.0
+        y = -409.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "172.16.0.0/24"
+        x = -329.0
+        y = -232.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Loop:192.168.0.10"
+        x = -367.0
+        y = 163.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "172.16.1.0/24"
+        x = -173.0
+        y = -232.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Loop:192.168.1.10"
+        x = -127.0
+        y = 163.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "10.0.1.0/24"
+        x = -220.0
+        y = -58.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "IRF-port1/2"
+        x = -188.0
+        y = -111.0
+        font = "Arial,6,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "BFD检测链路"
+        x = -198.0
+        y = -147.0
+        font = "Arial,6,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "IRF"
+        x = -182.0
+        y = -138.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 25.4761567361
+        y = -33.0
+        interface = MSR36-20_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 24.6825496802
+        y = -33.0
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -69.1136229598
+        y = 62.9737387626
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 50.9230802611
+        y = 65.2864199022
+        interface = MSR36-20_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 46.1136229598
+        y = -33.0
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        x = 24.5238432639
+        y = 64.9971658341
+        interface = MSR36-20_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_5/0"
+        x = 65.0
+        y = 20.0
+        interface = MSR36-20_2 GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_5/1"
+        x = 65.0
+        y = 25.0
+        interface = MSR36-20_2 GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 30.0
+        interface = MSR36-20_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_5/0"
+        x = -78.0
+        y = 20.0
+        interface = MSR36-20_3 GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_5/1"
+        x = -78.0
+        y = 25.0
+        interface = MSR36-20_3 GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/2"
+        x = 25.3174503198
+        y = 64.9987402963
+        interface = MSR36-20_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 30.0
+        interface = MSR36-20_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        x = 0.0769197389
+        y = -33.0
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -355.0
+        y = -164.0
+        width = 396.0
+        height = 106.0
+        border_color = "#666666"
+        border_style = 2
+        z = 4.0

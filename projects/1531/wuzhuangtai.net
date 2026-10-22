@@ -1,0 +1,30 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Client]]
+        image = .
+        device_id = 2
+        bridge_mac = 4c-25-53-41-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Server GE_0/0
+        x = 108.0
+        y = -109.0
+        z = 5.0
+    [[MSR36-20 Server]]
+        image = .
+        device_id = 1
+        bridge_mac = 4c-25-4f-c8-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Client GE_0/0
+        x = -168.0
+        y = -109.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "无状态"
+        x = -42.0
+        y = -184.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

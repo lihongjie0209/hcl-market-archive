@@ -1,0 +1,159 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\lb-7-v4tov6pang\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 0e-c6-26-f2-01-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/3
+        x = -111.0
+        y = -261.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 0e-c6-2f-db-02-00
+        slot0 = S5800 384
+        GE_0/2 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/3 = F1060_1 GE_0/2
+        GE_0/4 = F1060_3 GE_0/2
+        GE_0/5 = F1060_4 GE_0/2
+        x = -109.0
+        y = -26.0
+        z = 5.0
+    [[F1060 F1060_3]]
+        device_id = 3
+        bridge_mac = 0e-c6-3c-2b-03-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/4
+        x = 267.0
+        y = -145.0
+        z = 5.0
+    [[F1060 F1060_4]]
+        device_id = 4
+        bridge_mac = 0e-c6-3f-fa-04-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/5
+        x = 263.0
+        y = 71.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.6
+    m22 = 1.6
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = S5820V2-54QS-GE_2 GE_0/2
+        x = -455.0
+        y = -29.0
+        z = 5.0
+    [[NOTE 1]]
+        text = "2004::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 243.0
+        y = 31.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "2003::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 227.0
+        y = -212.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vsip 3.3.3.3\nsnat pool 2000::1 "
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -128.0
+        y = -343.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2004::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 13.0
+        y = 45.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2003::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -1.0
+        y = -100.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.1/24\n2002::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -232.0
+        y = -193.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2/24\n2002::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -234.0
+        y = -83.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -215.0
+        y = 64.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -480.0
+        y = 89.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = F1060_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -76.70579559690654
+        y = 14.907359750268995
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        interface = F1060_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -76.13563455938817
+        y = 37.069522639806365
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/5"
+        interface = S5820V2-54QS-GE_2 GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 92.70579559690654
+        y = 46.092640249731005
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/4"
+        interface = S5820V2-54QS-GE_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 95.13563455938817
+        y = -26.069522639806365
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -8.071044416798259
+        y = -41.0
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99849652634889
+        y = 24.653192226650155
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 0.07104441679825868
+        y = 63.98565822713496
+        z = 6.0
+    [[NOTE 17]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -114.0015034736511
+        y = 80.34680777334984
+        z = 6.0

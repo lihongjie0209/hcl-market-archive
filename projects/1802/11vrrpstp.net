@@ -1,0 +1,81 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\fanxuedong\hcl\projects\hcl_82q8co\working
+    udp = 16000
+    [[PC PC_6]]
+        device_id = 6
+        bridge_mac = 44-43-be-b8-06-00
+        slot0 = PC 250
+        GE_0/1 = SW3 GE_0/3
+        symbol = PC
+        x = -366.0
+        y = -117.0
+        z = 5.0
+    [[PC PC_5]]
+        device_id = 5
+        bridge_mac = 44-43-b5-4d-05-00
+        slot0 = PC 250
+        GE_0/1 = SW4 GE_0/3
+        symbol = PC
+        x = -52.8174242618
+        y = -113.252453105
+        z = 5.0
+    [[S5820V2-54QS-GE SW1]]
+        device_id = 1
+        bridge_mac = 44-43-3c-55-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/1
+        GE_0/2 = SW4 GE_0/2
+        GE_0/3 = SW3 GE_0/1
+        x = -376.666666667
+        y = -380.666666667
+        z = 5.0
+    [[S5820V2-54QS-GE SW3]]
+        device_id = 4
+        bridge_mac = 44-43-5a-f1-04-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/3
+        GE_0/2 = SW2 GE_0/3
+        GE_0/3 = PC_6 GE_0/1
+        x = -360.0
+        y = -215.666666667
+        z = 5.0
+    [[S5820V2-54QS-GE SW2]]
+        device_id = 2
+        bridge_mac = 44-43-42-08-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        GE_0/2 = SW4 GE_0/1
+        GE_0/3 = SW3 GE_0/2
+        x = -3.66666666667
+        y = -384.333333333
+        z = 5.0
+    [[S5820V2-54QS-GE SW4]]
+        device_id = 3
+        bridge_mac = 44-43-4a-18-03-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/2
+        GE_0/2 = SW1 GE_0/2
+        GE_0/3 = PC_5 GE_0/1
+        x = -53.9387446053
+        y = -224.666666667
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "VRRP:\n1 vlan500\n2 vlan600"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -486.666666667
+        y = -393.5
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 700.333333333
+        height = 100.0
+        fill_color = "#ffaa00"
+        border_color = "#666666"
+        border_style = 2
+        x = -497.666666667
+        y = -404.333333333
+        z = 3.0

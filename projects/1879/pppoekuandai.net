@@ -1,0 +1,74 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-64-04-aa-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -363.0
+        y = -155.0
+        z = 5.0
+    [[MSR36-20 RouterA]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-64-09-25-02-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        x = 82.0
+        y = -155.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 3
+        bridge_mac = 8a-64-12-d9-03-00
+        slot0 = S5800 512
+        GE_0/1 = Host GE_0/0
+        GE_0/2 = RouterA GE_0/0
+        x = -135.0
+        y = -155.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "宽带业务配置"
+        x = -188.0
+        y = -248.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "PPPoE Server"
+        x = 31.0
+        y = -191.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RouterA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

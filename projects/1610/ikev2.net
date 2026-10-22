@@ -1,0 +1,44 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 20-02-37-b1-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -270.0
+        y = -117.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 20-02-3a-f7-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = 42.0
+        y = -117.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "(10.1.1.1)-RTA-(1.1.1.1)--------(1.1.1.2)-RTB-(10.1.2.1)"
+        x = -355.0
+        y = 30.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

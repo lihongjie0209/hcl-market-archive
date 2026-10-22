@@ -1,0 +1,134 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 IPv4-Host-A]]
+        image = .
+        device_id = 3
+        bridge_mac = 30-b4-40-27-03-00
+        slot0 = MSR36 512
+        GE_0/0 = B4 GE_0/1
+        x = -385.0
+        y = 116.0
+        z = 5.0
+    [[MSR36-20 IPv4-Host-B]]
+        image = .
+        device_id = 4
+        bridge_mac = 30-b4-50-c6-04-00
+        slot0 = MSR36 512
+        GE_0/0 = AFTR GE_0/1
+        x = 293.0
+        y = 116.0
+        z = 5.0
+    [[MSR36-20 AFTR]]
+        image = .
+        device_id = 2
+        bridge_mac = 30-b4-2f-0f-02-00
+        slot0 = MSR36 512
+        GE_0/0 = B4 GE_0/0
+        GE_0/1 = IPv4-Host-B GE_0/0
+        x = 76.0
+        y = -114.0
+        z = 5.0
+    [[MSR36-20 B4]]
+        image = .
+        device_id = 1
+        bridge_mac = 30-b4-29-28-01-00
+        slot0 = MSR36 512
+        GE_0/0 = AFTR GE_0/0
+        GE_0/1 = IPv4-Host-A GE_0/0
+        x = -238.0
+        y = -114.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "tunnel:30.1.1.0/30"
+        x = -144.0
+        y = -51.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "1::0/64"
+        x = -87.0
+        y = -126.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "20.1.1.0/24"
+        x = 133.0
+        y = -6.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.0.0.0/24"
+        x = -355.0
+        y = -13.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "DS-Lite隧道典型配置"
+        x = -176.0
+        y = -200.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "运行IPv4协议的私网Private IPv4 network和公网IPv4 network通过IPv6网络相连。\n通过在B4设备（Router A）和AFTR（Router B）之间建立DS-Lite隧道，\n并在AFTR连接IPv4 network接口上配置NAT，\n实现IPv4私网主机穿越IPv6网络访问IPv4公网。"
+        x = -425.0
+        y = 215.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "IPv4 Network"
+        x = 97.0
+        y = 39.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "Private IPv4 Network"
+        x = -354.0
+        y = 23.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -65.4500798862
+        y = -33.0
+        interface = IPv4-Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 46.541352064
+        y = -33.0
+        interface = IPv4-Host-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 52.4500798862
+        y = 54.0945547181
+        interface = AFTR GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = AFTR GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 3.45864793605
+        y = 58.7041562905
+        interface = B4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = B4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

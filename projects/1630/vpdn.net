@@ -1,0 +1,140 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Remote-user]]
+        image = .
+        device_id = 1
+        bridge_mac = 14-8d-e1-c8-01-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/0
+        x = -497.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 LAC]]
+        image = .
+        device_id = 2
+        bridge_mac = 14-8d-e8-86-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Remote-user GE_0/0
+        GE_0/1 = Internet GE_0/0
+        x = -289.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 Private-Net]]
+        image = .
+        device_id = 5
+        bridge_mac = 14-8e-34-de-05-00
+        slot0 = MSR36 512
+        GE_0/0 = LNS GE_0/1
+        x = 359.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 LNS]]
+        image = .
+        device_id = 4
+        bridge_mac = 14-8e-2f-a0-04-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/1
+        GE_0/1 = Private-Net GE_0/0
+        x = 130.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 3
+        bridge_mac = 14-8e-28-55-03-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/1
+        GE_0/1 = LNS GE_0/0
+        x = -80.0
+        y = -148.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2.2.2.0/30"
+        x = -7.0
+        y = -159.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "1.1.1.0/30"
+        x = -221.0
+        y = -158.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "VPDN（Virtual Private Dial Network，虚拟专有拨号网络）业务是在宽带互联网基础上开放的基于拨号方式的虚拟专有网络业务，\n利用L2TP或GRE技术为物联网客户构建与公众互联网隔离的虚拟专用网络，满足客户的物联网无线终端访问客户内部网络的需求。\n目前大部分VPDN业务都采用L2TP技术实现。\n在运营商网络中，VPDN用户通过拨号的方式接入，由AAA服务器根据账号给BRAS下发LNS IP等参数，\nBRAS作为LAC和LNS端建立L2TP隧道，实现终端用户访问本企业/封闭站点的虚拟专用网络。\nPPP用户通过LAC接入LNS，在LAC和LNS之间建立L2TP隧道，以便用户通过该L2TP隧道访问公司总部。\n"
+        x = -687.0
+        y = 65.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.1.1.0/24"
+        x = 206.0
+        y = -159.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "VPDN业务配置"
+        x = -149.0
+        y = -291.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = Internet GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -79.0
+        y = 24.0
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LNS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LNS GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Private-Net GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LAC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LAC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Remote-user GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

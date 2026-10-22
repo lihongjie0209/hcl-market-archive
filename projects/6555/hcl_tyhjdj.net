@@ -1,0 +1,99 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_tyhjdj\working
+    udp = 16000
+    [[S6850 DeviceD]]
+        device_id = 4
+        bridge_mac = 8e-f1-4a-95-04-00
+        slot0 = S5800 512
+        GE_0/1 = DeviceB GE_0/5
+        x = 156.0
+        y = -294.0
+        z = 5.0
+    [[S6850 DeviceA]]
+        device_id = 1
+        bridge_mac = 8e-3b-8d-47-01-00
+        slot0 = S5800 512
+        GE_0/1 = DeviceB GE_0/1
+        GE_0/3 = DeviceB GE_0/3
+        GE_0/5 = DeviceC GE_0/1
+        x = -416.0
+        y = -64.0
+        z = 5.0
+    [[S6850 DeviceC]]
+        device_id = 3
+        bridge_mac = 8e-f1-3e-17-03-00
+        slot0 = S5800 512
+        GE_0/1 = DeviceA GE_0/5
+        x = -413.0
+        y = -287.0
+        z = 5.0
+    [[S6850 DeviceB]]
+        device_id = 2
+        bridge_mac = 8e-3b-94-0f-02-00
+        slot0 = S5800 512
+        GE_0/1 = DeviceA GE_0/1
+        GE_0/3 = DeviceA GE_0/3
+        GE_0/5 = DeviceD GE_0/1
+        x = 158.0
+        y = -62.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/3"
+        interface = DeviceB GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -94.9823356954
+        y = 38.8606583747
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = DeviceB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -90.9997571924
+        y = -26.1393719763
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/5"
+        interface = DeviceB GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.6551852262
+        y = -37.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = DeviceC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 27.4619320959
+        y = 70.9963808729
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/5"
+        interface = DeviceA GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -72.4619320959
+        y = -38.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        interface = DeviceA GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 50.0171786895
+        y = 30.1394023272
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = DeviceA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 47.9997571924
+        y = -18.8606280237
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = DeviceD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 28.0993275095
+        y = 72.9898585777
+        z = 6.0

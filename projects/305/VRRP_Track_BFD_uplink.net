@@ -1,0 +1,169 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 HOST A]]
+        image = .
+        device_id = 1
+        bridge_mac = 60-ec-ba-05-01-00
+        slot0 = MSR36 384
+        GE_0/0 = sw GE_0/1
+        x = -582.0
+        y = -159.0
+        z = 5.0
+    [[S5820V2-54QS-GE sw]]
+        image = .
+        device_id = 5
+        bridge_mac = 18-ff-86-e6-05-00
+        slot0 = S5800 384
+        GE_0/1 = HOST A GE_0/0
+        GE_0/2 = Router A GE_0/0
+        GE_0/3 = Router B GE_0/0
+        symbol = S5820V2-54QS-GE
+        x = -330.0
+        y = -165.0
+        z = 5.0
+    [[MSR36-20 HOSTB]]
+        image = .
+        device_id = 6
+        bridge_mac = 4c-15-99-fe-06-00
+        slot0 = MSR36 384
+        GE_0/0 = Router A GE_0/1
+        GE_0/1 = Router B GE_0/1
+        x = 359.0
+        y = -146.0
+        z = 5.0
+    [[MSR36-20 Router A]]
+        image = .
+        device_id = 2
+        bridge_mac = 60-ec-bc-46-02-00
+        slot0 = MSR36 384
+        GE_0/0 = sw GE_0/2
+        GE_0/1 = HOSTB GE_0/0
+        x = -77.0
+        y = -272.0
+        z = 5.0
+    [[MSR36-20 Router B]]
+        image = .
+        device_id = 3
+        bridge_mac = 60-ee-4b-4b-03-00
+        slot0 = MSR36 384
+        GE_0/0 = sw GE_0/3
+        GE_0/1 = HOSTB GE_0/1
+        x = -79.0
+        y = -53.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.1.1.3"
+        x = -525.0
+        y = -138.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Loop0 5.1.1.1 "
+        x = 333.0
+        y = -196.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "VRRP 网关10.1.1.111"
+        x = -182.0
+        y = -334.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.1.1.1/30"
+        x = 128.0
+        y = -229.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "4.1.1.1/30"
+        x = 136.0
+        y = -69.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "10.1.1.1"
+        x = -181.0
+        y = -282.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "10.1.1.2"
+        x = -180.0
+        y = -27.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 64.1277157382
+        y = 16.692060357
+        interface = Router B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -63.5284168369
+        y = 8.7004673875
+        interface = Router B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = 63.4275226816
+        y = 36.1052015089
+        interface = Router A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = -63.840699485
+        y = 40.5808491893
+        interface = Router A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -72.1277157382
+        y = 47.307939643
+        interface = HOSTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -76.4275226816
+        y = -21.1052015089
+        interface = HOSTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        x = 61.5284168369
+        y = 41.2995326125
+        interface = sw GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        x = 61.840699485
+        y = 9.41915081071
+        interface = sw GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = -66.9886669498
+        y = 25.9521111179
+        interface = sw GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 64.9886669498
+        y = 24.0478888821
+        interface = HOST A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

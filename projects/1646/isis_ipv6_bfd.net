@@ -1,0 +1,159 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 60-c0-63-35-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        GE_0/1 = RTC GE_0/0
+        x = -327.0
+        y = -130.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 60-c0-6c-3d-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        GE_0/1 = RTB GE_0/1
+        x = -74.0
+        y = 62.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 60-c0-68-3d-02-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        GE_0/1 = RTC GE_0/1
+        x = 179.0
+        y = -130.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 4
+        bridge_mac = 60-c0-78-9a-04-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/0
+        GE_0/2 = RTB GE_0/0
+        x = -74.0
+        y = -130.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IPv6 IS-IS与BFD联动配置"
+        x = -198.0
+        y = -302.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "·Router A、Router B通过二层交换机互连，并且在双方接口上使能BFD应用，\n之间运行IPv6 IS-IS，网络层相互可达。\n·当Router B和二层交换机之间的链路发生故障后，BFD能够快速检测并通告IPv6 IS-IS协议。"
+        x = -456.0
+        y = 163.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "2001:1::/64"
+        x = -453.0
+        y = -123.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2001:4::/64"
+        x = 229.0
+        y = -125.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "2001:3::1/64"
+        x = -23.0
+        y = 53.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "2001:2::1/64"
+        x = -274.0
+        y = -43.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2001::1/64"
+        x = -277.0
+        y = -142.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "BFD"
+        x = -78.0
+        y = -164.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 53.9244190113
+        y = -33.0
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -67.1948082319
+        y = -33.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = -66.9244190113
+        y = 52.629295772
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 54.1948082319
+        y = 52.3434301489
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -301.0
+        y = -163.0
+        width = 507.0
+        height = 100.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

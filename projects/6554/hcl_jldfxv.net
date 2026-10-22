@@ -1,0 +1,114 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_jldfxv\working
+    udp = 16000
+    [[S6850 SW1]]
+        device_id = 1
+        bridge_mac = 40-a7-42-d5-01-00
+        slot0 = S5800 512
+        GE_0/1 = SW2 GE_0/1
+        x = -581.0
+        y = -197.0
+        z = 5.0
+    [[S6850 SW3]]
+        device_id = 3
+        bridge_mac = 40-a7-50-c5-03-00
+        slot0 = S5800 512
+        GE_0/2 = SW2 GE_0/2
+        x = 78.0
+        y = -192.0
+        z = 5.0
+    [[S6850 SW2]]
+        device_id = 2
+        bridge_mac = 40-a7-4a-2c-02-00
+        slot0 = S5800 512
+        GE_0/1 = SW1 GE_0/1
+        GE_0/2 = SW3 GE_0/2
+        x = -265.0
+        y = -195.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.5
+    m22 = 1.5
+    [[NOTE 1]]
+        text = "loop0：1.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -676.0
+        y = -104.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "3.3.3.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 111.0
+        y = -255.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "23.1.1.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -211.0
+        y = -229.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "23.1.1.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -39.0
+        y = -231.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "12.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -528.0
+        y = -229.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "12.1.1.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -379.0
+        y = -229.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "vlan-interface 23"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -195.0
+        y = -280.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "vpn-instance 1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -427.0
+        y = -110.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "vlan-interface 12"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -489.0
+        y = -279.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = SW2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.998470113
+        y = 25.3498408465
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = SW2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9991988704
+        y = 24.7468405135
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = SW3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.998470113
+        y = 24.6501591535
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = SW1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9991988704
+        y = 25.2531594865
+        z = 6.0

@@ -1,0 +1,74 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-1b-5c-d4-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -421.0
+        y = -97.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 8a-1b-63-4a-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 42.0
+        y = -97.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-1b-60-93-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -193.0
+        y = -97.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "·Router A、Router B和Router C相连并通过RIPng来学习网络中的IPv6路由信息。\n·要求配置IPsec安全框架对Router A、Router B和Router C之间的RIPng报文进行有效性检查和验证。"
+        x = -527.0
+        y = 18.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "RIPng IPsec安全框架配置"
+        x = -314.0
+        y = -216.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

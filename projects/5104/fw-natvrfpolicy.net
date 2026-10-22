@@ -1,0 +1,116 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\fw-natvrfpolicy\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 46-fd-69-aa-01-00
+        slot0 = F1060 512
+        GE_0/3 = PC_3 GE_0/1
+        GE_0/2 = MSR36-20_2 GE_0/0
+        x = -26.0
+        y = -74.0
+        z = 5.0
+    [[PC PC_3]]
+        device_id = 3
+        bridge_mac = 46-fd-84-96-03-00
+        slot0 = PC 250
+        GE_0/1 = F1060_1 GE_0/3
+        symbol = PC
+        x = 325.0
+        y = -75.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 46-01-db-9a-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -399.0
+        y = -73.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.2999999999999998
+    m22 = 1.2999999999999998
+    [[NOTE 1]]
+        text = "nat static outbound 10.10.10.10映射10.1.1.1\nnat static inbound 20.20.20.20 映射 20.1.1.1\nnat server 30.30.30.30 映射30.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -210.0
+        y = -249.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "loopback 10.1.1.1\nloopbcak 20.1.1.1\nloopbcak 30.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -616.0
+        y = -126.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "nat outbound(easy ip)"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -204.0
+        y = -6.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -357.0
+        y = -109.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "vpn2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 36.0
+        y = -146.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "vpn1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -108.0
+        y = -142.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 219.0
+        y = -112.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 26.0
+        y = -113.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -143.0
+        y = -111.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99985701698103
+        y = 24.893048510649784
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99983766464356
+        y = 25.113959651466224
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99985701698103
+        y = 25.106951489350216
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99983766464356
+        y = 24.886040348533776
+        z = 6.0

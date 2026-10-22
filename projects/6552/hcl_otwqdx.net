@@ -1,0 +1,84 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_otwqdx\working
+    udp = 16000
+    [[S6850 Switch]]
+        device_id = 1
+        bridge_mac = 78-67-da-a4-01-00
+        slot0 = S5800 512
+        GE_0/1 = HostA GE_0/1
+        GE_0/2 = HostB GE_0/1
+        x = -252.0
+        y = -333.0
+        z = 5.0
+    [[S6850 HostB]]
+        device_id = 3
+        bridge_mac = 78-67-e7-6d-03-00
+        slot0 = S5800 512
+        GE_0/1 = Switch GE_0/2
+        x = -46.0
+        y = -96.0
+        z = 5.0
+    [[S6850 HostA]]
+        device_id = 2
+        bridge_mac = 78-67-df-ef-02-00
+        slot0 = S5800 512
+        GE_0/1 = Switch GE_0/1
+        x = -449.0
+        y = -98.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "192.168.10.99/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -544.0
+        y = -279.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.10.100/16"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -533.0
+        y = -10.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.20.100/16"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -112.0
+        y = -17.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "192.168.20.99/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -155.0
+        y = -274.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = HostA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 63.6970791544
+        y = -15.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = HostB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -112.240840591
+        y = -21.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        interface = Switch GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 75.240840591
+        y = 29.1897049518
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = Switch GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -94.6970791544
+        y = 21.6538761486
+        z = 6.0

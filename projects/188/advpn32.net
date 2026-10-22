@@ -1,0 +1,236 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Spoke-1]]
+        image = .
+        device_id = 4
+        bridge_mac = 5c-5a-96-1a-04-00
+        slot0 = MSR36 512
+        GE_0/0 = IP-Network GE_0/3
+        x = -416.0
+        y = -59.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 8
+        bridge_mac = 5c-68-69-c4-08-00
+        slot0 = S5800 512
+        GE_0/1 = IP-Network GE_0/5
+        GE_0/2 = Primary-Server GE_0/0
+        GE_0/3 = Secondary-Server GE_0/0
+        x = -99.0
+        y = -200.0
+        z = 5.0
+    [[MSR36-20 Spoke-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 5c-5a-a0-2b-05-00
+        slot0 = MSR36 512
+        GE_0/0 = IP-Network GE_0/4
+        x = -99.0
+        y = -59.0
+        z = 5.0
+    [[MSR36-20 Hub-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 5c-5a-5c-54-01-00
+        slot0 = MSR36 512
+        GE_0/0 = IP-Network GE_0/1
+        x = -416.0
+        y = -333.0
+        z = 5.0
+    [[MSR36-20 Hub-2]]
+        image = .
+        device_id = 2
+        bridge_mac = 5c-5a-64-13-02-00
+        slot0 = MSR36 512
+        GE_0/0 = IP-Network GE_0/2
+        x = -99.0
+        y = -333.0
+        z = 5.0
+    [[MSR36-20 Primary-Server]]
+        image = .
+        device_id = 6
+        bridge_mac = 5c-5a-d0-44-06-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        x = 115.0
+        y = -248.0
+        z = 5.0
+    [[S5820V2-54QS-GE IP-Network]]
+        image = .
+        device_id = 3
+        bridge_mac = 5c-5a-80-30-03-00
+        slot0 = S5800 512
+        GE_0/1 = Hub-1 GE_0/0
+        GE_0/2 = Hub-2 GE_0/0
+        GE_0/3 = Spoke-1 GE_0/0
+        GE_0/4 = Spoke-2 GE_0/0
+        GE_0/5 = SW GE_0/1
+        x = -267.0
+        y = -202.0
+        z = 5.0
+    [[MSR36-20 Secondary-Server]]
+        image = .
+        device_id = 7
+        bridge_mac = 5c-5a-d7-07-07-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        x = 115.0
+        y = -152.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2.2.2.1/24"
+        x = -220.0
+        y = -312.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "5.5.5.1/24"
+        x = -9.0
+        y = -243.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Loopback0:192.168.2.1"
+        x = -184.0
+        y = 16.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "4.4.4.1/24"
+        x = -221.0
+        y = -88.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "3.3.3.1/24"
+        x = -351.0
+        y = -88.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "5.5.5.2/24"
+        x = -17.0
+        y = -125.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.1/24"
+        x = -349.0
+        y = -312.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "IPv4 Full-Mesh类型ADVPN典型配置"
+        x = -315.0
+        y = -449.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "Loopback0:192.168.1.1"
+        x = -488.0
+        y = 18.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = -63.9971658341
+        y = 23.5238432639
+        interface = S5820V2-54QS-GE_8 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        x = 60.0302404215
+        y = 6.24555355032
+        interface = S5820V2-54QS-GE_8 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/3"
+        x = 64.0302404215
+        y = 33.7544464497
+        interface = S5820V2-54QS-GE_8 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/5"
+        x = 49.9971658341
+        y = 2.47615673612
+        interface = S5820V2-54QS-GE_3 GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        x = -87.8593630742
+        y = 63.6972410712
+        interface = S5820V2-54QS-GE_3 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/4"
+        x = 57.4596715144
+        y = 71.926982301
+        interface = S5820V2-54QS-GE_3 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = -68.0405362705
+        y = -33.0
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        x = 50.5437340998
+        y = -28.5966021849
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        x = 53.8593630742
+        y = -33.0
+        interface = MSR36-20_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/0"
+        x = -68.4596715144
+        y = -33.0
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/0"
+        x = -77.0302404215
+        y = 33.7544464497
+        interface = MSR36-20_6 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/0"
+        x = -77.0302404215
+        y = 16.2455535503
+        interface = MSR36-20_7 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/0"
+        x = 55.0405362705
+        y = 51.4114781976
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        x = -69.5437340998
+        y = 49.5966021849
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

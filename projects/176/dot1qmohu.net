@@ -1,0 +1,263 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC Host-C]]
+        image = .
+        device_id = 6
+        bridge_mac = 2a-a3-49-5f-06-00
+        slot0 = PC 250
+        GE_0/1 = Switch-A GE_0/3
+        symbol = PC
+        x = -89.0
+        y = 111.0
+        z = 5.0
+    [[PC Host-B]]
+        image = .
+        device_id = 5
+        bridge_mac = 2a-a3-46-72-05-00
+        slot0 = PC 250
+        GE_0/1 = Switch-A GE_0/2
+        symbol = PC
+        x = -274.0
+        y = 111.0
+        z = 5.0
+    [[PC Host-A]]
+        image = .
+        device_id = 4
+        bridge_mac = 2a-a3-41-81-04-00
+        slot0 = PC 250
+        GE_0/1 = Switch-A GE_0/1
+        symbol = PC
+        x = -479.0
+        y = 111.0
+        z = 5.0
+    [[MSR36-20 Server]]
+        image = .
+        device_id = 7
+        bridge_mac = 2a-a3-a4-a4-07-00
+        slot0 = MSR36 512
+        GE_0/0 = Switch-B GE_0/1
+        x = 354.0
+        y = 111.0
+        z = 5.0
+    [[MSR36-20 Device]]
+        image = .
+        device_id = 1
+        bridge_mac = 2a-a2-a9-dc-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Switch-A GE_0/4
+        GE_0/1 = Switch-B GE_0/2
+        x = -106.0
+        y = -236.0
+        z = 5.0
+    [[S5820V2-54QS-GE Switch-B]]
+        image = .
+        device_id = 3
+        bridge_mac = 2a-a2-b9-a7-03-00
+        slot0 = S5800 512
+        GE_0/1 = Server GE_0/0
+        GE_0/2 = Device GE_0/1
+        x = 111.0
+        y = -75.0
+        z = 5.0
+    [[S5820V2-54QS-GE Switch-A]]
+        image = .
+        device_id = 2
+        bridge_mac = 2a-a2-b5-cf-02-00
+        slot0 = S5800 512
+        GE_0/1 = Host-A GE_0/1
+        GE_0/2 = Host-B GE_0/1
+        GE_0/3 = Host-C GE_0/1
+        GE_0/4 = Device GE_0/0
+        x = -274.0
+        y = -75.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "1.1.2.1/24"
+        x = 222.0
+        y = 176.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "1.1.2.11/24"
+        x = -45.0
+        y = -151.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.3/24"
+        x = -118.0
+        y = 190.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.2/24"
+        x = -317.0
+        y = 193.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.1/24"
+        x = -504.0
+        y = 191.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.11/24"
+        x = -219.0
+        y = -153.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "Server group"
+        x = 247.0
+        y = 2.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "VLAN 13"
+        x = -110.0
+        y = 30.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "VLAN 12"
+        x = -314.0
+        y = 49.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "VLAN 11"
+        x = -525.0
+        y = -2.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "模糊的Dot1q终结配置举例"
+        x = -194.0
+        y = -371.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -67.3585162585
+        y = -33.0
+        interface = Server GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = -66.2079308505
+        y = -33.0
+        interface = Host-C GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = Host-B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 54.623743897
+        y = -33.0
+        interface = Host-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = 54.3585162585
+        y = 52.1675822093
+        interface = Switch-B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        x = -71.9714130116
+        y = 3.88263515498
+        interface = Switch-B GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/4"
+        x = 53.8795282046
+        y = -33.0
+        interface = Switch-A GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/3"
+        x = 53.2079308505
+        y = 53.3604061524
+        interface = Switch-A GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = Switch-A GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/1"
+        x = -78.623743897
+        y = 51.878128609
+        interface = Switch-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = 58.9714130116
+        y = 46.117364845
+        interface = Device GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        x = -66.8795282046
+        y = 52.6762145294
+        interface = Device GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = 233.0
+        y = -2.0
+        width = 181.0
+        height = 173.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -150.0
+        y = 1.0
+        width = 152.0
+        height = 173.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -340.0
+        y = 0.0
+        width = 152.0
+        height = 173.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 4]]
+        type = rectangle
+        x = -524.0
+        y = -1.0
+        width = 152.0
+        height = 173.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

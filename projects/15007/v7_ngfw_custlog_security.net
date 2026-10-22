@@ -1,0 +1,61 @@
+version = 5.10.0
+[vbox 127.0.0.1:16600]
+    workingdir = e:\2022hclhub\03firewall\v7_ngfw_custlog_security\working
+    udp = 10000
+    [[F1090 FW_2]]
+        device_id = 2
+        bridge_mac = a0-11-d6-52-02-00
+        slot0 = F1060 768
+        GE_0/1 = Client_1 GE_0/1
+        GE_0/2 = logserver_3 GE_0/2
+        x = -177.0
+        y = -148.0
+        z = 5.0
+    [[S5820V2-54QS-GE Client_1]]
+        device_id = 1
+        bridge_mac = a0-11-ca-c0-01-00
+        slot0 = S5800 384
+        GE_0/1 = FW_2 GE_0/1
+        x = -526.0
+        y = -151.0
+        z = 5.0
+    [[MSR36-20 logserver_3]]
+        device_id = 3
+        bridge_mac = a0-12-1f-ae-03-00
+        slot0 = MSR36 384
+        GE_0/2 = FW_2 GE_0/2
+        x = 229.0
+        y = -152.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/2"
+        interface = Internet_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.55882352941177
+        y = -1.647058823529406
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        interface = FW_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 78.55882352941178
+        y = -3.058823529411768
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = FW_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -84.89705882352942
+        y = -3.39705882352942
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = Client_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.30882352941177
+        y = -1.897058823529406
+        z = 6.0

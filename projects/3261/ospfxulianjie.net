@@ -1,0 +1,170 @@
+autostart = False
+version = 2.1.3
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SWA]]
+        image = .
+        device_id = 4
+        bridge_mac = 64-c8-01-e6-04-00
+        slot0 = S5800 384
+        GE_0/1 = SWB GE_0/2
+        x = 399.0
+        y = -207.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 2
+        bridge_mac = 64-c7-cb-b4-02-00
+        slot0 = S5800 384
+        GE_0/1 = SWD GE_0/1
+        GE_0/2 = SWB GE_0/1
+        x = -213.0
+        y = -207.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 3
+        bridge_mac = 64-c7-df-4c-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/2
+        GE_0/2 = SWA GE_0/1
+        x = 90.0
+        y = -207.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 1
+        bridge_mac = 64-c7-c4-85-01-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/1
+        x = -519.0
+        y = -207.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "vlan300\n10.1.1.1/24"
+        x = 308.0
+        y = -118.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan300\n10.1.1.2/24"
+        x = 78.0
+        y = -299.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan200\n10.2.1.1/24"
+        x = -23.0
+        y = -113.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan200\n10.2.1.2/24"
+        x = -240.0
+        y = -327.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan100\n10.3.1.2/24"
+        x = -344.0
+        y = -108.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "vlan100\n10.3.1.1/24"
+        x = -565.0
+        y = -112.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "Area0"
+        x = 264.0
+        y = -267.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "Area1"
+        x = -82.0
+        y = -272.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "Area2"
+        x = -435.0
+        y = -268.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = SWB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = SWB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = SWC GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = SWC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = SWD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = 129.0
+        y = -284.0
+        width = 375.0
+        height = 200.0
+        fill_color = "#ffaaff"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -192.0
+        y = -280.0
+        width = 316.0
+        height = 200.0
+        fill_color = "#55ffff"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = -568.0
+        y = -286.0
+        width = 375.0
+        height = 200.0
+        fill_color = "#ffff7f"
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

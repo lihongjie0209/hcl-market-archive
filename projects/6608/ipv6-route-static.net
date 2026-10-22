@@ -1,0 +1,84 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\2022-09-19 测试hcl\projects\ipv6静态路由配置举例\ipv6-route-static\working
+    udp = 10000
+    [[AC AC1]]
+        device_id = 1
+        bridge_mac = 46-f0-68-79-01-00
+        slot0 = AC 768
+        GE_0/1 = SWA1 GE_0/1
+        GE_0/0 = AC2 GE_0/0
+        x = -294.0
+        y = -168.0
+        z = 5.0
+    [[AC AC2]]
+        device_id = 2
+        bridge_mac = 46-f0-70-d6-02-00
+        slot0 = AC 768
+        GE_0/1 = SWA2 GE_0/1
+        GE_0/0 = AC1 GE_0/0
+        x = -42.0
+        y = -168.0
+        z = 5.0
+    [[S5820V2-54QS-GE SWA1]]
+        device_id = 3
+        bridge_mac = 46-f0-88-07-03-00
+        slot0 = S5800 384
+        GE_0/1 = AC1 GE_0/1
+        x = -563.0
+        y = -168.0
+        z = 5.0
+    [[S5820V2-54QS-GE SWA2]]
+        device_id = 4
+        bridge_mac = 46-f0-8e-6f-04-00
+        slot0 = S5800 384
+        GE_0/1 = AC2 GE_0/1
+        x = 221.0
+        y = -168.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.6
+    m22 = 1.6
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = SWA2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = SWA1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        interface = AC2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = AC2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        interface = AC1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = AC1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0

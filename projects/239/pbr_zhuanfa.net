@@ -1,0 +1,110 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 4
+        bridge_mac = 94-69-31-2a-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/2
+        x = -280.0
+        y = -12.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 94-3b-05-07-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = RTC GE_0/0
+        GE_0/2 = Host GE_0/0
+        x = -62.0
+        y = -12.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 94-3b-0a-8a-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = 250.0
+        y = 148.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 94-3b-07-aa-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = 250.0
+        y = -187.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2.2.2.1"
+        x = -140.0
+        y = -22.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "基于报文协议类型的转发策略路由配置"
+        x = -263.0
+        y = -256.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.2.1"
+        x = 35.0
+        y = -67.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.3.1"
+        x = 48.0
+        y = 68.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -72.8868852886
+        y = 44.5679645048
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -73.5926985125
+        y = 6.74733409615
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 60.5926985125
+        y = 43.2526659039
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 59.8868852886
+        y = 5.43203549519
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        x = -78.0
+        y = 25.0
+        interface = RTA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

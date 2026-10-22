@@ -1,0 +1,60 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\nat66untrust-trust\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 4c-60-af-32-01-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_4 GE_0/0
+        GE_0/3 = MSR36-20_5 GE_0/0
+        x = -86.0
+        y = -49.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_5]]
+        device_id = 5
+        bridge_mac = 4c-72-b5-84-05-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/3
+        x = 321.0
+        y = -50.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_4]]
+        device_id = 4
+        bridge_mac = 4c-72-af-83-04-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -466.0
+        y = -52.0
+        z = 5.0
+[Non-vBox-DATA]
+    [[NOTE 1]]
+        text = "2001::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 225.0
+        y = -89.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "2001::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -31.0
+        y = -94.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "2002::2/128映射2001::2/128"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -221.0
+        y = -147.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2000::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -209.0
+        y = -94.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2000::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -419.0
+        y = -87.0
+        z = 6.0

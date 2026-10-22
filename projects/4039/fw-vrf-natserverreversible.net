@@ -1,0 +1,105 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\fw-vrf-natserverreversible\working
+    udp = 10000
+    [[PC PC_1]]
+        device_id = 1
+        bridge_mac = 4a-b6-98-67-01-00
+        slot0 = PC 250
+        GE_0/1 = F1060_2 GE_0/2
+        symbol = PC
+        x = -452.0
+        y = -72.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 4a-b6-ab-d3-02-00
+        slot0 = F1060 512
+        GE_0/2 = PC_1 GE_0/1
+        GE_0/3 = PC_3 GE_0/1
+        x = -182.0
+        y = -75.0
+        z = 5.0
+    [[PC PC_3]]
+        device_id = 3
+        bridge_mac = 4a-b6-bc-42-03-00
+        slot0 = PC 250
+        GE_0/1 = F1060_2 GE_0/3
+        symbol = PC
+        x = 50.0
+        y = -78.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "global 3.3.3.3 inside 2.2.2.1 reversible"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -335.0
+        y = 11.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vpn2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -130.0
+        y = -155.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vpn1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -250.0
+        y = -154.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 72.0
+        y = -116.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -139.0
+        y = -120.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -280.0
+        y = -119.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -463.0
+        y = -113.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99665618628174
+        y = 25.51719814033985
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        interface = F1060_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99665618628174
+        y = 24.48280185966015
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = F1060_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.99753109279771
+        y = 25.444417012142196
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = PC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99753109279771
+        y = 24.555582987857804
+        z = 6.0

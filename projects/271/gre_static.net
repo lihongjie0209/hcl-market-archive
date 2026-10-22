@@ -1,0 +1,64 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 2
+        bridge_mac = a0-9d-8e-37-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTB GE_0/0
+        x = -137.0
+        y = -139.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = a0-9d-8a-05-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/0
+        x = -372.0
+        y = -139.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 3
+        bridge_mac = a0-9d-93-08-03-00
+        slot0 = MSR36 512
+        GE_0/0 = Internet GE_0/1
+        x = 95.0
+        y = -139.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "   IPv4\nGroup 2"
+        x = 166.0
+        y = -146.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.1.1"
+        x = 152.0
+        y = -74.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.0.1"
+        x = -509.0
+        y = -73.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GRE over IPv4隧道配置"
+        x = -236.0
+        y = -230.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "   IPv4\nGroup 1"
+        x = -498.0
+        y = -143.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

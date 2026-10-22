@@ -1,0 +1,94 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = a6-59-44-b3-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -81.0
+        y = -265.0
+        z = 5.0
+    [[PC PC_4]]
+        image = .
+        device_id = 4
+        bridge_mac = a6-59-5f-76-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = 133.0
+        y = 124.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 2
+        bridge_mac = a6-59-4f-f8-02-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/0
+        GE_0/2 = PC_3 GE_0/1
+        GE_0/3 = PC_4 GE_0/1
+        x = -81.0
+        y = -69.0
+        z = 5.0
+    [[PC PC_3]]
+        image = .
+        device_id = 3
+        bridge_mac = a6-59-5b-f0-03-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -258.0
+        y = 124.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.1.1.0/24"
+        x = -120.0
+        y = -154.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = 52.035901161
+        y = -33.0
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        x = -65.035901161
+        y = 54.4798244298
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/3"
+        x = 54.70414252
+        y = 51.7892500297
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -67.70414252
+        y = -33.0
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 25.0
+        y = 65.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

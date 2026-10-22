@@ -1,0 +1,75 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = C:\Users\l11773\HCL\Projects\nat444_vpn
+    udp = 16000
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_1]]
+        device_id = 1
+        bridge_mac = 30-30-78-ce-01-00
+        slot0 = S5800 384
+        GE_0/1 = F1090_3 GE_0/1
+        symbol = S5820V2-54QS-GE
+        x = -452.0
+        y = -134.0
+        z = 5.0
+    [[F1090 F1090_3]]
+        device_id = 3
+        bridge_mac = 30-30-99-a5-03-00
+        slot0 = F1060 1026
+        GE_0/1 = S5820V2-54QS-GE_1 GE_0/1
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/2
+        symbol = F1090
+        x = -80.0
+        y = -134.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 30-30-81-90-02-00
+        slot0 = S5800 384
+        GE_0/2 = F1090_3 GE_0/2
+        symbol = S5820V2-54QS-GE
+        x = 315.0
+        y = -129.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.5999999999999999
+    m22 = 1.5999999999999999
+    [[NOTE 1]]
+        text = "公网"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 302.707566339665
+        y = -174.5990257669732
+        z = 6.0
+    [[NOTE 2]]
+        text = "内网"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -445.057854765109
+        y = -183.43786053180503
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.9967957704
+        y = 24.4937114459
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        interface = F1090_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9967957704
+        y = 25.5062885541
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = F1090_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.9998554754
+        y = 24.8924735068
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9998554754
+        y = 25.1075264932
+        z = 6.0

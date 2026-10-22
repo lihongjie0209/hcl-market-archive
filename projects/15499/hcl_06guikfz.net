@@ -1,0 +1,70 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\111\不同ssid无线服务绑定不同频段射频配置举例\hcl_06guikfz\working
+    udp = 10000
+    [[S5820V2-54QS-GE SW]]
+        device_id = 3
+        bridge_mac = ac-b8-76-fd-03-00
+        slot0 = S5800 384
+        GE_0/1 = AC GE_0/1
+        GE_0/2 = AP1 GE_0/1
+        x = 14.0
+        y = -288.0
+        z = 5.0
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = ac-b8-5d-a3-01-00
+        slot0 = AC 768
+        GE_0/1 = SW GE_0/1
+        x = -184.0
+        y = -288.0
+        z = 5.0
+    [[AP AP1]]
+        device_id = 2
+        bridge_mac = ac-c6-76-44-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = SW GE_0/2
+        x = 14.0
+        y = -146.0
+        z = 5.0
+    [[Phone Phone_4]]
+        device_id = 4
+        bridge_mac = ac-c8-89-36-04-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = None
+        x = 14.999999999999996
+        y = 29.41176470588237
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = AP1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -33.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = AC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0

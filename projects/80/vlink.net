@@ -1,0 +1,179 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 1
+        bridge_mac = 68-a2-48-a3-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/1
+        x = -373.0
+        y = -86.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 4
+        bridge_mac = 68-a2-52-db-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = 282.0
+        y = -86.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 2
+        bridge_mac = 68-a2-4c-9d-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        GE_0/1 = RTD GE_0/0
+        x = -157.0
+        y = -86.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 3
+        bridge_mac = 68-a2-50-45-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = 64.0
+        y = -86.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "Area 1"
+        x = -65.0
+        y = -149.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "OSPF虚连接配置举例"
+        x = -128.0
+        y = -263.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Area 2"
+        x = -289.0
+        y = -148.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Area 0"
+        x = 159.0
+        y = -166.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.1.1.0/24"
+        x = 141.0
+        y = -97.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.1"
+        x = 278.0
+        y = -122.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2"
+        x = 55.0
+        y = -122.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "10.2.1.0/24"
+        x = -88.0
+        y = -97.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "10.3.1.0/24"
+        x = -307.0
+        y = -97.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "3.3.3.3"
+        x = -170.0
+        y = -122.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "4.4.4.4"
+        x = -382.0
+        y = -122.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -357.0
+        y = -163.0
+        width = 227.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -130.0
+        y = -172.0
+        width = 222.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        x = 90.0
+        y = -179.0
+        width = 224.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

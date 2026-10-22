@@ -1,0 +1,36 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\z18245\hcl\projects\rbac\working
+    udp = 16000
+    [[S6850 S6850_1]]
+        device_id = 1
+        bridge_mac = 40-99-c1-8f-01-00
+        slot0 = S5800 512
+        GE_0/1 = S6850_2 GE_0/1
+        x = 51.0
+        y = -225.0
+        z = 5.0
+    [[S6850 S6850_2]]
+        device_id = 2
+        bridge_mac = 40-99-c9-8c-02-00
+        slot0 = S5800 512
+        GE_0/1 = S6850_1 GE_0/1
+        x = 52.0
+        y = 4.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "DeviceB"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 146.0
+        y = 17.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "DeviceA"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 144.0
+        y = -217.0
+        z = 6.0

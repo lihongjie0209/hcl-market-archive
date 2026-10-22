@@ -1,0 +1,152 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\rbm-bridge-shuang\working
+    udp = 10000
+    [[F1090 F1090_1]]
+        device_id = 1
+        bridge_mac = 1e-7b-2c-a3-01-00
+        slot0 = F1060 768
+        GE_0/3 = F1090_2 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/1
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/1
+        x = -410.0
+        y = -32.0
+        z = 5.0
+    [[F1090 F1090_2]]
+        device_id = 2
+        bridge_mac = 1e-7b-32-5c-02-00
+        slot0 = F1060 768
+        GE_0/3 = F1090_1 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/2
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        x = 48.0
+        y = -32.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 1e-7b-70-4f-03-00
+        slot0 = S5800 384
+        GE_0/1 = F1090_1 GE_0/2
+        GE_0/2 = F1090_2 GE_0/2
+        x = -183.0
+        y = -241.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = 1e-7b-78-2d-04-00
+        slot0 = S5800 384
+        GE_0/1 = F1090_1 GE_0/4
+        GE_0/2 = F1090_2 GE_0/4
+        x = -178.0
+        y = 203.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.2
+    m22 = 1.2
+    [[NOTE 1]]
+        text = "vlan 10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -207.0
+        y = 56.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan 10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -208.0
+        y = -88.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan 10 interface 10.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -287.0
+        y = 296.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan 10 interface 10.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -295.0
+        y = -293.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -86.0
+        y = -39.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -337.0
+        y = -36.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 52.72680036297406
+        y = -33.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.10199372917882
+        y = -33.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 66.66143116495084
+        y = 70.83653295876505
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -76.42690355920342
+        y = 73.09349270428862
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/4"
+        interface = F1090_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -36.72680036297406
+        y = 70.83096497919871
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = F1090_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -63.66143116495084
+        y = -31.0
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/3"
+        interface = F1090_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/4"
+        interface = F1090_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 30.101993729178844
+        y = 74.46538157912511
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        interface = F1090_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.426903559203424
+        y = -33.0
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/3"
+        interface = F1090_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 54.0
+        y = 29.0
+        z = 6.0

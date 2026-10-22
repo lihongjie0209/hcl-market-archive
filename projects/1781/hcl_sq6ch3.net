@@ -1,0 +1,69 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 52-b0-54-98-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/1
+        GE_0/2 = SW3 GE_0/1
+        GE_0/3 = Client GE_0/1
+        x = -137.0
+        y = -109.0
+        z = 5.0
+    [[S6850 SW3]]
+        image = .
+        device_id = 4
+        bridge_mac = 52-b0-7d-04-04-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/2
+        x = 65.0
+        y = 30.0
+        z = 5.0
+    [[PC Client]]
+        image = .
+        device_id = 3
+        bridge_mac = 52-b0-6f-5d-03-00
+        slot0 = PC 250
+        GE_0/1 = SW1 GE_0/3
+        symbol = PC
+        x = -358.0
+        y = 34.0
+        z = 5.0
+    [[S6850 SW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 52-b0-5a-42-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        x = -137.0
+        y = -274.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "DCHP Server"
+        x = -195.0
+        y = -326.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Unauthorized Server"
+        x = -18.0
+        y = 118.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "DCHP Snooping"
+        x = -226.0
+        y = -10.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "DHCP Client"
+        x = -413.0
+        y = 123.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,42 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\111\hcl_lsargpjh\working
+    udp = 10000
+    [[AP AP]]
+        device_id = 2
+        bridge_mac = ac-0a-aa-02-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = SWA GE_0/3
+        x = -123.0
+        y = -75.0
+        z = 5.0
+    [[S5820V2-54QS-GE SWA]]
+        device_id = 3
+        bridge_mac = ac-0a-b6-62-03-00
+        slot0 = S5800 384
+        GE_0/3 = AP GE_0/1
+        GE_0/1 = AC1 GE_0/1
+        GE_0/2 = AC2 GE_0/1
+        x = -123.41594516540387
+        y = -227.41594516540385
+        z = 5.0
+    [[AC AC1]]
+        device_id = 1
+        bridge_mac = ac-0a-93-bd-01-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/1
+        x = -231.0
+        y = -344.0
+        z = 5.0
+    [[AC AC2]]
+        device_id = 4
+        bridge_mac = ac-30-da-88-04-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/2
+        x = -27.0
+        y = -344.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

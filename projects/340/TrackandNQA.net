@@ -1,0 +1,150 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SWA]]
+        image = .
+        device_id = 2
+        bridge_mac = 50-77-83-0e-02-00
+        slot0 = S5800 384
+        GE_0/1 = HOST1 GE_0/1
+        GE_0/2 = SWB GE_0/1
+        GE_0/3 = SWC GE_0/1
+        x = -144.0
+        y = -19.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 4
+        bridge_mac = 50-77-8d-c0-04-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/3
+        GE_0/2 = SWD GE_0/3
+        x = 61.0
+        y = 146.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 3
+        bridge_mac = 50-77-89-24-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/2
+        GE_0/2 = SWD GE_0/1
+        x = 59.0
+        y = -180.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 5
+        bridge_mac = 50-77-92-bb-05-00
+        slot0 = S5800 384
+        GE_0/1 = SWB GE_0/2
+        GE_0/2 = HOST2 GE_0/1
+        GE_0/3 = SWC GE_0/2
+        x = 243.0
+        y = -18.0
+        z = 5.0
+    [[S6850 HOST2]]
+        image = .
+        device_id = 6
+        bridge_mac = 50-77-99-4f-06-00
+        slot0 = S5800 384
+        GE_0/1 = SWD GE_0/2
+        x = 465.0
+        y = -17.0
+        z = 5.0
+    [[S6850 HOST1]]
+        image = .
+        device_id = 1
+        bridge_mac = 50-77-7f-65-01-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/1
+        x = -339.0
+        y = -18.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = -92.999594195
+        y = 24.8198216478
+        interface = HOST2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        x = 64.999594195
+        y = 25.1801783522
+        interface = SWD GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/3"
+        x = -82.7155233712
+        y = 51.7766254554
+        interface = SWD GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = -83.0220662053
+        y = -37.0
+        interface = SWD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        x = 54.7155233712
+        y = -37.0
+        interface = SWC GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -84.1604674105
+        y = -37.0
+        interface = SWC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        x = 55.0220662053
+        y = 51.4324713329
+        interface = SWB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = -84.3399071636
+        y = 49.8557884401
+        interface = SWB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        x = 56.1604674105
+        y = 50.0803762085
+        interface = SWA GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        x = 56.3399071636
+        y = 0.144211559918
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = -92.9994740406
+        y = 25.2051255079
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 64.9994740406
+        y = 24.7948744921
+        interface = HOST1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

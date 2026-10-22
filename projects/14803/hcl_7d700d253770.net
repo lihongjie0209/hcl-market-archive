@@ -1,0 +1,62 @@
+version = 5.10.2
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\moniqi319\hcl_7d700d253770\working
+    udp = 10000
+    [[S6850 SWA]]
+        device_id = 1
+        bridge_mac = 7e-42-cd-2c-01-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/1
+        x = -290.0
+        y = -152.0
+        z = 5.0
+    [[S6850 SWB]]
+        device_id = 2
+        bridge_mac = 7e-42-d5-57-02-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/1
+        x = 101.0
+        y = -153.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "as：64525"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 63.0
+        y = -264.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "as：64926"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -325.0
+        y = -269.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "172.23.1.96/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 28.0
+        y = -210.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "172.23.1.97/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -335.0
+        y = -218.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = SWB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -107.75
+        y = 15.25
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 87.75
+        y = 14.75
+        z = 6.0

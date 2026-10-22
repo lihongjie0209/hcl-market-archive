@@ -1,0 +1,68 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = a4-44-60-63-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -357.0
+        y = -74.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = a4-44-63-65-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = 2.0
+        y = -74.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2.2.2.2/32"
+        x = -23.0
+        y = -109.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2.2.2.1/32"
+        x = -385.0
+        y = -111.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "UDP-jitter测试配置"
+        x = -270.0
+        y = -205.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.2/30"
+        x = -107.0
+        y = -85.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "1.1.1.1/30"
+        x = -308.0
+        y = -84.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

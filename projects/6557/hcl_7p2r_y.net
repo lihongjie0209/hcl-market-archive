@@ -1,0 +1,101 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_7p2r_y\working
+    udp = 16000
+    [[S6850 SwitchC]]
+        device_id = 3
+        bridge_mac = 48-3e-74-ff-03-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchB GE_0/2
+        x = 149.0
+        y = -221.0
+        z = 5.0
+    [[S6850 SwitchB]]
+        device_id = 2
+        bridge_mac = 48-3e-6a-07-02-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchA GE_0/1
+        GE_0/2 = SwitchC GE_0/1
+        GE_0/3 = SwitchD GE_0/1
+        x = -127.0
+        y = -104.0
+        z = 5.0
+    [[S6850 SwitchA]]
+        device_id = 1
+        bridge_mac = 48-3e-5c-3a-01-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchB GE_0/1
+        x = -441.0
+        y = -103.0
+        z = 5.0
+    [[S6850 SwitchD]]
+        device_id = 4
+        bridge_mac = 48-3e-88-0d-04-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchB GE_0/3
+        x = 155.0
+        y = 13.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "Vlan-int13"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = 26.0
+        y = -50.1176470588
+        z = 6.0
+    [[NOTE 2]]
+        text = "Vlan-int11"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -304.0
+        y = -124.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "Vlan-int12"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -25.2352941176
+        y = -171.941176471
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SwitchD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -89.9462918728
+        y = 9.67121932936
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = SwitchA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9997945446
+        y = 24.8717955303
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        interface = SwitchB GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 66.9462918728
+        y = 84.3287806706
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = SwitchB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9997945446
+        y = 25.1282044697
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        interface = SwitchB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.8276310889
+        y = -46.611713179
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = SwitchC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -84.8276310889
+        y = 7.61171317897
+        z = 6.0

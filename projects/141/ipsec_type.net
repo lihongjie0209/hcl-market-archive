@@ -1,0 +1,173 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 MSR36-20_2]]
+        image = .
+        device_id = 2
+        bridge_mac = 88-78-01-88-02-00
+        slot0 = MSR36 384
+        GE_0/0 = PC_1 GE_0/1
+        GE_0/1 = MSR36-20_5 GE_0/0
+        x = -475.0
+        y = -234.0
+        z = 5.0
+    [[PC PC_4]]
+        image = .
+        device_id = 4
+        bridge_mac = 88-7a-76-49-04-00
+        slot0 = PC 250
+        GE_0/1 = F1090_3 GE_0/1
+        symbol = PC
+        x = 150.0
+        y = -12.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_5]]
+        image = .
+        device_id = 5
+        bridge_mac = 88-83-90-37-05-00
+        slot0 = MSR36 384
+        GE_0/0 = MSR36-20_2 GE_0/1
+        GE_0/1 = F1090_3 GE_0/0
+        x = -160.0
+        y = -274.0
+        z = 5.0
+    [[PC PC_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 88-77-dc-8c-01-00
+        slot0 = PC 250
+        GE_0/1 = MSR36-20_2 GE_0/0
+        symbol = PC
+        x = -474.0
+        y = -16.0
+        z = 5.0
+    [[F1090 F1090_3]]
+        image = .
+        device_id = 3
+        bridge_mac = 88-78-12-3e-03-00
+        slot0 = F1060 532
+        GE_0/0 = MSR36-20_5 GE_0/1
+        GE_0/1 = PC_4 GE_0/1
+        symbol = F1090
+        x = 147.0
+        y = -234.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "总部"
+        x = 159.0
+        y = -308.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "分支"
+        x = -523.0
+        y = -303.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "222.0.0.1"
+        x = 72.0
+        y = -276.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "222.0.0.2"
+        x = -97.0
+        y = -307.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "111.0.0.2"
+        x = -259.0
+        y = -307.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "111.0.0.1"
+        x = -441.0
+        y = -277.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "192.168.0.1"
+        x = 239.0
+        y = -165.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "192.168.0.2"
+        x = 229.0
+        y = -7.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "172.31.0.1"
+        x = -597.0
+        y = -161.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "172.31.0.2"
+        x = -600.0
+        y = -20.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 64.6647365151
+        y = 30.1680438456
+        interface = MSR36-20_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -73.6813491688
+        y = 30.0389014818
+        interface = MSR36-20_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 24.4595088081
+        y = -30.0
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -73.6647365151
+        y = 19.8319561544
+        interface = F1090_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 25.5404911919
+        y = 64.9963481992
+        interface = F1090_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        x = 64.6813491688
+        y = 19.9610985182
+        interface = MSR36-20_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/0"
+        x = 24.4313370961
+        y = 64.995957577
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = 25.5686629039
+        y = -30.0
+        interface = PC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

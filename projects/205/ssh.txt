@@ -1,0 +1,128 @@
+
+Note：
+　　在协商阶段之前，服务器端已经生成 RSA或 DSA密钥对，他们主要用于参与会话密钥的生成。
+
+<SSH-Server>*Nov 24 13:59:12:150 2021 SSH-Server SSHS/7/EVENT: Connection from 192.168.56.1 port 50080
+
+1、算法协商、版本协商
+双方发送自己所支持的版本号以及算法，协商确定版本及算法，若成功则继续，否则断开连接
+
+*Nov 24 13:59:12:150 2021 SSH-Server SSHS/7/EVENT: Start new child 290.
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Client protocol version 2.0, client software version MoTTY_Release_0.73
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Enabling compatibility mode for protocol 2.0
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Local version string SSH-2.0-Comware-7.1.064
+
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Pki-domain-name is not configure.
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Pki-domain-name is not configure.
+*Nov 24 13:59:12:162 2021 SSH-Server SSHS/7/EVENT: Get EC curve bits failed: not eq EC curve nid 415 need 715
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Hostkey string is : ecdsa-sha2-nistp256,ssh-rsa,ssh-dss
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[20].
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 20.
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_KEXINIT.
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: My proposal kex:
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(0): ecdh-sha2-nistp256,ecdh-sha2-nistp384,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(1): ecdsa-sha2-nistp256,ssh-rsa,ssh-dss
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(2): aes128-ctr,aes192-ctr,aes256-ctr,AEAD_AES_128_GCM,AEAD_AES_256_GCM,aes128-cbc,3des-cbc,aes256-cbc,des-cbc
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(3): aes128-ctr,aes192-ctr,aes256-ctr,AEAD_AES_128_GCM,AEAD_AES_256_GCM,aes128-cbc,3des-cbc,aes256-cbc,des-cbc
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(4): hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(5): hmac-sha2-256,hmac-sha2-512,hmac-sha1,hmac-md5,hmac-sha1-96,hmac-md5-96
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(6): none,zlib,zlib@openssh.com
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(7): none,zlib,zlib@openssh.com
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(8):
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(9):
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Peer proposal kex:
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(0): diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,rsa2048-sha256,rsa1024-sha1,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(1): ssh-rsa,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-dss
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(2): aes256-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-ctr,aes192-cbc,aes128-ctr,aes128-cbc,chacha20-poly1305@openssh.com,3des-ctr,3des-cbc,blowfish-ctr,blowfish-cbc,arcfour256,arcfour128
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(3): aes256-ctr,aes256-cbc,rijndael-cbc@lysator.liu.se,aes192-ctr,aes192-cbc,aes128-ctr,aes128-cbc,chacha20-poly1305@openssh.com,3des-ctr,3des-cbc,blowfish-ctr,blowfish-cbc,arcfour256,arcfour128
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(4): hmac-sha2-256,hmac-sha1,hmac-sha1-96,hmac-md5,hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-md5-etm@openssh.com
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(5): hmac-sha2-256,hmac-sha1,hmac-sha1-96,hmac-md5,hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-md5-etm@openssh.com
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(6): zlib,zlib@openssh.com,none
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(7): zlib,zlib@openssh.com,none
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(8):
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex strings(9):
+
+协商确定的算法
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex: client->server, Encrypt: aes256-ctr, HMAC: hmac-sha2-256, Compress: zlib
+*Nov 24 13:59:12:163 2021 SSH-Server SSHS/7/EVENT: Kex: server->client, Encrypt: aes256-ctr, HMAC: hmac-sha2-256, Compress: zlib
+
+*Nov 24 13:59:12:189 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 34.
+*Nov 24 13:59:12:189 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_KEX_DH_GEX_REQUEST.
+*Nov 24 13:59:12:191 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[31].
+*Nov 24 13:59:12:215 2021 SSH-Server SSHS/7/EVENT: Expecting packet type 32.
+*Nov 24 13:59:12:234 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 32.
+*Nov 24 13:59:12:262 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[33].
+*Nov 24 13:59:12:262 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[21].
+*Nov 24 13:59:12:262 2021 SSH-Server SSHS/7/EVENT: Set new keys: mode=1
+*Nov 24 13:59:12:262 2021 SSH-Server SSHS/7/EVENT: Enabling compression at level 6.
+*Nov 24 13:59:12:262 2021 SSH-Server SSHS/7/EVENT: Expecting packet type 21.
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/EVENT: Set new keys: mode=0
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 21.
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/EVENT: KEX done.
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 21, length after de-compress 17
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 5.
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_SERVICE_REQUEST.
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[6].
+*Nov 24 13:59:13:475 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 22, compressed_len 26
+*Nov 24 13:59:13:479 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 32, length after de-compress 36
+*Nov 24 13:59:13:479 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 50.
+*Nov 24 13:59:13:479 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_USERAUTH_REQUEST.
+
+认证阶段
+*Nov 24 13:59:13:479 2021 SSH-Server SSHS/7/EVENT: Username: admin, service: ssh-connection, method: none
+*Nov 24 13:59:13:479 2021 SSH-Server SSHS/7/EVENT: PAM: initializing for "admin", service:login, domain:
+*Nov 24 13:59:13:508 2021 SSH-Server SSHS/7/EVENT: Try authentication method none.
+*Nov 24 13:59:13:508 2021 SSH-Server SSHS/7/EVENT: Failed none for admin from 192.168.56.1 port 50080.
+
+*Nov 24 13:59:13:508 2021 SSH-Server SSHS/7/EVENT: Get authentication methods: password
+*Nov 24 13:59:13:508 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[51].
+*Nov 24 13:59:13:508 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 19, compressed_len 20
+*Nov 24 13:59:18:211 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 217, length after de-compress 55
+*Nov 24 13:59:18:212 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 50.
+*Nov 24 13:59:18:212 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_USERAUTH_REQUEST.
+*Nov 24 13:59:18:212 2021 SSH-Server SSHS/7/EVENT: Username: admin, service: ssh-connection, method: password
+*Nov 24 13:59:18:212 2021 SSH-Server SSHS/7/EVENT: Try authentication method password.
+*Nov 24 13:59:18:212 2021 SSH-Server SSHS/7/EVENT: Password authentication and authorization.
+*Nov 24 13:59:18:215 2021 SSH-Server SSHS/7/EVENT: PAM: Get work directory flash:.
+*Nov 24 13:59:18:215 2021 SSH-Server SSHS/7/EVENT: PAM: Get role list network-admin?network-operator.
+*Nov 24 13:59:18:215 2021 SSH-Server SSHS/7/EVENT: PAM: password authentication accepted for admin.
+*Nov 24 13:59:18:215 2021 SSH-Server SSHS/7/EVENT: PAM: accounting.
+*Nov 24 13:59:18:217 2021 SSH-Server SSHS/7/EVENT: PAM: account management : 0 (success)
+%Nov 24 13:59:18:217 2021 SSH-Server SSHS/6/SSHS_LOG: Accepted password for admin from 192.168.56.1 port 50080.
+
+*Nov 24 13:59:18:217 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[52].
+*Nov 24 13:59:18:218 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 6, compressed_len 9
+*Nov 24 13:59:18:218 2021 SSH-Server SSHS/7/EVENT: Entering interactive session for SSH2.
+*Nov 24 13:59:18:218 2021 SSH-Server SSHS/7/EVENT: Initiate server message dispatch, compatibility:1/0
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 17, length after de-compress 24
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 90.
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_CHANNEL_OPEN: ctype session, rchan 256, win 16384, max 16384
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/EVENT: Received session request.
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/EVENT: Channel 0: new [server-session]
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/EVENT: Session id 0 unused.
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/EVENT: Session opened: session 0, link with channel 0
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[91].
+*Nov 24 13:59:26:104 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 22, compressed_len 16
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 48, length after de-compress 72
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 98.
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_CHANNEL_REQUEST: channel 0, request pty-req, reply 1
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/EVENT: Channel request: user admin, service type 1 rtype:pty-req
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/EVENT: Open pty: pseudo-terminal-master(43), pseudo-terminal-sub(42)
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[99].
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 10, compressed_len 10
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Input: Length before de-compress 12, length after de-compress 15
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/MESSAGE: Received packet type 98.
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/EVENT: Received SSH2_MSG_CHANNEL_REQUEST: channel 0, request shell, reply 1
+*Nov 24 13:59:26:105 2021 SSH-Server SSHS/7/EVENT: Channel request: user admin, service type 1 rtype:shell
+*Nov 24 13:59:26:106 2021 SSH-Server SSHS/7/EVENT: Channel 0: read_fd 45 is a TTY.
+*Nov 24 13:59:26:106 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[93].
+*Nov 24 13:59:26:106 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 14, compressed_len 14
+*Nov 24 13:59:26:106 2021 SSH-Server SSHS/7/MESSAGE: Prepare packet[99].
+*Nov 24 13:59:26:106 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 10, compressed_len 9
+*Nov 24 13:59:27:107 2021 SSH-Server SSHS/7/EVENT: PAM: opening session.
+%Nov 24 13:59:27:107 2021 SSH-Server SSHS/6/SSHS_CONNECT: SSH user admin (IP: 192.168.56.1) connected to the server successfully.
+*Nov 24 13:59:27:107 2021 SSH-Server SSHS/7/EVENT: Setup environment: user=admin, work directory=flash:
+*Nov 24 13:59:27:107 2021 SSH-Server SSHS/7/EVENT: Get default work dir: flash:, return:0
+*Nov 24 13:59:27:118 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 427, compressed_len 187
+%Nov 24 13:59:27:188 2021 SSH-Server SHELL/5/SHELL_LOGIN: admin logged in from 192.168.56.1.
+*Nov 24 13:59:27:190 2021 SSH-Server SSHS/7/MESSAGE: Compression: raw_len 26, compressed_len 23

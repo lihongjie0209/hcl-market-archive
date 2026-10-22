@@ -1,0 +1,165 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC PC-1]]
+        image = .
+        device_id = 4
+        bridge_mac = a0-b0-d9-78-04-00
+        slot0 = PC 250
+        GE_0/1 = DeviceA GE_0/1
+        symbol = PC
+        x = -238.839141137
+        y = -106.0
+        z = 5.0
+    [[PC PC-2]]
+        image = .
+        device_id = 5
+        bridge_mac = a0-b0-dd-bb-05-00
+        slot0 = PC 250
+        GE_0/1 = DevicB GE_0/1
+        symbol = PC
+        x = 34.1040764009
+        y = -106.0
+        z = 5.0
+    [[MSR36-20 DeviceA]]
+        image = .
+        device_id = 1
+        bridge_mac = a0-b0-87-0b-01-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceC GE_0/0
+        GE_0/1 = PC-1 GE_0/1
+        GE_5/1 = DevicB GE_5/1
+        GE_5/0 = DevicB GE_5/0
+        x = -238.839141137
+        y = -321.580735804
+        z = 5.0
+    [[MSR36-20 DeviceC]]
+        image = .
+        device_id = 3
+        bridge_mac = a0-b0-94-6a-03-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceA GE_0/0
+        GE_0/1 = DevicB GE_0/0
+        x = -111.539105243
+        y = -463.709198822
+        z = 5.0
+    [[MSR36-20 DevicB]]
+        image = .
+        device_id = 2
+        bridge_mac = a0-b0-90-73-02-00
+        slot0 = MSR36 512
+        GE_5/1 = DeviceA GE_5/1
+        GE_0/1 = PC-2 GE_0/1
+        GE_0/0 = DeviceC GE_0/1
+        GE_5/0 = DeviceA GE_5/0
+        x = 34.1040764009
+        y = -321.580735804
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IRF"
+        x = -93.0
+        y = -287.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "LACP MAD检测方式"
+        x = -198.0
+        y = -560.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -66.6275879981
+        y = -33.0
+        interface = DevicB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_5/0"
+        x = -78.0
+        y = 25.0
+        interface = DevicB GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_5/1"
+        x = -75.0
+        y = 41.0
+        interface = DevicB GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = DevicB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 61.6275879981
+        y = 52.9367357687
+        interface = DeviceC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -75.6872136897
+        y = 54.7958491318
+        interface = DeviceC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_5/0"
+        x = 61.0
+        y = 6.0
+        interface = DeviceA GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_5/1"
+        x = 65.0
+        y = 30.0
+        interface = DeviceA GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 51.6872136897
+        y = -33.0
+        interface = DeviceA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = DeviceA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PC_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -273.0
+        y = -336.0
+        width = 381.0
+        height = 100.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

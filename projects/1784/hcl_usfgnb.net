@@ -1,0 +1,105 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 52-53-9a-05-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/1
+        GE_0/2 = DHCPv6 Client GE_0/1
+        GE_0/3 = SW3 GE_0/1
+        x = 53.0
+        y = -133.0
+        z = 5.0
+    [[S6850 SW3]]
+        image = .
+        device_id = 3
+        bridge_mac = 52-53-aa-08-03-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/3
+        x = 275.0
+        y = -8.0
+        z = 5.0
+    [[S6850 SW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 52-53-9c-98-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        x = 53.0
+        y = -289.0
+        z = 5.0
+    [[PC DHCPv6 Client]]
+        image = .
+        device_id = 4
+        bridge_mac = 52-53-bc-79-04-00
+        slot0 = PC 250
+        GE_0/1 = SW1 GE_0/2
+        symbol = PC
+        x = -161.0
+        y = -8.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "Unauthorized \nDHCPv6 Server"
+        x = 200.0
+        y = 85.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "DHCPv6 Snooping"
+        x = -48.0
+        y = -31.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "DHCPv6 Server"
+        x = -26.0
+        y = -336.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = 59.539442488
+        y = 4.82509200468
+        interface = DHCPv6 Client GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = -87.8546323886
+        y = 5.37464392535
+        interface = SW3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = SW2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/3"
+        x = 59.8546323886
+        y = 44.6253560747
+        interface = SW1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = -87.539442488
+        y = 45.1749079953
+        interface = SW1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -37.0
+        interface = SW1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,153 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_bunmrw\working
+    udp = 16000
+    [[S6850 SwitchC]]
+        device_id = 3
+        bridge_mac = 42-5e-cd-cf-03-00
+        slot0 = S5800 512
+        GE_0/2 = SwitchB GE_0/2
+        x = -4043.0
+        y = 3819.0
+        z = 5.0
+    [[S6850 SwitchB]]
+        device_id = 1
+        bridge_mac = 42-5e-ae-0e-01-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchA GE_0/1
+        GE_0/2 = SwitchC GE_0/2
+        x = -4487.0
+        y = 3810.0
+        z = 5.0
+    [[S6850 SwitchA]]
+        device_id = 2
+        bridge_mac = 42-5e-be-b3-02-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchB GE_0/1
+        x = -4107.0
+        y = 3568.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 0.4
+    m22 = 0.4
+    [[NOTE 1]]
+        text = "vlan-int300\n200.1.3.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4412.0
+        y = 3849.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan-int200\n200.1.2.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4553.0
+        y = 3689.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "loop0\n2.2.2.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4722.0
+        y = 3801.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "AS 10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4046.0
+        y = 3566.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan-int300\n200.1.3.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4227.0
+        y = 3762.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "loop0\n3.3.3.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -3969.0
+        y = 3873.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "AS 20"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4591.0
+        y = 3823.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "AS 30"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -3990.0
+        y = 3823.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "loop0\n1.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4124.0
+        y = 3432.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "vlan-int100\n9.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4145.0
+        y = 3501.0
+        z = 6.0
+    [[NOTE 11]]
+        text = "vlan-int200\n200.1.2.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -4333.0
+        y = 3567.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = Switch C GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9917848544
+        y = 24.1893557124
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = Switch B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -20.260854336
+        y = -46.4865085545
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = Switch B GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9917848544
+        y = 25.8106442876
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        interface = Switch A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -91.739145664
+        y = -3.51349144554
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        width = 341.0
+        height = 211.0
+        border_color = "#666666"
+        border_style = 2
+        x = -4248.0
+        y = 3491.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        width = 303.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        x = -4195.0
+        y = 3757.0
+        z = 3.0
+    [[SHAPE 3]]
+        type = ellipse
+        width = 303.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        x = -4614.0
+        y = 3739.0
+        z = 3.0

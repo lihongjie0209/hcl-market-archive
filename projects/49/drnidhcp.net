@@ -1,0 +1,58 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 DeviceD]]
+        image = .
+        device_id = 4
+        bridge_mac = 3a-bc-ae-56-04-00
+        slot0 = S5800 384
+        GE_0/4 = DeviceA GE_0/5
+        GE_0/5 = DeviceB GE_0/5
+        x = -175.0
+        y = 124.0
+        z = 5.0
+    [[S6850 DeviceA]]
+        image = .
+        device_id = 2
+        bridge_mac = 3a-bc-91-9a-02-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceB GE_0/1
+        GE_0/2 = DeviceB GE_0/2
+        GE_0/3 = DeviceB GE_0/3
+        GE_0/4 = DeviceC GE_0/4
+        GE_0/5 = DeviceD GE_0/4
+        x = -312.0
+        y = -69.0
+        z = 5.0
+    [[S6850 DeviceC]]
+        image = .
+        device_id = 1
+        bridge_mac = 3a-bc-89-e7-01-00
+        slot0 = S5800 384
+        GE_0/4 = DeviceA GE_0/4
+        GE_0/5 = DeviceB GE_0/4
+        x = -179.0
+        y = -228.0
+        z = 5.0
+    [[S6850 DeviceB]]
+        image = .
+        device_id = 3
+        bridge_mac = 3a-bc-a2-19-03-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceA GE_0/1
+        GE_0/2 = DeviceA GE_0/2
+        GE_0/3 = DeviceA GE_0/3
+        GE_0/4 = DeviceC GE_0/5
+        GE_0/5 = DeviceD GE_0/5
+        x = -41.0
+        y = -71.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "上行聚合101，使用vlan 200互通\n下行聚合2，使用vlan 101互通\nipl使用聚合1\nkeepalive使用三层接口\n"
+        x = 23.0
+        y = -229.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

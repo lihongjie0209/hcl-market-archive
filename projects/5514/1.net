@@ -1,0 +1,34 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\installerpacket\hcl\project\1\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 78-7e-de-40-01-00
+        slot0 = AC 768
+        GE_0/0 = S6850_3 GE_0/1
+        x = -329.0
+        y = -179.0
+        z = 5.0
+    [[AP AP_2]]
+        device_id = 2
+        bridge_mac = 78-7f-09-10-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = S6850_3 GE_0/2
+        x = 171.0
+        y = -180.0
+        z = 5.0
+    [[S6850 S6850_3]]
+        device_id = 3
+        bridge_mac = 78-85-27-82-03-00
+        slot0 = S5800 512
+        GE_0/1 = AC_1 GE_0/0
+        GE_0/2 = AP_2 GE_0/0
+        x = -71.0
+        y = -180.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

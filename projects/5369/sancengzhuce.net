@@ -1,0 +1,33 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\n21325\hcl\projects\ac三层注册+终端\sancengzhuce\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 34-e4-a5-d0-01-00
+        slot0 = AC 768
+        GE_0/1 = S6850_3 GE_0/3
+        x = -402.83333333333337
+        y = -75.66666666666669
+        z = 5.0
+    [[S6850 S6850_3]]
+        device_id = 3
+        bridge_mac = 34-e5-1b-92-03-00
+        slot0 = S5800 512
+        GE_0/3 = AC_1 GE_0/1
+        GE_0/6 = AP_4 GE_0/1
+        x = -128.0
+        y = -73.0
+        z = 5.0
+    [[AP AP_4]]
+        device_id = 4
+        bridge_mac = 34-e5-2d-d5-04-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = S6850_3 GE_0/6
+        x = 241.66666666666663
+        y = -72.16666666666666
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 0.9
+    m22 = 0.9

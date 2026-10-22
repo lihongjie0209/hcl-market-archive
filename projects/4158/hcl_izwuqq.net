@@ -1,0 +1,366 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SWA]]
+        image = .
+        device_id = 4
+        bridge_mac = 4c-07-38-93-04-00
+        slot0 = S5800 384
+        GE_0/1 = VM1 GE_0/1
+        GE_0/2 = SWE GE_0/3
+        x = -377.0
+        y = 195.0
+        z = 5.0
+    [[S6850 SWC]]
+        image = .
+        device_id = 1
+        bridge_mac = 4c-07-28-bf-01-00
+        slot0 = S5800 384
+        GE_0/1 = SWE GE_0/1
+        GE_0/2 = L3 network GE_0/1
+        x = -377.0
+        y = -311.0
+        z = 5.0
+    [[S6850 SWB]]
+        image = .
+        device_id = 5
+        bridge_mac = 4c-07-3d-02-05-00
+        slot0 = S5800 384
+        GE_0/1 = VM4 GE_0/1
+        GE_0/2 = SWE GE_0/4
+        x = 181.0
+        y = 195.0
+        z = 5.0
+    [[S6850 SWE]]
+        image = .
+        device_id = 3
+        bridge_mac = 4c-07-33-a1-03-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/1
+        GE_0/2 = SWD GE_0/1
+        GE_0/3 = SWA GE_0/2
+        GE_0/4 = SWB GE_0/2
+        x = -93.0
+        y = -56.0
+        z = 5.0
+    [[S6850 SWD]]
+        image = .
+        device_id = 2
+        bridge_mac = 4c-07-2d-3b-02-00
+        slot0 = S5800 384
+        GE_0/1 = SWE GE_0/2
+        GE_0/2 = L3 network GE_0/2
+        x = 181.0
+        y = -311.0
+        z = 5.0
+    [[S6850 L3 network]]
+        image = .
+        device_id = 8
+        bridge_mac = 4c-0b-5e-62-08-00
+        slot0 = S5800 384
+        GE_0/1 = SWC GE_0/2
+        GE_0/2 = SWD GE_0/2
+        x = -83.0
+        y = -485.0
+        z = 5.0
+    [[S6850 VM4]]
+        image = .
+        device_id = 7
+        bridge_mac = 4c-09-c5-01-07-00
+        slot0 = S5800 384
+        GE_0/1 = SWB GE_0/1
+        x = 514.0
+        y = 195.0
+        z = 5.0
+    [[S6850 VM1]]
+        image = .
+        device_id = 6
+        bridge_mac = 4c-09-be-c6-06-00
+        slot0 = S5800 384
+        GE_0/1 = SWA GE_0/1
+        x = -672.0
+        y = 195.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "vsi-int1\n10.1.1.1\nvsi-int2\n10.1.2.1"
+        x = 344.0
+        y = -361.0
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "vsi-int1\n10.1.1.1\nvsi-int2\n10.1.2.1"
+        x = -571.0
+        y = -354.0
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "loop0\n1.1.1.1/32"
+        x = -407.0
+        y = 267.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.1.1.11/24\nvlan 10"
+        x = -692.0
+        y = 137.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan 30"
+        x = 18.0
+        y = 71.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "vlan 20"
+        x = -251.0
+        y = 97.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "40.1.1.3/24"
+        x = -343.0
+        y = -237.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "50.1.1.4/24"
+        x = 117.0
+        y = -239.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "50.1.1.5/24"
+        x = -50.0
+        y = -102.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "loop0\n5.5.5.5/32"
+        x = 50.0
+        y = -77.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "loop1\n8.8.8.8/32"
+        x = -481.0
+        y = -314.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "loop0\n3.3.3.3/32"
+        x = -425.0
+        y = -368.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "loop0\n4.4.4.4/32"
+        x = 178.0
+        y = -372.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "100.1.1.4/24\nvlan 100"
+        x = 55.0
+        y = -378.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "loop1\n8.8.8.8/32"
+        x = 239.0
+        y = -330.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "100.1.1.3/24\nvlan 100"
+        x = -317.0
+        y = -367.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "20.1.1.1/24"
+        x = -378.0
+        y = 152.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "20.1.1.5/24"
+        x = -198.0
+        y = -2.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "30.1.1.2/24"
+        x = 121.0
+        y = 146.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "30.1.1.5/24"
+        x = -33.0
+        y = 5.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "loop0\n2.2.2.2/32"
+        x = 138.0
+        y = 264.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "10.1.2.12/24\nvlan 12"
+        x = 494.0
+        y = 138.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "40.1.1.5/24"
+        x = -203.0
+        y = -105.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 24]]
+        text = "vlan 40"
+        x = -261.0
+        y = -179.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 25]]
+        text = "vlan 50"
+        x = 56.0
+        y = -180.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 26]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = VM1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 27]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = VM4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 28]]
+        text = "GE_0/2"
+        x = 58.3983281847
+        y = 47.0125344854
+        interface = L3 network GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 29]]
+        text = "GE_0/1"
+        x = -87.423067313
+        y = 45.3728357566
+        interface = L3 network GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 30]]
+        text = "GE_0/2"
+        x = -72.3983281847
+        y = -9.01253448535
+        interface = SWD GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 31]]
+        text = "GE_0/1"
+        x = -52.2812718448
+        y = 42.2508186877
+        interface = SWD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 32]]
+        text = "GE_0/2"
+        x = 43.2812718448
+        y = -19.0
+        interface = SWE GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 33]]
+        text = "GE_0/4"
+        x = 54.4951006747
+        y = 40.0192345597
+        interface = SWE GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 34]]
+        text = "GE_0/1"
+        x = -43.7630116543
+        y = -21.0
+        interface = SWE GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 35]]
+        text = "GE_0/3"
+        x = -71.9719455525
+        y = 33.4892899073
+        interface = SWE GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 36]]
+        text = "GE_0/2"
+        x = -47.4951006747
+        y = -13.0
+        interface = SWB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 37]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = SWB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 38]]
+        text = "GE_0/2"
+        x = 32.423067313
+        y = -13.3728357566
+        interface = SWC GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 39]]
+        text = "GE_0/1"
+        x = 54.7630116543
+        y = 51.7238308868
+        interface = SWC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 40]]
+        text = "GE_0/2"
+        x = 33.9719455525
+        y = -19.0
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 41]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -408.0
+        y = -351.0
+        width = 661.0
+        height = 124.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -132.0
+        y = -492.0
+        width = 147.0
+        height = 92.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

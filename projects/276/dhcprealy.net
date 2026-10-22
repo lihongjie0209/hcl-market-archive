@@ -1,0 +1,46 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 DHCP-Server]]
+        image = .
+        device_id = 1
+        bridge_mac = 4a-d5-71-bc-01-00
+        slot0 = MSR36 512
+        GE_0/0 = DHCP-Relay GE_0/0
+        x = -284.0
+        y = -109.0
+        z = 5.0
+    [[MSR36-20 PC]]
+        image = .
+        device_id = 3
+        bridge_mac = 4a-d5-77-21-03-00
+        slot0 = MSR36 512
+        GE_0/0 = DHCP-Relay GE_0/1
+        x = 168.0
+        y = -109.0
+        z = 5.0
+    [[MSR36-20 DHCP-Relay]]
+        image = .
+        device_id = 2
+        bridge_mac = 4a-d5-74-e0-02-00
+        slot0 = MSR36 512
+        GE_0/0 = DHCP-Server GE_0/0
+        GE_0/1 = PC GE_0/0
+        x = -75.0
+        y = -109.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "192.168.2.2"
+        x = -235.0
+        y = -120.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.1.1"
+        x = -26.0
+        y = -121.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

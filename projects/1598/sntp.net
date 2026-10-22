@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 DeviceA]]
+        image = .
+        device_id = 1
+        bridge_mac = 62-56-3c-c1-01-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceB GE_0/0
+        x = -269.0
+        y = -60.0
+        z = 5.0
+    [[MSR36-20 DeviceB]]
+        image = .
+        device_id = 2
+        bridge_mac = 62-56-3f-22-02-00
+        slot0 = MSR36 512
+        GE_0/0 = DeviceA GE_0/0
+        x = 58.0
+        y = -60.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "SNTP Client"
+        x = 21.0
+        y = -96.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "NTP Server"
+        x = -303.0
+        y = -96.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.1.1.0/30"
+        x = -143.0
+        y = -72.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "SNTP基本组网配置"
+        x = -196.0
+        y = -242.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = NTP-S GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = SNTP-C GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

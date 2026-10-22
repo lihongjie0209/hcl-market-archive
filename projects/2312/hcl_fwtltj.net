@@ -1,0 +1,108 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 0e-c5-5c-af-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW3 GE_0/1
+        GE_0/2 = SW2 GE_0/1
+        x = -340.0
+        y = -242.0
+        z = 5.0
+    [[S6850 SW3]]
+        image = .
+        device_id = 3
+        bridge_mac = 0e-c5-67-a1-03-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        GE_0/2 = SW2 GE_0/2
+        x = -182.0
+        y = -126.0
+        z = 5.0
+    [[S6850 SW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 0e-c5-60-1e-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/2
+        GE_0/2 = SW3 GE_0/2
+        x = -10.0
+        y = -241.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "LO02.2.2.2"
+        x = -39.0
+        y = -293.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "LO01.1.1.1"
+        x = -404.0
+        y = -303.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan 13"
+        x = -28.0
+        y = -147.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan 11"
+        x = -361.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan 10"
+        x = -208.0
+        y = -274.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/2"
+        x = 58.2522392603
+        y = 2.76739816899
+        interface = S6850_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = -77.243219368
+        y = 2.32776299567
+        interface = S6850_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = -94.2522392603
+        y = 38.232601831
+        interface = S6850_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = -86.9998163465
+        y = 2.87878843531
+        interface = S6850_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        x = 54.9998163465
+        y = -2.87878843531
+        interface = S6850_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 52.243219368
+        y = 67.6722370043
+        interface = S6850_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

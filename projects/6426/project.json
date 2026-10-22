@@ -1,0 +1,1 @@
+{"projectInfo":{"name":"无线控制器PasswordControl基础配置举例","path":"hcl_lvxy9lre","visibility":0,"categoryId":125,"introduction":"（1）全局密码管理策略\n\n（2）切换到用户角色network-operator时使用的super密码管理策略\n\n（3）本地Telnet用户test的密码管理策略","label":[]},"deviceInfoList":[{"resourceName":"AC_1","resourceCategory":"无线","resourceModel":"AC","resourceVersion":"","configPath":"DeviceConfig\\AC_1.cfg"}]}

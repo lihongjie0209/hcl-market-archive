@@ -1,0 +1,37 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\组内工作\模拟器测试\模拟器工程文件\正式发布-1期\hcl_ckv50q\working
+    udp = 16000
+    [[S6850 sw1]]
+        device_id = 1
+        bridge_mac = 4c-84-ab-44-01-00
+        slot0 = S5800 512
+        GE_0/1 = sw2 GE_0/1
+        x = -366.176470588
+        y = -452.0
+        z = 5.0
+    [[S6850 sw2]]
+        device_id = 2
+        bridge_mac = 4c-84-ad-6f-02-00
+        slot0 = S5800 512
+        GE_0/1 = sw1 GE_0/1
+        x = 150.294117647
+        y = -450.882352941
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = S6850_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9732162911
+        y = 23.5364497468
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = S6850_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9732162911
+        y = 26.4635502532
+        z = 6.0

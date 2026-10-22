@@ -1,0 +1,162 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\rbm-static-bei\working
+    udp = 10000
+    [[F1090 F1090_1]]
+        device_id = 1
+        bridge_mac = a6-76-47-a9-01-00
+        slot0 = F1060 768
+        GE_0/3 = F1090_2 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/2
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/2
+        x = -280.0
+        y = -33.0
+        z = 5.0
+    [[F1090 F1090_2]]
+        device_id = 2
+        bridge_mac = a6-76-4a-e3-02-00
+        slot0 = F1060 768
+        GE_0/3 = F1090_1 GE_0/3
+        GE_0/2 = S5820V2-54QS-GE_3 GE_0/3
+        GE_0/4 = S5820V2-54QS-GE_4 GE_0/3
+        x = 97.0
+        y = -33.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = a6-77-8e-0d-03-00
+        slot0 = S5800 384
+        GE_0/2 = F1090_1 GE_0/2
+        GE_0/3 = F1090_2 GE_0/2
+        x = -95.0
+        y = -301.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_4]]
+        device_id = 4
+        bridge_mac = a6-77-93-6e-04-00
+        slot0 = S5800 384
+        GE_0/2 = F1090_1 GE_0/4
+        GE_0/3 = F1090_2 GE_0/4
+        x = -93.0
+        y = 217.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -38.0
+        y = -49.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -198.0
+        y = -42.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan30 interface 3.3.3.1/24\nloopback 20.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -188.0
+        y = 301.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "3.3.3.3/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 80.0
+        y = 52.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "3.3.3.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -329.0
+        y = 51.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.3/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 93.0
+        y = -108.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -326.0
+        y = -86.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "vlan20 interface 2.2.2.1/24\nloopback 10.1.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -193.0
+        y = -366.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_4 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 49.20333070134232
+        y = -33.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -56.9589809756873
+        y = -36.0
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_3 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 61.69102619345969
+        y = 75.22941634440201
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -70.30224733998521
+        y = 74.20556826175579
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/4"
+        interface = F1090_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -6.20333070134231
+        y = 71.84648776492409
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = F1090_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 1.3089738065403083
+        y = -33.0
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/3"
+        interface = F1090_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/4"
+        interface = F1090_1 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 49.9589809756873
+        y = 87.03072322952846
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        interface = F1090_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 47.30224733998523
+        y = -33.0
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/3"
+        interface = F1090_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0

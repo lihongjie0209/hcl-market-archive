@@ -1,0 +1,120 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 10000
+    [[S6850 SW1_1]]
+        device_id = 1
+        bridge_mac = 24-f2-91-5c-01-00
+        slot0 = S5800 512
+        GE_0/1 = SW2_2 GE_0/1
+        x = -26.25
+        y = -97.5
+        z = 5.0
+    [[S6850 SW2_2]]
+        device_id = 2
+        bridge_mac = 24-f2-96-1c-02-00
+        slot0 = S5800 512
+        GE_0/1 = SW1_1 GE_0/1
+        GE_0/2 = SW3_3 GE_0/2
+        x = 274.375
+        y = -99.375
+        z = 5.0
+    [[S6850 SW3_3]]
+        device_id = 3
+        bridge_mac = 24-f2-9c-5d-03-00
+        slot0 = S5800 512
+        GE_0/2 = SW2_2 GE_0/2
+        x = 524.375
+        y = -100.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "100::1/128"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -54.0
+        y = -20.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "AS101"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 371.0
+        y = -145.5
+        z = 6.0
+    [[NOTE 3]]
+        text = "AS100"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -32.125
+        y = -143.625
+        z = 6.0
+    [[NOTE 4]]
+        text = "11::3/64"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 443.5
+        y = -105.5
+        z = 6.0
+    [[NOTE 5]]
+        text = "11::2/64"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 323.5
+        y = -103.625
+        z = 6.0
+    [[NOTE 6]]
+        text = "10::2/64"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 187.875
+        y = -104.25
+        z = 6.0
+    [[NOTE 7]]
+        text = "10::1/64"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 22.875
+        y = -102.375
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        interface = SW3_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.99950249993776
+        y = 25.19949876558573
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        interface = SW2_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 51.87450249993776
+        y = 23.55050123441427
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        interface = SW2_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.99782096859963
+        y = 25.41751378881628
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        interface = SW1_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99782096859963
+        y = 24.58248621118372
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 426.625
+        height = 174.75
+        border_color = "#666666"
+        border_style = 2
+        x = 174.0
+        y = -149.75
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 199.75
+        height = 176.0
+        border_color = "#666666"
+        border_style = 2
+        x = -75.375
+        y = -149.75
+        z = 3.0

@@ -1,0 +1,42 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\2022-09-19 测试hcl\projects\dhcp relay\dhcp_relay\working
+    udp = 10000
+    [[S6850 SWB]]
+        device_id = 1
+        bridge_mac = 7e-fe-c6-0c-01-00
+        slot0 = S5800 512
+        GE_0/1 = AC GE_0/1
+        x = -194.0
+        y = -68.0
+        z = 5.0
+    [[AC AC]]
+        device_id = 2
+        bridge_mac = 7e-fe-d3-d4-02-00
+        slot0 = AC 768
+        GE_0/1 = SWB GE_0/1
+        GE_0/0 = AP GE_0/0
+        x = -12.0
+        y = -68.0
+        z = 5.0
+    [[AP AP]]
+        device_id = 3
+        bridge_mac = 7e-ff-09-10-03-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = AC GE_0/0
+        x = 175.0
+        y = -68.0
+        z = 5.0
+    [[Phone Phone_3]]
+        device_id = 4
+        bridge_mac = 7e-09-6e-88-04-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 7eff-0910-0310
+        x = 176.0
+        y = 32.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

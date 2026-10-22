@@ -1,0 +1,214 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 2
+        bridge_mac = 04-a3-c4-c5-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Network GE_0/0
+        GE_0/1 = SW GE_0/1
+        x = -260.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 Network]]
+        image = .
+        device_id = 1
+        bridge_mac = 04-a3-ba-f7-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTB GE_0/0
+        GE_0/2 = RTC GE_0/0
+        x = -63.0
+        y = -330.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 4
+        bridge_mac = 04-a3-cd-a2-04-00
+        slot0 = MSR36 512
+        GE_0/0 = Network GE_0/2
+        GE_0/1 = SW GE_0/3
+        x = 147.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 3
+        bridge_mac = 04-a3-c7-e2-03-00
+        slot0 = MSR36 512
+        GE_0/0 = Network GE_0/1
+        GE_0/1 = SW GE_0/2
+        x = -63.0
+        y = -153.0
+        z = 5.0
+    [[MSR36-20 Host-C]]
+        image = .
+        device_id = 8
+        bridge_mac = 04-a4-33-f7-08-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/6
+        x = 174.0
+        y = 161.0
+        z = 5.0
+    [[MSR36-20 Host-B]]
+        image = .
+        device_id = 7
+        bridge_mac = 04-a4-2f-3f-07-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/5
+        x = -63.0
+        y = 161.0
+        z = 5.0
+    [[MSR36-20 Host-A]]
+        image = .
+        device_id = 6
+        bridge_mac = 04-a4-2b-cf-06-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/4
+        x = -260.0
+        y = 161.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 5
+        bridge_mac = 04-a3-e1-06-05-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/1
+        GE_0/2 = RTB GE_0/1
+        GE_0/3 = RTC GE_0/1
+        GE_0/4 = Host-A GE_0/0
+        GE_0/5 = Host-B GE_0/0
+        GE_0/6 = Host-C GE_0/0
+        x = -63.0
+        y = 7.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/4"
+        x = -69.5136978906
+        y = 49.6350734779
+        interface = SW GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/5"
+        x = 25.0
+        y = 65.0
+        interface = SW GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/6"
+        x = 58.5409776758
+        y = 46.7945593337
+        interface = SW GE_0/6
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/3"
+        x = 56.8172688013
+        y = 0.758271389486
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -69.049380482
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 56.5136978906
+        y = 0.364926522093
+        interface = Host-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -71.5409776758
+        y = 3.20544066633
+        interface = Host-C GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -69.8172688013
+        y = 49.2417286105
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -68.5851145233
+        y = -33.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        x = 55.5851145233
+        y = 50.778882241
+        interface = Network GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = Network GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -67.7542856895
+        y = 51.7335460256
+        interface = Network GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/1"
+        x = 56.049380482
+        y = 50.2177709499
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        x = 54.7542856895
+        y = -33.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

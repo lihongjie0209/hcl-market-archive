@@ -1,0 +1,185 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S5820V2-54QS-GE SW1]]
+        image = .
+        device_id = 3
+        bridge_mac = 3a-8c-9f-3d-03-00
+        slot0 = S5800 512
+        GE_0/11 = FW1 GE_0/1
+        GE_0/12 = FW2 GE_0/1
+        x = -67.0
+        y = -334.0
+        z = 5.0
+    [[F1060 FW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 3a-8c-64-b5-01-00
+        slot0 = F1060 512
+        GE_0/0 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/1 = SW1 GE_0/11
+        GE_0/10 = FW2 GE_0/10
+        GE_0/11 = FW2 GE_0/11
+        GE_0/2 = MSR GE_0/1
+        symbol = F1060
+        x = -218.0
+        y = -146.0
+        z = 5.0
+    [[F1060 FW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 3a-8c-6d-5c-02-00
+        slot0 = F1060 512
+        GE_0/1 = SW1 GE_0/12
+        GE_0/10 = FW1 GE_0/10
+        GE_0/11 = FW1 GE_0/11
+        GE_0/2 = MSR GE_0/2
+        symbol = F1060
+        x = 91.0
+        y = -146.0
+        z = 5.0
+    [[MSR36-20 MSR]]
+        image = .
+        device_id = 4
+        bridge_mac = 46-5b-aa-32-04-00
+        slot0 = MSR36 512
+        GE_0/1 = FW1 GE_0/2
+        GE_0/2 = FW2 GE_0/2
+        x = -65.0
+        y = 29.0
+        z = 5.0
+[GNS3-DATA]
+    m11 = 1.41421356237
+    m22 = 1.41421356237
+    [[NOTE 1]]
+        text = "10.20.1.2/24"
+        x = -14.6066017178
+        y = 35.5391052434
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.10.1.2/24"
+        x = -165.927452892
+        y = 37.1543289326
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.20.1.1/24"
+        x = -2.58578643763
+        y = -99.3172798365
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        color = "#00007f"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.10.1.1/24"
+        x = -175.119841047
+        y = -99.3172798365
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        color = "#00007f"
+        z = 6.0
+    [[NOTE 5]]
+        text = "IRF"
+        x = -57.0
+        y = -117.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "20.1.1.1/24"
+        x = -82.8076118446
+        y = -158.071067812
+        font = "Arial,12,-1,5,75,0,0,0,0,0"
+        color = "#aa0000"
+        z = 6.0
+    [[NOTE 7]]
+        text = "Reth1"
+        x = -65.0
+        y = -176.0
+        font = "Arial,12,-1,5,75,0,0,0,0,0"
+        color = "#aa0000"
+        z = 6.0
+    [[NOTE 8]]
+        text = "Vlan-interface 20\n20.1.1.2/24"
+        x = -11.0
+        y = -358.0
+        font = "Arial,12,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        x = 57.6177114596
+        y = -12.4939033456
+        interface = MSR GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = -67.3929079461
+        y = -13.2010101268
+        interface = MSR GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        x = -17.5674589279
+        y = 70.486072512
+        interface = FW2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 11.9717842659
+        y = -34.0710678119
+        interface = FW2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        x = 6.94925713225
+        y = 70.6389080566
+        interface = FW1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -63.8895870449
+        y = 4.16544818001
+        interface = FW1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = -30.9515560944
+        y = -32.5355339059
+        interface = FW1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/12"
+        x = 59.7353225153
+        y = 33.0359897198
+        interface = SW1 GE_0/12
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/11"
+        x = -78.6844828749
+        y = 32.1358895495
+        interface = SW1 GE_0/11
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[Cloud Host]]
+        symbol = Host
+        x = -419.736544033
+        y = -145.890872965
+        z = 5.0
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = FW1 GE_0/0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -183.0
+        y = -175.0
+        width = 285.0
+        height = 41.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

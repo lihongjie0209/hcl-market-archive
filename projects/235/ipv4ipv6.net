@@ -1,0 +1,122 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 34-1f-81-64-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = PC-1 GE_0/0
+        x = -168.0
+        y = -26.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 34-1f-84-8a-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = PC-2 GE_0/0
+        x = 100.0
+        y = -26.0
+        z = 5.0
+    [[MSR36-20 PC-1]]
+        image = .
+        device_id = 3
+        bridge_mac = 34-20-46-80-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = -276.0
+        y = 146.0
+        z = 5.0
+    [[MSR36-20 PC-2]]
+        image = .
+        device_id = 4
+        bridge_mac = 34-20-49-cb-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 239.0
+        y = 146.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "两台具有双协议栈的路由器Router A和Router B通过IPv4网络连接。\n网络管理员希望建立IPv4兼容IPv6自动隧道，使得这两台设备能够通过IPv6协议互通。\n下一跳必须写对端地址，不能写隧道。\n[RTA]ipv6 route-static :: 0 ::192.168.100.2\n[RTA]undo ipv6 route-static :: 0 Tunnel0"
+        x = -389.0
+        y = 273.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2002::/64"
+        x = 161.0
+        y = 79.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "2001::/64"
+        x = -252.0
+        y = 75.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "tunnel: ::192.168.100.0/96"
+        x = -148.0
+        y = 53.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "192.168.100.0//24"
+        x = -112.0
+        y = -36.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "IPv4兼容IPv6自动隧道典型配置"
+        x = -187.0
+        y = -126.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -63.141903779
+        y = -33.0
+        interface = PC-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 46.2707253014
+        y = -33.0
+        interface = PC-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 50.141903779
+        y = 56.1108449639
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 3.72927469857
+        y = 58.8755995541
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

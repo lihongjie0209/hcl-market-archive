@@ -1,0 +1,58 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC PC-1]]
+        image = .
+        device_id = 3
+        bridge_mac = 40-22-8d-f0-03-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -309.0
+        y = 180.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 2
+        bridge_mac = 40-22-2d-8f-02-00
+        slot0 = S5800 512
+        GE_0/1 = DHCP-Server GE_0/0
+        GE_0/2 = PC-1 GE_0/1
+        GE_0/3 = PC-N GE_0/1
+        x = -94.0
+        y = -7.0
+        z = 5.0
+    [[PC PC-N]]
+        image = .
+        device_id = 4
+        bridge_mac = 40-22-91-78-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = 147.0
+        y = 180.0
+        z = 5.0
+    [[MSR36-20 DHCP-Server]]
+        image = .
+        device_id = 1
+        bridge_mac = 40-22-22-39-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -94.0
+        y = -212.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "10.1.1.0/25"
+        x = -122.0
+        y = -118.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "……"
+        x = -105.0
+        y = 201.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,158 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = 60-b0-d4-4d-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/2
+        x = 25.0
+        y = -108.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 60-b0-c3-5d-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/0
+        x = -432.0
+        y = -255.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 60-b0-cf-d5-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTB GE_0/0
+        GE_0/2 = RTD GE_0/0
+        x = -237.0
+        y = -108.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 60-b0-c8-73-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/1
+        x = -432.0
+        y = 36.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IPv6 IS-IS基本组网配置"
+        x = -284.0
+        y = -350.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Area 10"
+        x = -239.0
+        y = 83.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "L2"
+        x = 31.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2001:1::1/64"
+        x = -392.0
+        y = -139.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "Area 20"
+        x = -74.0
+        y = 14.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "L-1-2"
+        x = -242.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "2001:4::1/64"
+        x = -38.0
+        y = -168.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "2001:2::1/64"
+        x = -367.0
+        y = -37.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "2001:3::1/64"
+        x = -166.0
+        y = -118.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 57.7030597541
+        y = 1.96719985062
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = -70.7030597541
+        y = 48.0328001494
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -70.4547532149
+        y = 1.61861865162
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = RTC GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 57.4547532149
+        y = 48.3813813484
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        x = -468.0
+        y = -277.0
+        width = 321.0
+        height = 397.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -74.0
+        y = -191.0
+        width = 209.0
+        height = 244.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

@@ -1,0 +1,58 @@
+autostart = False
+version = 2.1.3
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 A]]
+        image = .
+        device_id = 2
+        bridge_mac = ac-06-13-5d-02-00
+        slot0 = S5800 384
+        GE_0/1 = B GE_0/1
+        x = -304.0
+        y = -32.0
+        z = 5.0
+    [[S6850 B]]
+        image = .
+        device_id = 1
+        bridge_mac = ac-06-0e-75-01-00
+        slot0 = S5800 384
+        GE_0/1 = A GE_0/1
+        GE_0/2 = C GE_0/1
+        x = -106.0
+        y = -284.0
+        z = 5.0
+    [[S6850 C]]
+        image = .
+        device_id = 3
+        bridge_mac = ac-06-19-5e-03-00
+        slot0 = S5800 384
+        GE_0/1 = B GE_0/2
+        x = 70.0
+        y = -35.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "vlan-int200\n192.168.3.2/24"
+        x = 72.0
+        y = -84.0
+        font = "Arial,7,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan-int200\n192.168.3.1/24"
+        x = -51.0
+        y = -270.0
+        font = "Arial,7,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan-int100\n192.168.2.1/24"
+        x = -356.0
+        y = -89.0
+        font = "Arial,7,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan-int100\n192.168.2.2/24"
+        x = -219.0
+        y = -272.0
+        font = "Arial,7,-1,5,75,0,0,0,0,0"
+        z = 6.0

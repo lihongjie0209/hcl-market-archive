@@ -1,0 +1,213 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC CE-3]]
+        image = .
+        device_id = 6
+        bridge_mac = 62-34-b6-49-06-00
+        slot0 = PC 250
+        GE_0/1 = PE3 GE_0/2
+        symbol = PC
+        x = -94.0
+        y = -317.0
+        z = 5.0
+    [[MSR36-20 PE1]]
+        image = .
+        device_id = 1
+        bridge_mac = 62-34-65-32-01-00
+        slot0 = MSR36 512
+        GE_0/0 = PE2 GE_0/0
+        GE_0/1 = PE3 GE_0/1
+        GE_0/2 = CE-1 GE_0/1
+        x = -254.0
+        y = 9.0
+        z = 5.0
+    [[MSR36-20 PE2]]
+        image = .
+        device_id = 2
+        bridge_mac = 62-34-69-d8-02-00
+        slot0 = MSR36 512
+        GE_0/0 = PE1 GE_0/0
+        GE_0/1 = PE3 GE_0/0
+        GE_0/2 = CE-2 GE_0/1
+        x = 84.0
+        y = 9.0
+        z = 5.0
+    [[MSR36-20 PE3]]
+        image = .
+        device_id = 3
+        bridge_mac = 62-34-6d-a2-03-00
+        slot0 = MSR36 512
+        GE_0/0 = PE2 GE_0/1
+        GE_0/1 = PE1 GE_0/1
+        GE_0/2 = CE-3 GE_0/1
+        x = -94.0
+        y = -161.0
+        z = 5.0
+    [[PC CE-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 62-34-b0-7f-05-00
+        slot0 = PC 250
+        GE_0/1 = PE2 GE_0/2
+        symbol = PC
+        x = 84.0
+        y = 165.0
+        z = 5.0
+    [[PC CE-1]]
+        image = .
+        device_id = 4
+        bridge_mac = 62-34-ac-a8-04-00
+        slot0 = PC 250
+        GE_0/1 = PE1 GE_0/2
+        symbol = PC
+        x = -254.0
+        y = 165.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "3.3.3.9/32"
+        x = -45.0
+        y = -156.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2.2.2.9/32"
+        x = 134.0
+        y = 14.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "40.1.1.0/24"
+        x = -31.0
+        y = -68.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.9/32"
+        x = -363.0
+        y = 16.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "30.1.1.0/24"
+        x = -198.0
+        y = -70.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "20.1.1.0/24"
+        x = -123.0
+        y = -2.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "100.1.1.2"
+        x = -22.0
+        y = 172.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "100.1.1.1"
+        x = -203.0
+        y = 172.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "100.1.1.3"
+        x = -44.0
+        y = -313.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "BGP自动发现LDP信令方式VPLS配置"
+        x = -240.0
+        y = -382.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 53.9268418849
+        y = 52.6267591036
+        interface = PE3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -65.4145879602
+        y = 54.1279997077
+        interface = PE3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/2"
+        x = 25.0
+        y = -33.0
+        interface = PE3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = -66.9268418849
+        y = -33.0
+        interface = PE2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = PE2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/1"
+        x = 52.4145879602
+        y = -33.0
+        interface = PE1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = PE1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = PC_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

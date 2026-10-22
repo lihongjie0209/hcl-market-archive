@@ -1,0 +1,89 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\nat66trust-untrust\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 4c-89-9d-e1-01-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_2 GE_0/0
+        GE_0/3 = MSR36-20_3 GE_0/0
+        x = -107.0
+        y = -68.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 4c-89-a8-f3-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -469.0
+        y = -66.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 4c-89-af-4f-03-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/3
+        x = 282.0
+        y = -70.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "2001:: 96 变为 2002:: 96 "
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -208.0
+        y = -188.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "2001::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 198.0
+        y = -115.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "2001::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -44.0
+        y = -107.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2000::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -211.0
+        y = -110.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2000::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -455.0
+        y = -109.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.9964825331
+        y = 25.530457328
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9975034328
+        y = 24.5531005203
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9964825331
+        y = 24.469542672
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.9975034328
+        y = 25.4468994797
+        z = 6.0

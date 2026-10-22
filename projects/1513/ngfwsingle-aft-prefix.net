@@ -1,0 +1,161 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\ngfwsingle-aft-prefix\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 40-87-7d-7c-01-00
+        slot0 = F1060 512
+        GE_0/2 = MSR36-20_3 GE_0/0
+        GE_0/3 = S5820V2-54QS-GE_2 GE_0/2
+        x = -161.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_3]]
+        device_id = 3
+        bridge_mac = 40-87-a7-ad-03-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -158.0
+        y = -326.0
+        z = 5.0
+    [[PC PC_4]]
+        device_id = 4
+        bridge_mac = 40-87-b6-24-04-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_2 GE_0/3
+        symbol = PC
+        x = -283.0
+        y = 248.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 40-87-99-00-02-00
+        slot0 = S5800 600
+        GE_0/2 = F1060_1 GE_0/3
+        GE_0/3 = PC_4 GE_0/1
+        GE_0/4 = PC_5 GE_0/1
+        x = -161.0
+        y = 36.0
+        z = 5.0
+    [[PC PC_5]]
+        device_id = 5
+        bridge_mac = 40-87-bf-ad-05-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_2 GE_0/4
+        symbol = PC
+        x = -28.0
+        y = 240.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[NOTE 1]]
+        text = "AFT中IPV6目的地址利用前缀模式转换\nAFT中IPV6源地址利用地址池进行转换"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 74.0
+        y = -169.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.1.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -102.0
+        y = 176.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.1.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -291.0
+        y = 178.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "192.168.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -301.0
+        y = -73.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2001::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -287.0
+        y = -182.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2001::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -291.0
+        y = -265.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = PC_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 3.15429940431
+        y = -33.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 44.9511337233
+        y = -33.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.3259384251
+        y = 64.9943201092
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/4"
+        interface = S5820V2-54QS-GE_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 47.8457005957
+        y = 90.5076911393
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -68.9511337233
+        y = 83.6691831913
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -33.0
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.6740615749
+        y = -33.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 370.0
+        height = 472.0
+        border_color = "#666666"
+        border_style = 2
+        x = -308.0
+        y = -126.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 370.0
+        height = 204.0
+        border_color = "#666666"
+        border_style = 2
+        x = -309.0
+        y = -333.0
+        z = 3.0

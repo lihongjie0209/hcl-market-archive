@@ -1,0 +1,25 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\hcl\project\layer2_static_link-aggregation\working
+    udp = 10000
+    [[S6850 S6850_1]]
+        device_id = 1
+        bridge_mac = 1a-30-c1-10-01-00
+        slot0 = S5800 512
+        GE_0/1 = S6850_2 GE_0/1
+        GE_0/2 = S6850_2 GE_0/2
+        x = -177.0
+        y = -73.0
+        z = 5.0
+    [[S6850 S6850_2]]
+        device_id = 2
+        bridge_mac = 1a-30-c8-d0-02-00
+        slot0 = S5800 512
+        GE_0/1 = S6850_1 GE_0/1
+        GE_0/2 = S6850_1 GE_0/2
+        x = 78.0
+        y = -72.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

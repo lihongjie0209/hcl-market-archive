@@ -1,0 +1,94 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC PC-1]]
+        image = .
+        device_id = 1
+        bridge_mac = ac-51-0b-c2-01-00
+        slot0 = PC 250
+        GE_0/1 = Router GE_0/0
+        symbol = PC
+        x = -394.0
+        y = -22.0
+        z = 5.0
+    [[PC PC-2]]
+        image = .
+        device_id = 2
+        bridge_mac = ac-51-12-f9-02-00
+        slot0 = PC 250
+        GE_0/1 = Router GE_0/1
+        symbol = PC
+        x = 3.0
+        y = -22.0
+        z = 5.0
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 3
+        bridge_mac = ac-51-99-cc-03-00
+        slot0 = MSR36 512
+        GE_0/0 = PC-1 GE_0/1
+        GE_0/1 = PC-2 GE_0/1
+        x = -205.0
+        y = -149.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "172.16.1.1/16"
+        x = -53.0
+        y = -55.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "172.16.1.254/24"
+        x = -156.0
+        y = -130.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "172.16.0.254/24"
+        x = -378.0
+        y = -129.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "普通代理ARP基本组网配置"
+        x = -332.0
+        y = -255.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "172.16.0.1/16"
+        x = -444.0
+        y = -59.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 58.3632605627
+        y = 2.93435147967
+        interface = PC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = -61.1393851375
+        y = 4.15527926703
+        interface = PC_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 59.1393851375
+        y = 45.844720733
+        interface = MSR36-20_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -80.3632605627
+        y = 48.0656485203
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,120 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-02-46-09-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -309.0
+        y = 86.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-02-4d-de-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        GE_0/1 = RTB GE_0/1
+        x = -87.0
+        y = -121.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 3
+        bridge_mac = 8a-02-53-96-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/1
+        x = 175.0
+        y = 86.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "Router A、Router B和Router C通过RIPng协议实现网络互连。\n要求当Router A和Router B之间的链路出现单通故障时，业务可以快速切换到链路B上。"
+        x = -455.0
+        y = 201.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "RIPng快速重路由配置"
+        x = -179.0
+        y = -248.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "20::1/128"
+        x = 226.0
+        y = 95.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10::1/128"
+        x = -416.0
+        y = 95.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "3::1/64"
+        x = 94.0
+        y = 46.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "2::1/64"
+        x = -170.0
+        y = 78.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "1::1/64"
+        x = -259.0
+        y = 46.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = -74.2701717084
+        y = 8.13362385574
+        interface = MSR36-20_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = MSR36-20_3 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = 61.2701717084
+        y = 41.8663761443
+        interface = MSR36-20_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = -74.2165524761
+        y = 41.9812051029
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 61.2165524761
+        y = 8.0187948971
+        interface = MSR36-20_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,146 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 FTP-Server-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 3a-c7-99-25-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        x = -330.0
+        y = -191.0
+        z = 5.0
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 5
+        bridge_mac = 3a-c7-ba-eb-05-00
+        slot0 = MSR36 512
+        GE_0/0 = Router GE_0/0
+        x = 208.0
+        y = -65.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 3
+        bridge_mac = 3a-c7-ab-8e-03-00
+        slot0 = S5800 512
+        GE_0/1 = Router GE_0/1
+        GE_0/2 = FTP-Server-1 GE_0/0
+        GE_0/3 = FTP-Server-2 GE_0/0
+        x = -195.0
+        y = -65.0
+        z = 5.0
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 4
+        bridge_mac = 3a-c7-b7-cf-04-00
+        slot0 = MSR36 512
+        GE_0/0 = Host GE_0/0
+        GE_0/1 = SW GE_0/1
+        x = -16.0
+        y = -65.0
+        z = 5.0
+    [[MSR36-20 FTP-Server-2]]
+        image = .
+        device_id = 2
+        bridge_mac = 3a-c7-a1-60-02-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        x = -330.0
+        y = 43.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "负载分担内部服务器配置"
+        x = -176.0
+        y = -241.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.110.10.1"
+        x = -226.0
+        y = -127.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "两台FTP服务器可以同时对外提供服务，并进行负载分担。"
+        x = -344.0
+        y = 187.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "admin\123456qwer"
+        x = -66.0
+        y = 110.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.110.10.2"
+        x = -227.0
+        y = 12.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "202.38.1.1"
+        x = 33.0
+        y = -76.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 56.9194639404
+        y = 0.892992268752
+        interface = FTP-Server-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = Router GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Router GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/3"
+        x = -69.9194639404
+        y = 49.1070077312
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 50.0
+        y = -1.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        x = -68.0118811068
+        y = -33.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 55.0118811068
+        y = 51.4440351011
+        interface = FTP-Server-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

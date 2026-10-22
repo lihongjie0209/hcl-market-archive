@@ -1,0 +1,86 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 78-a8-46-e7-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -210.0
+        y = -10.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 78-a8-5c-66-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = 179.0
+        y = 73.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 78-a8-59-96-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = 179.0
+        y = -99.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2::1/64"
+        x = -83.0
+        y = 54.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "基于报文协议类型的IPv6本地策略路由配置"
+        x = -229.0
+        y = -212.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1::1/64"
+        x = -85.0
+        y = -54.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Router A分别与Router B和Router C直连（保证Router B和Router C之间路由完全不可达）。\n通过策略路由控制Router A产生的报文：\n· 指定所有TCP报文的下一跳为1::2；\n· 其它IPv6报文仍然按照查找路由表的方式进行转发。"
+        x = -380.0
+        y = 207.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = -76.9924730734
+        y = 33.9211570785
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -77.1194398386
+        y = 16.6531786463
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 64.1194398386
+        y = 33.3468213537
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = 63.9924730734
+        y = 16.0788429215
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

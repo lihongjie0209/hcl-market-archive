@@ -1,0 +1,146 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 IPv4-Host-A]]
+        image = .
+        device_id = 2
+        bridge_mac = 50-74-81-29-02-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        x = -335.0
+        y = -176.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 5
+        bridge_mac = 50-74-96-39-05-00
+        slot0 = S5800 512
+        GE_0/1 = IPv4-Host-A GE_0/0
+        GE_0/2 = IPv4-Host-B GE_0/0
+        GE_0/3 = NAT GE_0/0
+        x = -145.0
+        y = -62.0
+        z = 5.0
+    [[MSR36-20 IPv4-Host-B]]
+        image = .
+        device_id = 3
+        bridge_mac = 50-74-86-72-03-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        x = -335.0
+        y = 48.0
+        z = 5.0
+    [[MSR36-20 NAT]]
+        image = .
+        device_id = 1
+        bridge_mac = 50-74-7d-59-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        GE_0/1 = IPv6-FTP-Server GE_0/0
+        x = 69.0
+        y = -62.0
+        z = 5.0
+    [[MSR36-20 IPv6-FTP-Server]]
+        image = .
+        device_id = 4
+        bridge_mac = 50-74-8b-62-04-00
+        slot0 = MSR36 512
+        GE_0/0 = NAT GE_0/1
+        x = 316.0
+        y = -62.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "<IPv4-Host-A>ftp 10.1.1.1\nPress CTRL+C to abort.\nConnected to 10.1.1.1 (10.1.1.1).\n220 FTP service ready.\nUser (10.1.1.1:(none)): admin\n331 Password required for admin.\n"
+        x = 294.0
+        y = -306.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "password simple 123asdrtyy"
+        x = -128.0
+        y = 109.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "某公司将网络升级到了IPv6，此时Internet仍然是IPv4网络。该公司希望内部的FTP服务器能够继续为IPv4 Internet的用户提供服务。\n该公司拥有的IPv4地址为10.1.1.1。\n为满足上述要求，本例实现方式如下：\n·使用IPv6侧服务器配置将IPv6内部服务器的地址及端口映射为IPv4地址及端口，Router收到来自IPv4 Internet的报文后，\n根据该配置策略将报文IPv4目的地址转换为IPv6地址；\n·使用NAT64前缀将报文源IPv4地址转换为IPv6地址。"
+        x = -668.0
+        y = 151.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2013::/96"
+        x = 162.0
+        y = -74.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "20.1.1.0/24"
+        x = -357.0
+        y = -51.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "IPv4 Internet访问IPv6网络内部服务器配置"
+        x = -226.0
+        y = -285.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/3"
+        x = 65.0
+        y = 25.0
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = -72.6170514192
+        y = 45.0414508217
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = -72.2997170285
+        y = 4.4201697829
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = IPv6-FTP-Server GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 59.6170514192
+        y = 4.95854917833
+        interface = IPv4-Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = 59.2997170285
+        y = 45.5798302171
+        interface = IPv4-Host-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = NAT GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = NAT GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

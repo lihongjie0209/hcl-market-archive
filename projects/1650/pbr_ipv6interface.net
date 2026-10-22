@@ -1,0 +1,159 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 3
+        bridge_mac = 78-b1-dc-73-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = RTC GE_0/0
+        GE_0/2 = SW GE_0/1
+        x = -509.0
+        y = -142.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 2
+        bridge_mac = 78-b1-d6-22-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = -323.0
+        y = -261.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 1
+        bridge_mac = 78-b1-cf-bc-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        x = -690.0
+        y = -259.0
+        z = 5.0
+    [[MSR36-20 Host-B]]
+        image = .
+        device_id = 6
+        bridge_mac = 78-ca-75-65-06-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        x = -310.0
+        y = 112.0
+        z = 5.0
+    [[PC Host-A]]
+        image = .
+        device_id = 5
+        bridge_mac = 78-b2-16-33-05-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -681.0
+        y = 112.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 4
+        bridge_mac = 78-b2-09-d4-04-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/2
+        GE_0/2 = Host-A GE_0/1
+        GE_0/3 = Host-B GE_0/0
+        x = -509.0
+        y = -3.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "1::2/64"
+        x = -667.0
+        y = -181.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2::2/64"
+        x = -385.0
+        y = -190.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10::2/64"
+        x = -578.0
+        y = -70.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "基于报文协议类型的IPv6转发策略路由配置"
+        x = -738.0
+        y = -352.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        x = -66.2842712475
+        y = 53.2842712475
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/3"
+        x = 59.6329275381
+        y = 45.0140033512
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 53.2842712475
+        y = -33.0
+        interface = Host-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -72.6329275381
+        y = 4.98599664883
+        interface = Host-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 58.0770600828
+        y = 47.4924008563
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = -71.6412294553
+        y = 46.6394935415
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = RTA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 58.6412294553
+        y = 3.36050645847
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -71.0770600828
+        y = 2.50759914371
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

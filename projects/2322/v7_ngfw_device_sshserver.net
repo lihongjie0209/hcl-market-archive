@@ -1,0 +1,49 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = E:\HCLHub\03Firewall\v7_ngfw_device_sshserver
+    udp = 10000
+    [[F1090 FW1_1]]
+        device_id = 1
+        bridge_mac = 16-4e-06-5d-01-00
+        slot0 = F1060 768
+        GE_0/1 = PC1_2 GE_0/0
+        x = -276.0
+        y = -248.0
+        z = 5.0
+    [[MSR36-20 PC1_2]]
+        device_id = 2
+        bridge_mac = 16-4e-13-54-02-00
+        slot0 = MSR36 384
+        GE_0/0 = FW1_1 GE_0/1
+        x = 127.0
+        y = -249.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "10.0.12.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -218.7058823529412
+        y = -255.49999999999997
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.12.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 36.58823529411765
+        y = -256.0882352941177
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        interface = PC1_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.9998768546839
+        y = 25.099255277555045
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = FW1_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99987685468392
+        y = 24.900744722444955
+        z = 6.0

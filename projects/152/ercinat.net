@@ -1,0 +1,90 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[F1060 F1060_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 88-99-79-6f-01-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/3
+        symbol = F1060
+        x = -115.0
+        y = -210.0
+        z = 5.0
+    [[PC PC_4]]
+        image = .
+        device_id = 4
+        bridge_mac = 88-99-bb-33-04-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_2 GE_0/2
+        symbol = PC
+        x = 112.0
+        y = 151.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        image = .
+        device_id = 2
+        bridge_mac = 88-99-ab-0a-02-00
+        slot0 = S5800 384
+        GE_0/1 = PC_3 GE_0/1
+        GE_0/2 = PC_4 GE_0/1
+        GE_0/3 = F1060_1 GE_0/2
+        symbol = S5820V2-54QS-GE
+        x = -118.0
+        y = -17.0
+        z = 5.0
+    [[PC PC_3]]
+        image = .
+        device_id = 3
+        bridge_mac = 88-99-b6-e9-03-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_2 GE_0/1
+        symbol = PC
+        x = -379.0
+        y = 155.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = -72.3007903639
+        y = 1.40637921245
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = 58.4382570395
+        y = 3.04816713437
+        interface = PC_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/3"
+        x = 25.6216865575
+        y = -34.0
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        x = 81.3007903639
+        y = 87.5936207876
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = -78.4382570395
+        y = 79.9518328656
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/2"
+        x = 24.3783134425
+        y = 64.995168531
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

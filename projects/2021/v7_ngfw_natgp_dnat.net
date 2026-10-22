@@ -1,0 +1,148 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = E:\HCLHub\03Firewall\v7_ngfw_natgp_snat
+    udp = 10000
+    [[F1090 FW1_2]]
+        device_id = 2
+        bridge_mac = 96-25-54-97-02-00
+        slot0 = F1060 768
+        GE_0/1 = Internet_1 GE_0/1
+        GE_0/2 = SW1_3 GE_0/2
+        x = -251.0
+        y = -99.0
+        z = 5.0
+    [[S5820V2-54QS-GE Internet_1]]
+        device_id = 1
+        bridge_mac = 96-25-38-6e-01-00
+        slot0 = S5800 384
+        GE_0/1 = FW1_2 GE_0/1
+        x = -575.0
+        y = -99.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW1_3]]
+        device_id = 3
+        bridge_mac = 96-25-89-99-03-00
+        slot0 = S5800 384
+        GE_0/2 = FW1_2 GE_0/2
+        GE_0/4 = Server1_4 GE_0/0
+        GE_0/5 = Server2_5 GE_0/0
+        x = 76.0
+        y = -98.0
+        z = 5.0
+    [[MSR36-20 Server1_4]]
+        device_id = 4
+        bridge_mac = 96-25-ae-3c-04-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_3 GE_0/4
+        x = 299.0
+        y = -225.0
+        z = 5.0
+    [[MSR36-20 Server2_5]]
+        device_id = 5
+        bridge_mac = 96-25-b4-19-05-00
+        slot0 = MSR36 384
+        GE_0/0 = SW1_3 GE_0/5
+        x = 300.0
+        y = 99.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "172.16.5.5"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 301.0
+        y = 71.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "172.16.5.4"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 305.0
+        y = -156.5
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan 10:172.16.5.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 132.7142857142857
+        y = -84.92857142857143
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan 2:10.0.23.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -44.71428571428572
+        y = -127.35714285714285
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.0.23.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -202.0
+        y = -118.5
+        z = 6.0
+    [[NOTE 6]]
+        text = "100.0.12.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -351.0
+        y = -133.5
+        z = 6.0
+    [[NOTE 7]]
+        text = "100.0.12.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -592.0
+        y = -134.5
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        interface = Server2_5 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -57.03651951133264
+        y = -29.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        interface = Server1_4 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -61.758464725211184
+        y = 44.79517946234
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/5"
+        interface = SW1_3 GE_0/5
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 55.03651951133264
+        y = 51.41604617737737
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/4"
+        interface = SW1_3 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 67.61560758235404
+        y = -1.938036605197155
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = SW1_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.99981296131338
+        y = 24.877676412962344
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = Internet_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        interface = FW1_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99981296131338
+        y = 25.122323587037656
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        interface = FW1_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -67.0
+        y = 25.0
+        z = 6.0

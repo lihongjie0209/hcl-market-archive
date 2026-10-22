@@ -1,0 +1,74 @@
+version = 5.10.2
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\moniqi319\hcl_357f0d658209\working
+    udp = 10000
+    [[S6850 RTA]]
+        device_id = 1
+        bridge_mac = 72-c3-d6-4a-01-00
+        slot0 = S5800 512
+        GE_0/1 = RTB GE_0/1
+        x = -402.0
+        y = -79.0
+        z = 5.0
+    [[S6850 RTB]]
+        device_id = 2
+        bridge_mac = 72-c3-db-d9-02-00
+        slot0 = S5800 512
+        GE_0/1 = RTA GE_0/1
+        GE_0/2 = RTC GE_0/1
+        x = -73.0
+        y = -233.0
+        z = 5.0
+    [[S6850 RTC]]
+        device_id = 3
+        bridge_mac = 72-c3-e9-e9-03-00
+        slot0 = S5800 512
+        GE_0/1 = RTB GE_0/2
+        x = 272.0
+        y = -64.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.1
+    m22 = 1.1
+    [[NOTE 1]]
+        text = "LOOP0:3.3.3.3/32"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 349.0
+        y = -46.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "20.0.0.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 205.0
+        y = -110.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "20.0.0.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -5.0
+        y = -236.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "LOOP0:2.2.2.2/32"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -140.0
+        y = -319.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.0.0.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -231.0
+        y = -246.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "10.0.0.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -488.0
+        y = -136.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "LOOP0:1.1.1.1/32"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -658.0
+        y = -51.0
+        z = 6.0

@@ -1,0 +1,30 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Router-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 56-e1-82-35-01-00
+        slot0 = MSR36 512
+        Ser_2/0 = Router-B Ser_2/0
+        x = -379.0
+        y = -8.0
+        z = 5.0
+    [[MSR36-20 Router-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 56-e1-85-72-02-00
+        slot0 = MSR36 512
+        Ser_2/0 = Router-A Ser_2/0
+        x = -130.0
+        y = -8.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "200.1.1.0/16"
+        x = -304.0
+        y = -19.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

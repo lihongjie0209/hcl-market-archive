@@ -1,0 +1,156 @@
+version = 5.8.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\cys44579\desktop\gcs\qosvlan\working
+    udp = 10000
+    [[S6850 Backbone]]
+        device_id = 5
+        bridge_mac = 0e-af-a6-ea-05-00
+        slot0 = S5800 512
+        GE_0/10 = Device-2 GE_0/10
+        x = -87.0
+        y = -83.39696961966997
+        z = 5.0
+    [[PC PC_2]]
+        device_id = 11
+        bridge_mac = 0e-b1-29-b9-0b-00
+        slot0 = PC 250
+        GE_0/1 = SW1 GE_0/3
+        symbol = PC
+        x = -257.0
+        y = 491.0
+        z = 5.0
+    [[PC PC_3]]
+        device_id = 12
+        bridge_mac = 0e-b1-2c-c9-0c-00
+        slot0 = PC 250
+        GE_0/1 = SW2 GE_0/1
+        symbol = PC
+        x = -151.0
+        y = 492.0
+        z = 5.0
+    [[PC PC_4]]
+        device_id = 13
+        bridge_mac = 0e-b1-2f-21-0d-00
+        slot0 = PC 250
+        GE_0/1 = SW2 GE_0/3
+        symbol = PC
+        x = 1.0
+        y = 491.0
+        z = 5.0
+    [[PC PC_5]]
+        device_id = 14
+        bridge_mac = 0e-b1-31-89-0e-00
+        slot0 = PC 250
+        GE_0/1 = SW3 GE_0/1
+        symbol = PC
+        x = 109.0
+        y = 493.0
+        z = 5.0
+    [[PC PC_6]]
+        device_id = 15
+        bridge_mac = 0e-b1-33-8e-0f-00
+        slot0 = PC 250
+        GE_0/1 = SW3 GE_0/2
+        symbol = PC
+        x = 273.0
+        y = 490.0
+        z = 5.0
+    [[PC PC_1]]
+        device_id = 10
+        bridge_mac = 0e-b1-26-20-0a-00
+        slot0 = PC 250
+        GE_0/1 = SW1 GE_0/2
+        symbol = PC
+        x = -375.0
+        y = 491.0
+        z = 5.0
+    [[S6850 SW1]]
+        device_id = 7
+        bridge_mac = 0e-af-b8-f5-07-00
+        slot0 = S5800 512
+        GE_0/3 = PC_2 GE_0/1
+        GE_0/2 = PC_1 GE_0/1
+        GE_0/1 = Device-2 GE_0/1
+        x = -318.0
+        y = 321.0
+        z = 5.0
+    [[S6850 SW2]]
+        device_id = 8
+        bridge_mac = 0e-af-bc-f1-08-00
+        slot0 = S5800 512
+        GE_0/1 = PC_3 GE_0/1
+        GE_0/3 = PC_4 GE_0/1
+        GE_0/2 = Device-2 GE_0/2
+        x = -86.0
+        y = 327.0
+        z = 5.0
+    [[S6850 SW3]]
+        device_id = 9
+        bridge_mac = 0e-b0-9f-f5-09-00
+        slot0 = S5800 512
+        GE_0/1 = PC_5 GE_0/1
+        GE_0/2 = PC_6 GE_0/1
+        GE_0/3 = Device-2 GE_0/3
+        x = 172.0
+        y = 322.0
+        z = 5.0
+    [[S6850 Device-2]]
+        device_id = 6
+        bridge_mac = 0e-af-ad-80-06-00
+        slot0 = S5800 512
+        GE_0/10 = Backbone GE_0/10
+        GE_0/1 = SW1 GE_0/1
+        GE_0/2 = SW2 GE_0/2
+        GE_0/3 = SW3 GE_0/3
+        x = -88.0
+        y = 155.0
+        z = 5.0
+[Non-vBox-DATA]
+    [[NOTE 1]]
+        text = "vlan1001\nvlan1002\nvlan1003"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -350.0
+        y = 581.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan1001\nvlan1002\nvlan1003"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -110.0
+        y = 587.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vlan201\nvlan202\nvlan203"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 164.0
+        y = 588.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan1001 400Mbps\nvlan1002 200Mbps\nvlan1003 200Mbps"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -404.0
+        y = 196.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan201 400Mbps\nvlan202 200Mbps\nvlan203 200Mbps"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 97.0
+        y = 195.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1002→201 1002→202 1003→203"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -546.1126983722081
+        y = 139.38477631085027
+        z = 6.0
+    [[NOTE 7]]
+        text = "vlan201 100Mbps\nvlan202 60Mbps\nvlan203 40Mbps"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -33.107647738324744
+        y = 16.608081014213354
+        z = 6.0
+    [[NOTE 8]]
+        text = "流量监管-基于VLAN带宽分配"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -241.58787847868
+        y = 710.1484117468901
+        z = 6.0

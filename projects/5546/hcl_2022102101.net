@@ -1,0 +1,43 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\hcl文件\hcl_2022102101\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 78-c3-97-78-01-00
+        slot0 = AC 768
+        GE_0/1 = S6850_4 GE_0/1
+        x = -915.0
+        y = -244.0
+        z = 5.0
+    [[AP AP_2]]
+        device_id = 2
+        bridge_mac = 78-c3-a1-77-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = S6850_4 GE_0/2
+        x = -495.0
+        y = -243.0
+        z = 5.0
+    [[Phone Phone_3]]
+        device_id = 3
+        bridge_mac = 78-c4-b0-98-03-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 78c3-a177-0210
+        x = -319.0
+        y = -240.0
+        z = 5.0
+    [[S6850 S6850_4]]
+        device_id = 4
+        bridge_mac = 7a-06-86-c4-04-00
+        slot0 = S5800 512
+        GE_0/1 = AC_1 GE_0/1
+        GE_0/2 = AP_2 GE_0/1
+        x = -710.0
+        y = -244.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

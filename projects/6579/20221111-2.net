@@ -1,0 +1,83 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\h23227\hcl\projects\20221111-2\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 78-c3-97-78-01-00
+        slot0 = AC 768
+        GE_0/1 = S6850_4 GE_0/1
+        x = -915.0
+        y = -244.0
+        z = 5.0
+    [[AP AP_2]]
+        device_id = 2
+        bridge_mac = 78-c3-a1-77-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = S6850_4 GE_0/2
+        x = -468.0357142857142
+        y = -242.7321428571429
+        z = 5.0
+    [[Phone Phone_3]]
+        device_id = 3
+        bridge_mac = 78-c4-b0-98-03-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 78c3-a177-0210
+        x = -301.36869747899163
+        y = -242.67331932773112
+        z = 5.0
+    [[S6850 S6850_4]]
+        device_id = 4
+        bridge_mac = 7a-06-86-c4-04-00
+        slot0 = S5800 512
+        GE_0/1 = AC_1 GE_0/1
+        GE_0/2 = AP_2 GE_0/1
+        x = -710.0
+        y = -244.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "apap"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -471.5
+        y = -276.2321428571429
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.10.10.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -497.6607142857142
+        y = -305.16071428571445
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = S6850_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 53.39399520367158
+        y = -2.6407474258021466
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = S6850_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -62.285714285714334
+        y = 23.571428571428555
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = AP_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -59.71332293476388
+        y = 24.11133566109629
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = AC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 51.428571428571445
+        y = 25.0
+        z = 6.0

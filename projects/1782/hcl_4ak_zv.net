@@ -1,0 +1,33 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 52-0b-4d-a1-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/1
+        GE_0/2 = Host GE_0/1
+        x = -139.0
+        y = -120.0
+        z = 5.0
+    [[S6850 Host]]
+        image = .
+        device_id = 3
+        bridge_mac = 52-0b-56-3a-03-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/2
+        x = -401.0
+        y = -121.0
+        z = 5.0
+    [[S6850 SW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 52-0b-51-08-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        x = 116.0
+        y = -120.0
+        z = 5.0

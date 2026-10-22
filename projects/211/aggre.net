@@ -1,0 +1,104 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Device-A]]
+        image = .
+        device_id = 1
+        bridge_mac = 1e-56-c2-ab-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-B GE_0/0
+        GE_0/1 = Device-B GE_0/1
+        GE_5/1 = Device-B GE_5/1
+        GE_5/0 = Device-B GE_5/0
+        x = -144.0
+        y = -64.0
+        z = 5.0
+    [[MSR36-20 Device-B]]
+        image = .
+        device_id = 2
+        bridge_mac = 1e-56-c6-75-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Device-A GE_0/0
+        GE_0/1 = Device-A GE_0/1
+        GE_5/1 = Device-A GE_5/1
+        GE_5/0 = Device-A GE_5/0
+        x = 188.0
+        y = -64.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "聚合组2"
+        x = 4.0
+        y = -30.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "聚合组1"
+        x = 2.0
+        y = -84.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "三层聚合负载分担配置举例"
+        x = -91.0
+        y = -212.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_5/1"
+        x = -74.0
+        y = 49.0
+        interface = Device-B GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_5/0"
+        x = -75.0
+        y = 30.0
+        interface = Device-B GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -77.0
+        y = -1.0
+        interface = Device-B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -78.0
+        y = -20.0
+        interface = Device-B GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_5/1"
+        x = 66.0
+        y = 50.0
+        interface = Device-A GE_5/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_5/0"
+        x = 66.0
+        y = 30.0
+        interface = Device-A GE_5/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = 66.0
+        y = 0.0
+        interface = Device-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 64.0
+        y = -22.0
+        interface = Device-A GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

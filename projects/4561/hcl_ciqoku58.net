@@ -1,0 +1,45 @@
+version = 5.2.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\c10212\hcl\projects\hcl_ciqoku58\working
+    udp = 10000
+    [[S6850 S6850_1]]
+        device_id = 1
+        bridge_mac = 8e-0f-41-cd-01-00
+        slot0 = S5800 512
+        XGE_0/49 = S6850_2 XGE_0/49
+        GE_0/1 = NIC:VirtualBox Host-Only Ethernet Adapter
+        x = 46.99999999999994
+        y = -103.50000000000003
+        z = 5.0
+    [[S6850 S6850_2]]
+        device_id = 2
+        bridge_mac = 8e-0f-47-0a-02-00
+        slot0 = S5800 512
+        XGE_0/49 = S6850_1 XGE_0/49
+        x = 47.0
+        y = -221.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = S6850_1 GE_0/1
+        x = 46.999999999999986
+        y = -8.000000000000004
+        z = 5.0
+    [[NOTE 1]]
+        text = "XGE_0/49"
+        interface = S6850_2 XGE_0/49
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.999999999999986
+        y = 65.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "XGE_0/49"
+        interface = S6850_1 XGE_0/49
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.000000000000014
+        y = -29.0
+        z = 6.0

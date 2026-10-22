@@ -1,0 +1,25 @@
+[H3C-security-policy-ipv6]dis th*Nov 10 16:40:58:699 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Local, Dst-Zone=Untrust;If-In=InLoopBack0(1284), If-Out=GigabitEthernet1/0/0(1); Packet Info:Src-IP=fe80::3e1e:18ff:fe58:105, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+
+#
+security-policy ipv6
+#
+return
+[H3C-security-policy-ipv6]*Nov 10 16:41:05:455 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Untrust, Dst-Zone=Local;If-In=GigabitEthernet1/0/0(1), If-Out=NULL0(1283); Packet Info:Src-IP=fe80::3e1e:24ff:fe14:205, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+*Nov 10 16:41:08:699 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Local, Dst-Zone=Untrust;If-In=InLoopBack0(1284), If-Out=GigabitEthernet1/0/0(1); Packet Info:Src-IP=fe80::3e1e:18ff:fe58:105, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+*Nov 10 16:41:15:454 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Untrust, Dst-Zone=Local;If-In=GigabitEthernet1/0/0(1), If-Out=NULL0(1283); Packet Info:Src-IP=fe80::3e1e:24ff:fe14:205, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+*Nov 10 16:41:18:699 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Local, Dst-Zone=Untrust;If-In=InLoopBack0(1284), If-Out=GigabitEthernet1/0/0(1); Packet Info:Src-IP=fe80::3e1e:18ff:fe58:105, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+*Nov 10 16:41:25:455 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Untrust, Dst-Zone=Local;If-In=GigabitEthernet1/0/0(1), If-Out=NULL0(1283); Packet Info:Src-IP=fe80::3e1e:24ff:fe14:205, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+*Nov 10 16:41:28:699 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Local, Dst-Zone=Untrust;If-In=InLoopBack0(1284), If-Out=GigabitEthernet1/0/0(1); Packet Info:Src-IP=fe80::3e1e:18ff:fe58:105, Dst-IP=ff02::5, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=invalid(0), ACL=none, Rule-ID=none.
+
+
+
+
+<H3C>u*Nov 10 16:57:36:218 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Untrust, Dst-Zone=Local;If-In=GigabitEthernet1/0/0(1), If-Out=InLoopBack0(1284); Packet Info:Src-IP=fe80::3e1e:24ff:fe14:205, Dst-IP=fe80::3e1e:18ff:fe58:105, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=other(1), ACL=none, Rule-ID=none.
+
+ *Nov 10 16:57:36:317 2021 H3C FILTER/7/PACKET: -Context=1; The packet is denied. Src-Zone=Local, Dst-Zone=Untrust;If-In=InLoopBack0(1284), If-Out=GigabitEthernet1/0/0(1); Packet Info:Src-IP=fe80::3e1e:18ff:fe58:105, Dst-IP=fe80::3e1e:24ff:fe14:205, VPN-Instance=,Src-Port=65535, Dst-Port=65535, Protocol=OSPFIGP(89), Application=other(1), ACL=none, Rule-ID=none.

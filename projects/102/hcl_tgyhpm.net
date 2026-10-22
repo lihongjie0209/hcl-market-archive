@@ -1,0 +1,86 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 SITE2]]
+        image = .
+        device_id = 4
+        bridge_mac = 8a-c6-ce-18-04-00
+        slot0 = S5800 384
+        GE_0/1 = PE2 GE_0/2
+        x = 156.0
+        y = 187.0
+        z = 5.0
+    [[S6850 PE1]]
+        image = .
+        device_id = 1
+        bridge_mac = 8a-c6-b8-4a-01-00
+        slot0 = S5800 384
+        GE_0/1 = PE2 GE_0/1
+        GE_0/2 = SITE1 GE_0/1
+        x = -417.0
+        y = -36.0
+        z = 5.0
+    [[S6850 PE2]]
+        image = .
+        device_id = 2
+        bridge_mac = 8a-c6-bf-31-02-00
+        slot0 = S5800 384
+        GE_0/1 = PE1 GE_0/1
+        GE_0/2 = SITE2 GE_0/1
+        x = 156.0
+        y = -36.0
+        z = 5.0
+    [[S6850 SITE1]]
+        image = .
+        device_id = 3
+        bridge_mac = 8a-c6-c8-58-03-00
+        slot0 = S5800 384
+        GE_0/1 = PE1 GE_0/2
+        x = -417.0
+        y = 187.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -37.0
+        interface = SITE2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -37.0
+        interface = SITE1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = -93.0
+        y = 25.0
+        interface = PE2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = PE1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = PE1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

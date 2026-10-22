@@ -1,0 +1,113 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 2
+        bridge_mac = 3c-32-25-04-02-00
+        slot0 = MSR36 512
+        GE_0/0 = IPv6-Host GE_0/0
+        GE_0/1 = NIC:VirtualBox Host-Only Ethernet Adapter
+        x = -90.0
+        y = -94.0
+        z = 5.0
+    [[MSR36-20 IPv6-Host]]
+        image = .
+        device_id = 1
+        bridge_mac = 3c-32-1d-0e-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Router GE_0/0
+        x = -320.0
+        y = -94.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IPv4 Network"
+        x = -8.0
+        y = -122.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "IPv6网络和IPv4网络通过ISATAP路由器相连，在IPv4网络侧分布着一些IPv6主机。\n要求将IPv4网络中的IPv6主机通过ISATAP隧道接入到IPv6网络。"
+        x = -428.0
+        y = 46.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.56.0/30"
+        x = -23.0
+        y = -68.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "IPv6 Network"
+        x = -257.0
+        y = -121.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "ISATAP隧道典型配置"
+        x = -193.0
+        y = -213.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "3001::/64"
+        x = -229.0
+        y = -69.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = IPv6-Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = Router GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Router GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        x = -260.0
+        y = 91.0
+        interface = ISATAP-Host NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[Cloud ISATAP-Host]]
+        symbol = Host
+        x = 158.0
+        y = -94.0
+        z = 5.0
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = Router GE_0/1
+    [[SHAPE 1]]
+        type = rectangle
+        x = -59.0
+        y = -121.0
+        width = 243.0
+        height = 100.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        x = -302.0
+        y = -121.0
+        width = 243.0
+        height = 100.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

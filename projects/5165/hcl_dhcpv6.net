@@ -1,0 +1,62 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 3
+        bridge_mac = 3a-96-ac-48-03-00
+        slot0 = MSR36 384
+        GE_0/1 = Client GE_0/0
+        x = 245.0
+        y = -159.0
+        z = 5.0
+    [[MSR36-20 Client]]
+        image = .
+        device_id = 2
+        bridge_mac = 3a-ad-36-a2-02-00
+        slot0 = MSR36 384
+        GE_0/0 = Host GE_0/1
+        GE_0/1 = Server GE_0/0
+        x = 13.0
+        y = -159.0
+        z = 5.0
+    [[MSR36-20 Server]]
+        image = .
+        device_id = 1
+        bridge_mac = 3a-ad-34-1f-01-00
+        slot0 = MSR36 384
+        GE_0/0 = Client GE_0/1
+        x = -249.0
+        y = -159.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/0"
+        x = 64.9933208724
+        y = 24.2690515767
+        interface = MSR36-20_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = -66.9933208724
+        y = 25.7309484233
+        interface = MSR36-20_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = 51.1374306481
+        y = 25.386388989
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        x = -65.1374306481
+        y = -13.0
+        interface = MSR36-20_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

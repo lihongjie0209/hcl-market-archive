@@ -1,0 +1,110 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = 72-b9-11-43-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/2
+        x = 118.0
+        y = 73.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 72-b9-02-75-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        x = -333.0
+        y = -70.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 72-b9-0e-2b-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        x = 118.0
+        y = -215.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 72-b9-08-bc-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        GE_0/2 = RTD GE_0/0
+        x = -125.0
+        y = -70.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "BGP LS配置举例"
+        x = -203.0
+        y = -317.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "194.1.1.0/24"
+        x = -23.0
+        y = 21.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.1.1.0/24"
+        x = -276.0
+        y = -82.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "193.1.1.0/24"
+        x = -46.0
+        y = -136.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 61.1978896903
+        y = 7.97904873496
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        x = 59.8834452934
+        y = 44.5740962618
+        interface = RTB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -74.1978896903
+        y = 42.020951265
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -72.8834452934
+        y = 5.42590373821
+        interface = RTD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

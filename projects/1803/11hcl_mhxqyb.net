@@ -1,0 +1,41 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\组内工作\模拟器测试\模拟器工程文件\正式发布-1期\工程文件补充个人\vlanmapping映射\hcl_mhxqyb\working
+    udp = 16000
+    [[S6850 SWA]]
+        device_id = 1
+        bridge_mac = 72-30-34-f9-01-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/1
+        GE_0/2 = PC1 GE_0/1
+        x = -368.0
+        y = -178.0
+        z = 5.0
+    [[S6850 PC2]]
+        device_id = 4
+        bridge_mac = 72-30-41-bc-04-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/2
+        x = 56.0
+        y = 111.0
+        z = 5.0
+    [[S6850 SWB]]
+        device_id = 2
+        bridge_mac = 72-30-37-fd-02-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/1
+        GE_0/2 = PC2 GE_0/1
+        x = 53.0
+        y = -181.0
+        z = 5.0
+    [[S6850 PC1]]
+        device_id = 3
+        bridge_mac = 72-30-3d-53-03-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/2
+        x = -368.0
+        y = 104.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

@@ -1,0 +1,68 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PPPoEServer]]
+        image = .
+        device_id = 2
+        bridge_mac = 66-e5-c5-54-02-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoEClient GE_0/0
+        GE_0/1 = Internet GE_0/0
+        x = -64.0
+        y = -115.0
+        z = 5.0
+    [[MSR36-20 PPPoEClient]]
+        image = .
+        device_id = 1
+        bridge_mac = 66-e5-c0-a8-01-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoEServer GE_0/0
+        x = -341.0
+        y = -115.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 3
+        bridge_mac = 66-e5-c9-a5-03-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoEServer GE_0/1
+        x = 230.0
+        y = -115.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "PPPoE Server通过本地DHCP服务器为用户分配IP地址配置举例"
+        x = -367.0
+        y = -237.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = PPPoEClient GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = PPPoEServer GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = PPPoEServer GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

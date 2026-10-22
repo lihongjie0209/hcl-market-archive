@@ -1,0 +1,92 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 PPPoECilent]]
+        image = .
+        device_id = 1
+        bridge_mac = 66-0d-43-3d-01-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoEServer GE_0/0
+        x = -410.0
+        y = -136.0
+        z = 5.0
+    [[MSR36-20 PPPoEServer]]
+        image = .
+        device_id = 2
+        bridge_mac = 66-0c-09-30-02-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoECilent GE_0/0
+        GE_0/1 = DHCPServer GE_0/0
+        x = -195.0
+        y = -136.0
+        z = 5.0
+    [[MSR36-20 DHCPServer]]
+        image = .
+        device_id = 3
+        bridge_mac = 66-0c-0e-6f-03-00
+        slot0 = MSR36 512
+        GE_0/0 = PPPoEServer GE_0/1
+        GE_0/1 = Internet GE_0/0
+        x = 41.0
+        y = -136.0
+        z = 5.0
+    [[MSR36-20 Internet]]
+        image = .
+        device_id = 4
+        bridge_mac = 66-0c-12-40-04-00
+        slot0 = MSR36 512
+        GE_0/0 = DHCPServer GE_0/1
+        x = 275.0
+        y = -136.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "PPPoE Server通过远端DHCP服务器为用户分配IP地址配置举例"
+        x = -378.0
+        y = -292.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Internet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = DHCPServer GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = DHCPServer GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = PPPoEServer GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -77.9762399741
+        y = 26.3784910336
+        interface = PPPoEServer GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = PPPoECilent GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

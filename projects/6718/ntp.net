@@ -1,0 +1,38 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l15246\hcl\projects\ntp\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 52-0c-06-ec-01-00
+        slot0 = AC 768
+        GE_0/0 = S5820V2-54QS-GE_2 GE_0/1
+        x = -696.0
+        y = -200.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 52-19-03-05-02-00
+        slot0 = S5800 384
+        GE_0/1 = AC_1 GE_0/0
+        x = -211.0
+        y = -201.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -90.99991497529501
+        y = 25.082474051495467
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        interface = AC_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99991497529504
+        y = 24.917525948504533
+        z = 6.0

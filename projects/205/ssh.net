@@ -1,0 +1,47 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Server]]
+        image = .
+        device_id = 1
+        bridge_mac = 0e-c2-36-01-01-00
+        slot0 = MSR36 512
+        GE_0/0 = NIC:VirtualBox Host-Only Ethernet Adapter
+        x = 101.0
+        y = -171.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "#\nlocal-user xgdd class manage\n service-type ssh terminal\n authorization-attribute user-role network-xgdd\n#\n这么配置的话不行，因为没有授权user-role，用户没有权限会闪退。"
+        x = -314.0
+        y = -38.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "SSH"
+        x = -100.0
+        y = -226.5
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/0"
+        x = -77.9994686045
+        y = 25.2061828279
+        interface = Server GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        x = 28.9994658548
+        y = 89.2067155858
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[Cloud Host_1]]
+        symbol = Host
+        x = -287.0
+        y = -169.0
+        z = 5.0
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = Server GE_0/0

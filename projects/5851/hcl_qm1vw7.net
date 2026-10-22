@@ -1,0 +1,61 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\组内工作\模拟器测试\模拟器工程文件\正式发布-1期\新建文件夹\arp冲突检测基本功能举例\hcl_qm1vw7\working
+    udp = 16000
+    [[S6850 SWA]]
+        device_id = 1
+        bridge_mac = 6c-0c-b2-34-01-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/1
+        x = -334.0
+        y = 11.0
+        z = 5.0
+    [[S6850 SWC]]
+        device_id = 3
+        bridge_mac = 6c-0c-b9-a2-03-00
+        slot0 = S5800 512
+        GE_0/1 = SWB GE_0/2
+        x = 95.0
+        y = 8.0
+        z = 5.0
+    [[S6850 SWB]]
+        device_id = 2
+        bridge_mac = 6c-0c-b4-a1-02-00
+        slot0 = S5800 512
+        GE_0/1 = SWA GE_0/1
+        GE_0/2 = SWC GE_0/1
+        x = -119.0
+        y = -157.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = S6850_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -84.6774253821
+        y = 0.575816878299
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        interface = S6850_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 56.6774253821
+        y = 49.4241831217
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = S6850_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -93.5187522789
+        y = 43.6286064319
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = S6850_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 56.5187522789
+        y = 0.371393568079
+        z = 6.0

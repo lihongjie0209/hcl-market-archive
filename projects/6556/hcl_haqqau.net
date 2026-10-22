@@ -1,0 +1,185 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25883\desktop\模拟器\hcl_haqqau\working
+    udp = 16000
+    [[S6850 SwitchC]]
+        device_id = 3
+        bridge_mac = 46-59-df-68-03-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchA GE_0/2
+        GE_0/2 = SwitchD GE_0/2
+        x = -337.0
+        y = 70.0
+        z = 5.0
+    [[S6850 SwitchB]]
+        device_id = 2
+        bridge_mac = 46-59-d9-cd-02-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchA GE_0/1
+        GE_0/3 = SwitchD GE_0/3
+        x = -333.0
+        y = -210.0
+        z = 5.0
+    [[S6850 SwitchA]]
+        device_id = 1
+        bridge_mac = 46-59-d1-ae-01-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchB GE_0/1
+        GE_0/2 = SwitchC GE_0/1
+        x = -542.0
+        y = -86.0
+        z = 5.0
+    [[S6850 SwitchE]]
+        device_id = 5
+        bridge_mac = 46-5a-01-a9-05-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchD GE_0/1
+        x = 176.0
+        y = -76.0
+        z = 5.0
+    [[S6850 SwitchD]]
+        device_id = 4
+        bridge_mac = 46-59-e6-c2-04-00
+        slot0 = S5800 512
+        GE_0/1 = SwitchE GE_0/1
+        GE_0/2 = SwitchC GE_0/2
+        GE_0/3 = SwitchB GE_0/3
+        x = -117.0
+        y = -73.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "Vlan-int 500"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -24.0
+        y = -94.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "Vlan-int 400"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -225.0
+        y = 38.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "Vlan-int 300"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -239.0
+        y = -169.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "Vlan-int 200"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -556.0
+        y = 42.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "Vlan-int 100"
+        font = "Arial,10,-1,5,75,0,0,0,0,0"
+        x = -551.0
+        y = -167.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "AS 20"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -38.0
+        y = -221.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "AS 10"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -567.0
+        y = -222.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = SwitchE GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -92.9979034602
+        y = 25.4095348477
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = SwitchD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9979034602
+        y = 24.5904651523
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/3"
+        interface = SwitchD GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -37.7786179776
+        y = -44.4244012173
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        interface = SwitchD GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -56.537744652
+        y = 72.7995340238
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = SwitchC GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 56.537744652
+        y = 9.20046597618
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = SwitchC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.8315210394
+        y = 6.7769888676
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        interface = SwitchB GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 61.7786179776
+        y = 3.42440121731
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        interface = SwitchB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -72.4009619267
+        y = 8.41014009051
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/2"
+        interface = SwitchA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 7.83152103937
+        y = 77.2230111324
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/1"
+        interface = SwitchA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 8.40096192675
+        y = -41.4101400905
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 674.0
+        height = 423.0
+        fill_color = "#55ffff"
+        border_color = "#666666"
+        border_style = 2
+        x = -415.0
+        y = -238.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 174.0
+        height = 419.0
+        fill_color = "#ffaaff"
+        border_color = "#666666"
+        border_style = 2
+        x = -610.0
+        y = -236.0
+        z = 3.0

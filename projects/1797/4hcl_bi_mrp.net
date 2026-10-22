@@ -1,0 +1,100 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC Client  B]]
+        image = .
+        device_id = 4
+        bridge_mac = 46-57-3d-44-04-00
+        slot0 = PC 250
+        GE_0/1 = Device A GE_0/2
+        symbol = PC
+        x = -264.0
+        y = -32.0
+        z = 5.0
+    [[PC Client  A]]
+        image = .
+        device_id = 3
+        bridge_mac = 46-57-37-1f-03-00
+        slot0 = PC 250
+        GE_0/1 = Device A GE_0/1
+        symbol = PC
+        x = -267.0
+        y = -257.0
+        z = 5.0
+    [[S6850 Device B]]
+        image = .
+        device_id = 2
+        bridge_mac = 46-57-27-4b-02-00
+        slot0 = S5800 384
+        GE_0/1 = Device A GE_0/3
+        x = 261.0
+        y = -155.0
+        z = 5.0
+    [[S6850 Device A]]
+        image = .
+        device_id = 1
+        bridge_mac = 46-57-23-a1-01-00
+        slot0 = S5800 384
+        GE_0/1 = Client  A GE_0/1
+        GE_0/2 = Client  B GE_0/1
+        GE_0/3 = Device B GE_0/1
+        x = -5.0
+        y = -152.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "DHCP Server"
+        x = 229.0
+        y = -47.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "DHCP Relay"
+        x = -36.0
+        y = -46.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/3"
+        x = 71.4057313623
+        y = 7.2496038354
+        interface = Device A GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        x = -87.4359588936
+        y = -6.50517796035
+        interface = Device A GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = -71.0011305982
+        y = 48.699256621
+        interface = Device A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -92.9988694018
+        y = 25.300743379
+        interface = Device B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 61.4359588936
+        y = 41.5051779604
+        interface = Client  A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 60.5942686377
+        y = 6.75039616459
+        interface = Client  B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

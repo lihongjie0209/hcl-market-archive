@@ -1,0 +1,15 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\组内工作\模拟器测试\模拟器工程文件\正式发布-1期\新建文件夹\snmp剔除某一oid节点配置举例（路美妙19938）\hcl_d_evcg\working
+    udp = 16000
+    [[S6850 SW1]]
+        device_id = 1
+        bridge_mac = 46-1b-88-ee-01-00
+        slot0 = S5800 512
+        x = -279.0
+        y = -206.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

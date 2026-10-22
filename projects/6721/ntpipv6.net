@@ -1,0 +1,38 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l15246\hcl\projects\ntpipv6\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 52-28-28-5f-01-00
+        slot0 = AC 768
+        GE_0/0 = S5820V2-54QS-GE_2 GE_0/1
+        x = -615.0
+        y = -168.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 52-28-4a-ce-02-00
+        slot0 = S5800 384
+        GE_0/1 = AC_1 GE_0/0
+        x = -152.0
+        y = -162.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -90.99664172838453
+        y = 24.48168498840107
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        interface = AC_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.99664172838459
+        y = 25.51831501159893
+        z = 6.0

@@ -1,0 +1,111 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\2022-09-19 测试hcl\projects\vlan-interface实现vlan间路由\vlan-interface-router\working
+    udp = 10000
+    [[PC PC1]]
+        device_id = 2
+        bridge_mac = 46-b0-61-bc-02-00
+        slot0 = PC 250
+        GE_0/1 = AC GE_0/0
+        symbol = PC
+        x = -288.0
+        y = -223.0
+        z = 5.0
+    [[PC PC2]]
+        device_id = 3
+        bridge_mac = 46-b0-6d-35-03-00
+        slot0 = PC 250
+        GE_0/1 = AC GE_0/1
+        symbol = PC
+        x = 148.0
+        y = -223.0
+        z = 5.0
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = 46-b0-53-e1-01-00
+        slot0 = AC 768
+        GE_0/0 = PC1 GE_0/1
+        GE_0/1 = PC2 GE_0/1
+        x = -68.0
+        y = -223.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "vlan 200"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 173.48380207782338
+        y = -276.80108191427627
+        z = 6.0
+    [[NOTE 2]]
+        text = "vlan 100"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -351.8965363437813
+        y = -279.6295090390225
+        z = 6.0
+    [[NOTE 3]]
+        text = "192.168.2.1/24\n    GW: 2.100"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 141.3431457505076
+        y = -136.61522368914973
+        z = 6.0
+    [[NOTE 4]]
+        text = "192.168.1.1/24\n    GW: 1.100"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -382.49390334558996
+        y = -140.10050506338834
+        z = 6.0
+    [[NOTE 5]]
+        text = "int vlan 100\n192.168.1.100/24\n\nint vlan 200\n192.168.2.100/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -133.91421356237302
+        y = -144.8786796564403
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = PC2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.0
+        y = 25.5
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        interface = PC1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 49.5
+        y = 25.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = AC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 52.0
+        y = -4.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        interface = AC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.0
+        y = -4.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        width = 271.1019843598036
+        height = 254.44217151748074
+        border_color = "#666666"
+        border_style = 2
+        x = 77.89801564019638
+        y = -296.8685783886736
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        width = 256.68481220460006
+        height = 257.270598642227
+        border_color = "#666666"
+        border_style = 2
+        x = -422.84985514955525
+        y = -297.5756851698602
+        z = 3.0

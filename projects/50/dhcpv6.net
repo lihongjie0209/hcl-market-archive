@@ -1,0 +1,86 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 client1]]
+        image = .
+        device_id = 3
+        bridge_mac = 8e-07-c3-18-03-00
+        slot0 = S5800 384
+        GE_0/1 = S6850_2 GE_0/2
+        x = -265.0
+        y = 90.0
+        z = 5.0
+    [[S6850 S6850_2]]
+        image = .
+        device_id = 2
+        bridge_mac = 8e-07-b9-b4-02-00
+        slot0 = S5800 384
+        GE_0/1 = server GE_0/1
+        GE_0/2 = client1 GE_0/1
+        GE_0/3 = client2 GE_0/1
+        x = -109.0
+        y = -41.0
+        z = 5.0
+    [[S6850 server]]
+        image = .
+        device_id = 1
+        bridge_mac = 8e-07-b1-40-01-00
+        slot0 = S5800 384
+        GE_0/1 = S6850_2 GE_0/1
+        x = -107.0
+        y = -189.0
+        z = 5.0
+    [[S6850 client2]]
+        image = .
+        device_id = 4
+        bridge_mac = 8e-07-cb-04-04-00
+        slot0 = S5800 384
+        GE_0/1 = S6850_2 GE_0/3
+        x = 39.0
+        y = 90.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/1"
+        x = -79.9521355441
+        y = -1.0
+        interface = client2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        x = 56.3129301902
+        y = 0.110234976985
+        interface = client1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/3"
+        x = 66.9521355441
+        y = 75.5116875424
+        interface = S6850_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        x = -96.3129301902
+        y = 69.889765023
+        interface = S6850_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = -5.45950880812
+        y = -33.0
+        interface = S6850_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -4.54049119188
+        y = 77.9963481992
+        interface = server GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

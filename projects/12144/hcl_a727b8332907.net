@@ -1,0 +1,255 @@
+version = 5.9.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\m23503\hcl\projects\hcl_a727b8332907\working
+    udp = 10000
+    [[MSR36-20 MSR36-20_1]]
+        device_id = 1
+        bridge_mac = 1e-a2-56-29-01-00
+        slot0 = MSR36 384
+        GE_0/0 = Server2_2 GE_0/2
+        x = -501.5979797464466
+        y = -158.0
+        z = 5.0
+    [[VSR-88 SSH-Server]]
+        device_id = 7
+        bridge_mac = 24-02-b3-ca-07-00
+        slot0 = MSR36 768
+        GE_0/1 = SSH-Client GE_0/1
+        GE_0/0 = Server2_2 GE_0/5
+        x = 499.0660171779821
+        y = -158.0
+        z = 5.0
+    [[VSR-88 SSH-Client]]
+        device_id = 8
+        bridge_mac = 24-02-d2-d4-08-00
+        slot0 = MSR36 768
+        GE_0/1 = SSH-Server GE_0/1
+        x = 1016.631601080076
+        y = -158.0
+        z = 5.0
+    [[PC DHCP-Client]]
+        device_id = 5
+        bridge_mac = 22-e3-ce-4b-05-00
+        slot0 = PC 250
+        GE_0/1 = Server2_2 GE_0/3
+        symbol = PC
+        x = -500.2935059634512
+        y = -304.10050506338837
+        z = 5.0
+    [[VSR-88 PPPoE-Server]]
+        device_id = 9
+        bridge_mac = 24-6c-52-a6-09-00
+        slot0 = MSR36 768
+        GE_0/1 = Server2_2 GE_0/4
+        x = -137.1543289325507
+        y = -626.4133470105958
+        z = 5.0
+    [[S6850 8021x-Server]]
+        device_id = 10
+        bridge_mac = 24-f3-47-9e-0a-00
+        slot0 = S5800 512
+        GE_0/1 = Server2_2 GE_0/6
+        x = 665.1362184380704
+        y = -661.3961030678927
+        z = 5.0
+    [[S6850 S6850_6]]
+        device_id = 6
+        bridge_mac = 44-100-1a-5d-06-00
+        slot0 = S5800 512
+        GE_0/1 = Server2_2 GE_0/7
+        GE_0/2 = Openwrt_Receiver_2 GE_0/7
+        GE_0/3 = Openwrt_Receiver_1 GE_0/7
+        x = -130.0
+        y = 59.0
+        z = 5.0
+    [[Server2 Openwrt_Receiver_1]]
+        device_id = 3
+        bridge_mac = 44-e9-5b-df-03-00
+        slot0 = Server2 256
+        GE_0/7 = S6850_6 GE_0/3
+        x = -451.0
+        y = 59.0
+        z = 5.0
+    [[Server2 Openwrt_Receiver_2]]
+        device_id = 4
+        bridge_mac = 44-f3-21-20-04-00
+        slot0 = Server2 256
+        GE_0/7 = S6850_6 GE_0/2
+        x = 170.0
+        y = 59.0
+        z = 5.0
+    [[Server2 Server2_2]]
+        device_id = 2
+        bridge_mac = 44-e3-21-72-02-00
+        slot0 = Server2 256
+        GE_0/2 = MSR36-20_1 GE_0/0
+        GE_0/5 = SSH-Server GE_0/0
+        GE_0/3 = DHCP-Client GE_0/1
+        GE_0/4 = PPPoE-Server GE_0/1
+        GE_0/6 = 8021x-Server GE_0/1
+        GE_0/7 = S6850_6 GE_0/1
+        x = -130.0
+        y = -158.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 0.5
+    m22 = 0.5
+    [[NOTE 1]]
+        text = "802.1x"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 373.59502115361636
+        y = -689.7514421272201
+        z = 6.0
+    [[NOTE 2]]
+        text = "PPPoE"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -537.1585130146568
+        y = -693.9940828143393
+        z = 6.0
+    [[NOTE 3]]
+        text = "Radius"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 360.8670990922585
+        y = -370.1391770309006
+        z = 6.0
+    [[NOTE 4]]
+        text = "基础功能:TFTP/FTP/DHCP/DNS/Log"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -530.698484809835
+        y = -355.3553390593274
+        z = 6.0
+    [[NOTE 5]]
+        text = "192.168.2.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -449.0
+        y = -169.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "192.168.2.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -271.0
+        y = -161.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "192.168.3.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -227.9999999999999
+        y = -210.99999999999994
+        z = 6.0
+    [[NOTE 8]]
+        text = "192.168.20.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 546.0
+        y = -164.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "192.168.5.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -79.99999999999999
+        y = -165.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "192.168.5.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 370.9999999999999
+        y = -168.0
+        z = 6.0
+    [[NOTE 11]]
+        text = "192.168.20.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 868.9999999999998
+        y = -167.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "192.168.6.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 509.0
+        y = -637.0
+        z = 6.0
+    [[NOTE 13]]
+        text = "192.168.6.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -65.0
+        y = -238.0
+        z = 6.0
+    [[NOTE 14]]
+        text = "配置页面地址\n192.168.56.5"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -501.0
+        y = -11.0
+        z = 6.0
+    [[NOTE 15]]
+        text = "配置页面地址\n192.168.56.6"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 119.0
+        y = -14.0
+        z = 6.0
+    [[NOTE 16]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -136.0
+        y = -42.0
+        z = 6.0
+    [[NOTE 17]]
+        text = "192.168.7.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -167.0
+        y = -58.0
+        z = 6.0
+    [[NOTE 18]]
+        text = "192.168.7.4"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 43.0
+        y = 87.0
+        z = 6.0
+    [[NOTE 19]]
+        text = "192.168.7.3"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -405.0
+        y = 81.0
+        z = 6.0
+    [[SHAPE 1]]
+        type = rectangle
+        width = 915.5870119269027
+        height = 353.98484809834997
+        border_color = "#666666"
+        border_style = 2
+        x = 349.82041789803236
+        y = -424.0
+        z = 3.0
+    [[SHAPE 2]]
+        type = rectangle
+        width = 914.5643584128175
+        height = 287.1736649163069
+        border_color = "#666666"
+        border_style = 2
+        x = 348.43564158718254
+        y = -727.4377336282353
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        width = 881.7199128346442
+        height = 283.93694141484866
+        border_color = "#666666"
+        border_style = 2
+        x = -550.7199128346442
+        y = -728.0
+        z = 3.0
+    [[SHAPE 4]]
+        type = rectangle
+        width = 882.0
+        height = 351.0
+        border_color = "#666666"
+        border_style = 2
+        x = -550.0
+        y = -424.0
+        z = 3.0
+    [[SHAPE 5]]
+        type = rectangle
+        width = 883.0
+        height = 241.0
+        border_color = "#666666"
+        border_style = 2
+        x = -551.0
+        y = -69.0
+        z = 3.0

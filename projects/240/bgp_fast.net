@@ -1,0 +1,136 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = 72-e2-cb-99-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        GE_0/1 = RTC GE_0/1
+        x = 240.0
+        y = -86.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 72-e2-be-87-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -484.0
+        y = -86.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 72-e2-c6-f3-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        GE_0/1 = RTD GE_0/1
+        x = -142.0
+        y = 109.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 72-e2-c3-89-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTD GE_0/0
+        x = -142.0
+        y = -270.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "开启BGP快速重路由功能的方法有如下两种：\n·           在BGP地址族视图下执行pic命令开启当前地址族的BGP快速重路由功能。采用这种方法时，BGP会为当前地址族的所有BGP路由\n自动计算备份下一跳，即只要从不同BGP对等体学习到了到达同一目的网络的路由，且这些路由不等价，就会生成主备两条路由。\n·           在BGP地址族视图下执行fast-reroute route-policy命令指定快速重路由引用的路由策略，并在引用的路由策略中，\n通过apply [ ipv6 ] fast-reroute backup-nexthop命令指定备份下一跳的地址。采用这种方式时，只有为主路由计算出的备份下一跳地址与指定的地址相同时，才会为其生成备份下一跳；否则，不会为主路由生成备份下一跳。在引用的路由策略中，还可以配置if-match子句，用来决定哪些路由可以进行快速重路由保护，BGP只会为通过if-match子句过滤的路由生成备份下一跳。\n引用路由策略方式的优先级高于通过pic命令开启BGP快速重路由方式。\nIPv4单播路由和IPv6单播路由支持BGP快速重路由功能；IPv4组播路由和IPv6组播路由不支持BGP快速重路由功能。"
+        x = -732.0
+        y = 182.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "20.1.1.0/30"
+        x = 12.0
+        y = -184.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "40.1.1.0/30"
+        x = 1.0
+        y = 28.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "4.4.4.4/32"
+        x = 290.0
+        y = -80.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "30.1.1.0/30"
+        x = -362.0
+        y = 16.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "2.2.2.2/32"
+        x = -176.0
+        y = -305.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.1/32"
+        x = -594.0
+        y = -80.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "10.1.1.0/30"
+        x = -363.0
+        y = -183.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "3.3.3.3/32"
+        x = -172.0
+        y = 75.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "AS 100"
+        x = -507.0
+        y = -145.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "AS 200"
+        x = -87.0
+        y = -77.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "Router A、Router B、Router C和Router D通过BGP协议实现网络互连。\n要求链路B正常时，Router A和Router D之间的流量通过链路B转发；链路B出现故障时，流量可以快速切换到链路A上。\n\nFRR配置后，bfd才能起来。"
+        x = -663.0
+        y = -424.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -563.0
+        y = -159.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -260.0
+        y = -282.0
+        width = 580.0
+        height = 442.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

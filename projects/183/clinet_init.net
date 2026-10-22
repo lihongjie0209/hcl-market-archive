@@ -1,0 +1,113 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 CorporateNet]]
+        image = .
+        device_id = 2
+        bridge_mac = 14-70-a7-c9-02-00
+        slot0 = MSR36 512
+        GE_0/0 = LNS GE_0/1
+        x = 221.0
+        y = -148.0
+        z = 5.0
+    [[MSR36-20 ISP]]
+        image = .
+        device_id = 3
+        bridge_mac = 2e-6f-db-72-03-00
+        slot0 = MSR36 512
+        GE_0/0 = LNS GE_0/2
+        x = -101.0
+        y = -324.0
+        z = 5.0
+    [[MSR36-20 LNS]]
+        image = .
+        device_id = 1
+        bridge_mac = 14-70-9e-7f-01-00
+        slot0 = MSR36 512
+        GE_0/0 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/1 = CorporateNet GE_0/0
+        GE_0/2 = ISP GE_0/0
+        x = -101.0
+        y = -148.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = " 1.1.1.0/24"
+        x = 19.0
+        y = -159.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "192.168.56.0/24"
+        x = -304.0
+        y = -159.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1、PC上公网也是通过LNS实现的，访问公网的地址是分配的私网地址，需要在接口配置nat转换该地址。\n#\ninterface GigabitEthernet0/2\n ip address 2.2.2.1 255.255.255.0\n nat outbound\n#\n2、如果上公网部分不想通过LNS的话，需要修改PC路由，添加私网明细到LNS，同时删掉LNS的缺省路由。"
+        x = -512.0
+        y = -53.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.2.2.0/24"
+        x = -76.0
+        y = -220.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "8.8.8.8/32"
+        x = -129.0
+        y = -359.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LNS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        x = 25.0
+        y = -33.0
+        interface = LNS GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LNS GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 25.0
+        y = 65.0
+        interface = ISP GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = CorporateNet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        x = -78.0
+        y = -49.0
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[Cloud Host_1]]
+        symbol = Host
+        x = -384.0
+        y = -148.0
+        z = 5.0
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = LNS GE_0/0

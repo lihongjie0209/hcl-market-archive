@@ -1,0 +1,170 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 08-ed-95-d6-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = PC-1 GE_0/0
+        x = -306.0
+        y = -190.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 08-ed-9d-59-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        GE_0/1 = PC-2 GE_0/0
+        x = 91.0
+        y = -190.0
+        z = 5.0
+    [[MSR36-20 PC-1]]
+        image = .
+        device_id = 4
+        bridge_mac = 6e-77-14-37-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/1
+        x = -407.0
+        y = 11.0
+        z = 5.0
+    [[MSR36-20 PC-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 6e-77-19-eb-05-00
+        slot0 = MSR36 512
+        GE_0/0 = RTC GE_0/1
+        x = 240.0
+        y = 11.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 08-ed-9a-23-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        x = -102.0
+        y = -190.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = ".1"
+        x = -52.0
+        y = -202.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "20.1.1.2"
+        x = 0.0
+        y = -202.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = ".1"
+        x = -254.0
+        y = -201.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "10.1.1.2"
+        x = -192.0
+        y = -201.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "21.1.1.0/24"
+        x = 127.0
+        y = -86.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "11.1.1.0/24"
+        x = -367.0
+        y = -92.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "3.3.3.9/32"
+        x = 67.0
+        y = -224.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "2.2.2.9/32"
+        x = -128.0
+        y = -228.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "1.1.1.9/32"
+        x = -335.0
+        y = -226.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "利用LDP动态建立LSP配置"
+        x = -244.0
+        y = -298.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 1.17942966133
+        y = -33.0
+        interface = PC-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = 42.9596357388
+        y = -33.0
+        interface = PC-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 47.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 48.8205703387
+        y = 57.1337895173
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -65.0
+        y = 24.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/1"
+        x = 7.04036426124
+        y = 60.7414533019
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

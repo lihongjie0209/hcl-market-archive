@@ -1,0 +1,236 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 RTD]]
+        image = .
+        device_id = 4
+        bridge_mac = 4c-64-e5-04-04-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/2
+        GE_0/1 = VM2 GE_0/1
+        x = -17.0
+        y = 43.0
+        z = 5.0
+    [[MSR36-20 RTA]]
+        image = .
+        device_id = 1
+        bridge_mac = 4c-64-d7-bd-01-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/0
+        GE_0/1 = VM1 GE_0/1
+        x = -231.0
+        y = -127.0
+        z = 5.0
+    [[MSR36-20 RTC]]
+        image = .
+        device_id = 3
+        bridge_mac = 4c-64-e0-aa-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RTB GE_0/1
+        GE_0/1 = VM3 GE_0/1
+        x = 185.0
+        y = -127.0
+        z = 5.0
+    [[MSR36-20 RTB]]
+        image = .
+        device_id = 2
+        bridge_mac = 4c-64-db-fc-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RTA GE_0/0
+        GE_0/1 = RTC GE_0/0
+        GE_0/2 = RTD GE_0/0
+        x = -17.0
+        y = -127.0
+        z = 5.0
+    [[PC VM2]]
+        image = .
+        device_id = 6
+        bridge_mac = 4c-65-19-ba-06-00
+        slot0 = PC 250
+        GE_0/1 = RTD GE_0/1
+        symbol = PC
+        x = -17.0
+        y = 189.0
+        z = 5.0
+    [[PC VM3]]
+        image = .
+        device_id = 7
+        bridge_mac = 4c-65-1d-84-07-00
+        slot0 = PC 250
+        GE_0/1 = RTC GE_0/1
+        symbol = PC
+        x = 396.0
+        y = -127.0
+        z = 5.0
+    [[PC VM1]]
+        image = .
+        device_id = 5
+        bridge_mac = 4c-65-12-4a-05-00
+        slot0 = PC 250
+        GE_0/1 = RTA GE_0/1
+        symbol = PC
+        x = -447.0
+        y = -127.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "IP核心网络"
+        x = -51.0
+        y = -217.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "VXLAN头端复制配置"
+        x = -104.0
+        y = -307.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.1/32"
+        x = -259.0
+        y = -163.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.2.2.2/32"
+        x = 54.0
+        y = 61.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "13.1.1.0/24"
+        x = 53.0
+        y = -140.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "12.1.1.0/24"
+        x = 13.0
+        y = -31.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "3.3.3.3/32"
+        x = 162.0
+        y = -162.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "11.1.1.0/24"
+        x = -153.0
+        y = -139.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "192.168.0.2"
+        x = 317.0
+        y = -164.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "192.168.0.1"
+        x = -447.0
+        y = -164.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "192.168.0.3"
+        x = 36.0
+        y = 194.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = VM1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = VM3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = VM2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = RTB GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 18]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = RTC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 19]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RTC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 20]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = RTA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 21]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RTA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 22]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = RTD GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 23]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = RTD GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -207.0
+        y = -255.0
+        width = 434.0
+        height = 313.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

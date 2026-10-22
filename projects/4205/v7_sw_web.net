@@ -1,0 +1,41 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 10000
+    [[S5820V2-54QS-GE SW1_1]]
+        device_id = 1
+        bridge_mac = 64-73-b1-d4-01-00
+        slot0 = S5800 384
+        GE_0/1 = NIC:VirtualBox Host-Only Ethernet Adapter
+        x = -201.9230769230769
+        y = -247.30769230769226
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = SW1_1 GE_0/1
+        x = -198.0769230769231
+        y = 51.153846153846146
+        z = 5.0
+    [[NOTE 1]]
+        text = "192.168.1.1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -139.3846153846154
+        y = -239.34615384615384
+        z = 6.0
+    [[NOTE 2]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.896641171933624
+        y = -29.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.103358828066376
+        y = 64.99986646168537
+        z = 6.0

@@ -1,0 +1,134 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 BRAS]]
+        image = .
+        device_id = 2
+        bridge_mac = 10-2b-ce-3e-02-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/2
+        GE_0/1 = CR GE_0/0
+        x = 144.0
+        y = -326.0
+        z = 5.0
+    [[MSR36-20 CR]]
+        image = .
+        device_id = 3
+        bridge_mac = 10-2b-d3-23-03-00
+        slot0 = MSR36 512
+        GE_0/0 = BRAS GE_0/1
+        x = 405.0
+        y = -326.0
+        z = 5.0
+    [[MSR36-20 Host]]
+        image = .
+        device_id = 5
+        bridge_mac = 5c-8d-34-a4-05-00
+        slot0 = MSR36 512
+        GE_0/0 = CPE GE_0/1
+        x = -532.0
+        y = -326.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 4
+        bridge_mac = 10-2b-e0-2f-04-00
+        slot0 = S5800 512
+        GE_0/1 = CPE GE_0/0
+        GE_0/2 = BRAS GE_0/0
+        x = -96.0
+        y = -326.0
+        z = 5.0
+    [[MSR36-20 CPE]]
+        image = .
+        device_id = 1
+        bridge_mac = 10-2b-c4-8b-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/1
+        GE_0/1 = Host GE_0/0
+        x = -314.0
+        y = -326.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "3001::1"
+        x = 225.0
+        y = -337.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "PPPoE Client"
+        x = -355.0
+        y = -367.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "2.2.2.1/24"
+        x = 226.0
+        y = -277.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "PPPoE Server"
+        x = 100.0
+        y = -368.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = CPE GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = CPE GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = Host GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = CR GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = BRAS GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = BRAS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

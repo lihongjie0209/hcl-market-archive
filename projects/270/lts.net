@@ -1,0 +1,140 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 LTS]]
+        image = .
+        device_id = 3
+        bridge_mac = 58-26-36-c4-03-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/1
+        GE_0/1 = LNS GE_0/0
+        x = -39.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 RemoteHost]]
+        image = .
+        device_id = 1
+        bridge_mac = 58-26-2e-f5-01-00
+        slot0 = MSR36 512
+        GE_0/0 = LAC GE_0/0
+        x = -478.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 LNS]]
+        image = .
+        device_id = 4
+        bridge_mac = 58-26-39-e0-04-00
+        slot0 = MSR36 512
+        GE_0/0 = LTS GE_0/1
+        GE_0/1 = CorporateNet GE_0/0
+        x = 155.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 LAC]]
+        image = .
+        device_id = 2
+        bridge_mac = 58-26-32-9e-02-00
+        slot0 = MSR36 512
+        GE_0/0 = RemoteHost GE_0/0
+        GE_0/1 = LTS GE_0/0
+        x = -241.0
+        y = -99.0
+        z = 5.0
+    [[MSR36-20 CorporateNet]]
+        image = .
+        device_id = 5
+        bridge_mac = 58-26-3e-06-05-00
+        slot0 = MSR36 512
+        GE_0/0 = LNS GE_0/1
+        x = 364.0
+        y = -99.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "L2TP隧道交换配置举例"
+        x = -163.0
+        y = -223.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.0.0.0/24"
+        x = 208.0
+        y = -111.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.2.0/24"
+        x = 23.0
+        y = -110.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.0/24"
+        x = -181.0
+        y = -111.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "192.168.0.0/24"
+        x = -419.0
+        y = -111.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = CorporateNet GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LNS GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LNS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LTS GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LTS GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = LAC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = LAC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RemoteHost GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

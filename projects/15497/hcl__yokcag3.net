@@ -1,0 +1,61 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\t25850\desktop\111\新建文件夹\hcl__yokcag3\working
+    udp = 10000
+    [[AC AC]]
+        device_id = 1
+        bridge_mac = aa-79-4c-5e-01-00
+        slot0 = AC 768
+        GE_0/1 = SWA GE_0/1
+        x = -351.0
+        y = -127.0
+        z = 5.0
+    [[AP AP]]
+        device_id = 2
+        bridge_mac = aa-79-59-32-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = SWA GE_0/2
+        x = 89.0
+        y = -127.0
+        z = 5.0
+    [[S5820V2-54QS-GE SWA]]
+        device_id = 3
+        bridge_mac = aa-79-69-ce-03-00
+        slot0 = S5800 384
+        GE_0/1 = AC GE_0/1
+        GE_0/2 = AP GE_0/1
+        x = -130.0
+        y = -127.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/2"
+        interface = SWA GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = SWA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = AP GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -70.22182540694797
+        y = -8.234018715767732
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = AC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 55.10050506338834
+        y = -8.234018715767732
+        z = 6.0

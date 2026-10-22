@@ -1,0 +1,43 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\w23495\hcl\projects\5\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 18-01-26-c5-01-00
+        slot0 = AC 768
+        GE_0/0 = S6850_2 GE_0/1
+        x = -3940.3223304703365
+        y = -4549.639610306789
+        z = 5.0
+    [[S6850 S6850_2]]
+        device_id = 2
+        bridge_mac = 18-01-3f-63-02-00
+        slot0 = S5800 512
+        GE_0/1 = AC_1 GE_0/0
+        GE_0/2 = AP_3 GE_0/0
+        GE_0/3 = AP_4 GE_0/0
+        x = -3708.9212795116005
+        y = -4519.13907455312
+        z = 5.0
+    [[AP AP_3]]
+        device_id = 3
+        bridge_mac = 18-01-4d-c7-03-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = S6850_2 GE_0/2
+        x = -3530.117647058823
+        y = -4576.35294117647
+        z = 5.0
+    [[AP AP_4]]
+        device_id = 4
+        bridge_mac = 18-01-55-70-04-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = S6850_2 GE_0/3
+        x = -3534.443038599772
+        y = -4455.653844152513
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.7
+    m22 = 1.7

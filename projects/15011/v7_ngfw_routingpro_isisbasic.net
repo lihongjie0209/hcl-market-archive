@@ -1,0 +1,38 @@
+version = 5.10.0
+[vbox 127.0.0.1:16600]
+    workingdir = e:\2022hclhub\03firewall\v7_ngfw_routingpro_isisbasic\working
+    udp = 10000
+    [[F1090 FW_2]]
+        device_id = 2
+        bridge_mac = a0-11-d6-52-02-00
+        slot0 = F1060 768
+        GE_0/1 = SW_1 GE_0/1
+        x = -41.7058823529412
+        y = -181.52941176470588
+        z = 5.0
+    [[S5820V2-54QS-GE SW_1]]
+        device_id = 1
+        bridge_mac = a0-11-ca-c0-01-00
+        slot0 = S5800 384
+        GE_0/1 = FW_2 GE_0/1
+        x = -369.52941176470597
+        y = -182.7647058823529
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/1"
+        interface = FW_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -91.95588235294119
+        y = 14.691176470588239
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = Client_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 71.95588235294122
+        y = 15.308823529411761
+        z = 6.0

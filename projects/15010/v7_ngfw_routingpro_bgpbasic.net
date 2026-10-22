@@ -1,0 +1,61 @@
+version = 5.10.0
+[vbox 127.0.0.1:16600]
+    workingdir = e:\hclhub\v7_ngfw_routingpro_bgpbasic\working
+    udp = 10000
+    [[F1090 FW_2]]
+        device_id = 2
+        bridge_mac = a0-11-d6-52-02-00
+        slot0 = F1060 768
+        GE_0/1 = SW_1 GE_0/1
+        GE_0/2 = RT_3 GE_0/2
+        x = -164.64705882352945
+        y = -226.8235294117647
+        z = 5.0
+    [[S5820V2-54QS-GE SW_1]]
+        device_id = 1
+        bridge_mac = a0-11-ca-c0-01-00
+        slot0 = S5800 384
+        GE_0/1 = FW_2 GE_0/1
+        x = -437.76470588235304
+        y = -24.529411764705856
+        z = 5.0
+    [[MSR36-20 RT_3]]
+        device_id = 3
+        bridge_mac = a0-12-1f-ae-03-00
+        slot0 = MSR36 384
+        GE_0/2 = FW_2 GE_0/2
+        x = 115.47058823529409
+        y = -27.882352941176464
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "GE_0/2"
+        interface = Internet_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -20.61764705882353
+        y = -37.088235294117645
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        interface = FW_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 77.08823529411765
+        y = 30.029411764705912
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = FW_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.9264705882353
+        y = 29.691176470588204
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = Client_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 35.33823529411768
+        y = -46.161764705882355
+        z = 6.0

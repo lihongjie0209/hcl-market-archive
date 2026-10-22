@@ -1,0 +1,136 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[PC IPv4-Host-A]]
+        image = .
+        device_id = 3
+        bridge_mac = 5c-6a-c7-60-03-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/1
+        symbol = PC
+        x = -387.0
+        y = -149.0
+        z = 5.0
+    [[PC IPv4-Host-B]]
+        image = .
+        device_id = 4
+        bridge_mac = 5c-6a-ca-89-04-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -387.0
+        y = 84.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 5
+        bridge_mac = 5c-6b-bc-f0-05-00
+        slot0 = S5800 512
+        GE_0/1 = IPv4-Host-A GE_0/1
+        GE_0/2 = IPv4-Host-B GE_0/1
+        GE_0/3 = Router GE_0/0
+        x = -242.0
+        y = -34.0
+        z = 5.0
+    [[MSR36-20 IPv6-Server]]
+        image = .
+        device_id = 2
+        bridge_mac = 5c-6a-b2-05-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Router GE_0/1
+        x = 192.0
+        y = -34.0
+        z = 5.0
+    [[MSR36-20 Router]]
+        image = .
+        device_id = 1
+        bridge_mac = 5c-6a-ad-c1-01-00
+        slot0 = MSR36 512
+        GE_0/0 = SW GE_0/3
+        GE_0/1 = IPv6-Server GE_0/0
+        x = -24.0
+        y = -34.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2013:0:ff14:0101:100::/64 "
+        x = -28.0
+        y = 69.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "IPv4网络访问IPv6 Internet中的服务器配置"
+        x = -283.0
+        y = -223.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "10.1.1.0/24"
+        x = -430.0
+        y = -13.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "Internet已经升级到了IPv6，但是某公司内部网络仍然是IPv4网络。\n而该公司内部网络的10.1.1.0/24网段的用户仍需要访问IPv6 Internet中的服务器，其他用户不能访问。\n为满足上述要求，本例中使用如下方式实现：\n·使用IPv4到IPv6源地址动态地址转换策略，将IPv4报文的源地址转换为IPv6地址。\n·通过IPv6到IPv4的源地址静态转换策略为IPv6 Internet上服务器的IPv6地址指定一个对应的IPv4地址，\nRouter收到发往该IPv4地址的报文时将其转换为对应的IPv6地址。"
+        x = -538.0
+        y = 195.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 65.0
+        y = 25.0
+        interface = Router GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = Router GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = IPv6-Server GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/3"
+        x = 65.0
+        y = 25.0
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/2"
+        x = -69.0249161696
+        y = 50.2478628139
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = -69.3399071636
+        y = 0.144211559918
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = 56.0249161696
+        y = -33.0
+        interface = IPv4-Host-B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 56.3399071636
+        y = 49.8557884401
+        interface = IPv4-Host-A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

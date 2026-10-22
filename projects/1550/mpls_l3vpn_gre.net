@@ -1,0 +1,176 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 P]]
+        image = .
+        device_id = 2
+        bridge_mac = 7e-10-76-d8-02-00
+        slot0 = MSR36 512
+        GE_0/0 = PE_1 GE_0/0
+        GE_0/1 = PE_2 GE_0/0
+        x = -96.0
+        y = -213.0
+        z = 5.0
+    [[MSR36-20 CE_1]]
+        image = .
+        device_id = 4
+        bridge_mac = 7e-10-80-27-04-00
+        slot0 = MSR36 512
+        GE_0/0 = PE_1 GE_0/1
+        x = -250.0
+        y = 172.0
+        z = 5.0
+    [[MSR36-20 PE_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 7e-10-71-3e-01-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/0
+        GE_0/1 = CE_1 GE_0/0
+        x = -250.0
+        y = -72.0
+        z = 5.0
+    [[MSR36-20 PE_2]]
+        image = .
+        device_id = 3
+        bridge_mac = 7e-10-7a-ee-03-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/1
+        GE_0/1 = CE_2 GE_0/0
+        x = 72.0
+        y = -72.0
+        z = 5.0
+    [[MSR36-20 CE_2]]
+        image = .
+        device_id = 5
+        bridge_mac = 7e-10-88-87-05-00
+        slot0 = MSR36 512
+        GE_0/0 = PE_2 GE_0/1
+        x = 72.0
+        y = 172.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "配置MPLS L3VPN采用GRE隧道"
+        x = -253.0
+        y = -296.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Gre Tunnel"
+        x = -136.0
+        y = -62.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "AS 100"
+        x = -110.0
+        y = -124.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "AS 65410"
+        x = -336.0
+        y = 103.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "AS 65420"
+        x = 97.0
+        y = 100.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = CE_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = PE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -68.6389701532
+        y = -33.0
+        interface = PE_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 25.0
+        y = 65.0
+        interface = PE_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = 54.5020645816
+        y = -33.0
+        interface = PE_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = 25.0
+        y = -33.0
+        interface = CE_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = 55.6389701532
+        y = 50.71484995
+        interface = P GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = -67.5020645816
+        y = 52.0116305584
+        interface = P GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -321.0
+        y = 92.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -1.0
+        y = 89.0
+        width = 200.0
+        height = 200.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -228.0
+        y = -70.0
+        width = 321.0
+        height = 48.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 4]]
+        type = ellipse
+        x = -237.0
+        y = -184.0
+        width = 347.0
+        height = 231.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

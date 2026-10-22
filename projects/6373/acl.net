@@ -1,0 +1,43 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\f23488\hcl\projects\acl\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 8a-42-0d-b3-01-00
+        slot0 = AC 768
+        GE_0/1 = S5820V2-54QS-GE_3 GE_0/1
+        x = -428.35353536869206
+        y = -206.10353536869218
+        z = 5.0
+    [[AP AP_2]]
+        device_id = 2
+        bridge_mac = 8a-42-20-f2-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/1 = S5820V2-54QS-GE_3 GE_0/2
+        x = -126.84054834596147
+        y = 43.504329007576885
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 8a-77-98-69-03-00
+        slot0 = S5800 384
+        GE_0/1 = AC_1 GE_0/1
+        GE_0/2 = AP_2 GE_0/1
+        x = -132.33621933838458
+        y = -210.00000000000003
+        z = 5.0
+    [[Phone Phone_4]]
+        device_id = 4
+        bridge_mac = 8e-ff-39-4c-04-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = None
+        x = -178.72745292923247
+        y = 184.61904733323354
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

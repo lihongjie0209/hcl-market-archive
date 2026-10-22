@@ -1,0 +1,15 @@
+version = 5.2.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\c10212\hcl\projects\hcl_oouh_dva\working
+    udp = 10000
+    [[S6850 S6850_1]]
+        device_id = 1
+        bridge_mac = 7e-36-21-1b-01-00
+        slot0 = S5800 512
+        x = -264.0
+        y = -171.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

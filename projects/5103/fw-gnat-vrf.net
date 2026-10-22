@@ -1,0 +1,157 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\fw-gnat-vrf\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 46-d0-7c-e6-01-00
+        slot0 = F1060 512
+        GE_0/3 = S5820V2-54QS-GE_3 GE_0/3
+        GE_0/2 = MSR36-20_2 GE_0/0
+        x = -88.0
+        y = -124.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        device_id = 2
+        bridge_mac = 46-d0-8c-d3-02-00
+        slot0 = MSR36 384
+        GE_0/0 = F1060_1 GE_0/2
+        x = -89.0
+        y = -318.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_3]]
+        device_id = 3
+        bridge_mac = 46-d0-a1-2e-03-00
+        slot0 = S5800 384
+        GE_0/1 = PC_4 GE_0/1
+        GE_0/2 = PC_5 GE_0/1
+        GE_0/3 = F1060_1 GE_0/3
+        x = -89.0
+        y = 60.0
+        z = 5.0
+    [[PC PC_4]]
+        device_id = 4
+        bridge_mac = 46-d0-b1-42-04-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_3 GE_0/1
+        symbol = PC
+        x = -293.0
+        y = 261.0
+        z = 5.0
+    [[PC PC_5]]
+        device_id = 5
+        bridge_mac = 46-d0-b5-1c-05-00
+        slot0 = PC 250
+        GE_0/1 = S5820V2-54QS-GE_3 GE_0/2
+        symbol = PC
+        x = 111.0
+        y = 260.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.2
+    m22 = 1.2
+    [[NOTE 1]]
+        text = "3.3.3.3映射1.1.1.2\n源地址转换为2.2.2.2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -1.0
+        y = -119.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "vpn2"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 4.0
+        y = -38.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "vpn1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 7.0
+        y = -157.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -177.0
+        y = -247.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -173.0
+        y = -157.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.3/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -171.0
+        y = -46.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 123.0
+        y = 214.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -349.0
+        y = 222.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        interface = PC_5 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -66.2842712474619
+        y = -33.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        interface = PC_4 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 53.49300267750243
+        y = -33.0
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_3 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.631500233408453
+        y = -33.0
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 58.2842712474619
+        y = 69.2842712474619
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -65.49300267750242
+        y = 75.07398793224502
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        interface = MSR36-20_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.638216619737946
+        y = 64.99490817024451
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.361783380262054
+        y = -33.0
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/3"
+        interface = F1060_1 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 24.368499766591547
+        y = 64.99501478253515
+        z = 6.0

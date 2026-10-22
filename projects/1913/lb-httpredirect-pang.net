@@ -1,0 +1,157 @@
+version = 5.0.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\hclhub\lb-httpredirect-pang\working
+    udp = 16000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 90-fc-5a-4e-01-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/2
+        x = -161.0
+        y = -261.0
+        z = 5.0
+    [[F1060 F1060_3]]
+        device_id = 3
+        bridge_mac = 90-fc-b1-39-03-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/3
+        x = 169.0
+        y = -136.0
+        z = 5.0
+    [[S5820V2-54QS-GE S5820V2-54QS-GE_2]]
+        device_id = 2
+        bridge_mac = 90-fc-65-48-02-00
+        slot0 = S5800 600
+        GE_0/1 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/2 = F1060_1 GE_0/2
+        GE_0/3 = F1060_3 GE_0/2
+        GE_0/4 = F1060_4 GE_0/2
+        x = -163.0
+        y = -65.0
+        z = 5.0
+    [[F1060 F1060_4]]
+        device_id = 4
+        bridge_mac = 90-fc-b6-d2-04-00
+        slot0 = F1060 512
+        GE_0/2 = S5820V2-54QS-GE_2 GE_0/4
+        x = 171.0
+        y = 72.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = S5820V2-54QS-GE_2 GE_0/1
+        x = -471.0
+        y = -63.0
+        z = 5.0
+    [[NOTE 1]]
+        text = "VSIP 5.5.5.5\nSNAT 6.6.6.6"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -161.0
+        y = -394.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "4.4.4.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -87.0
+        y = 12.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "3.3.3.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -87.0
+        y = -99.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -186.0
+        y = -146.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2.2.2.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -281.0
+        y = -100.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -188.0
+        y = -311.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "4.4.4.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 142.0
+        y = 23.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "3.3.3.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 145.0
+        y = -186.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "2.2.2.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -444.0
+        y = -98.0
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        interface = F1060_4 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -77.0077423062
+        y = 9.82017755705
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/2"
+        interface = F1060_3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -79.1155415813
+        y = 33.3650706394
+        z = 6.0
+    [[NOTE 12]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -118.000843286
+        y = 93.7402652161
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/4"
+        interface = S5820V2-54QS-GE_2 GE_0/4
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 77.0077423062
+        y = 35.179822443
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/3"
+        interface = S5820V2-54QS-GE_2 GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 69.1155415813
+        y = 1.63492936063
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/2"
+        interface = S5820V2-54QS-GE_2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 8.40814201732
+        y = -39.0
+        z = 6.0
+    [[NOTE 16]]
+        text = "GE_0/1"
+        interface = S5820V2-54QS-GE_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -84.9991567141
+        y = 25.2597347839
+        z = 6.0
+    [[NOTE 17]]
+        text = "GE_0/2"
+        interface = F1060_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 8.59185798268
+        y = 60.997917697
+        z = 6.0

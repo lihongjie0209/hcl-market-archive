@@ -1,0 +1,132 @@
+autostart = False
+version = 2.1.3
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S6850 A]]
+        image = .
+        device_id = 1
+        bridge_mac = ac-56-42-c8-01-00
+        slot0 = S5800 384
+        GE_0/1 = C GE_0/1
+        GE_0/2 = B GE_0/2
+        x = -413.0
+        y = -81.0
+        z = 5.0
+    [[S6850 C]]
+        image = .
+        device_id = 2
+        bridge_mac = ac-56-4b-1e-02-00
+        slot0 = S5800 384
+        GE_0/1 = A GE_0/1
+        GE_0/2 = B GE_0/1
+        x = -133.0
+        y = -282.0
+        z = 5.0
+    [[S6850 B]]
+        image = .
+        device_id = 3
+        bridge_mac = ac-56-53-96-03-00
+        slot0 = S5800 384
+        GE_0/1 = C GE_0/2
+        GE_0/2 = A GE_0/2
+        x = 137.0
+        y = -85.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "\n设备\n接口\nIP地址\n设备\n接口\nIP地址\nSwitch A\nVlan-int100\n12.12.12.1/24\nSwitch B\nVlan-int101\n24.24.24.4/24\n \nVlan-int200\n13.13.13.1/24\n \nVlan-int200\n13.13.13.2/24\n \nLoop0\n1.1.1.1/32\n \nLoop0\n4.4.4.4/32\nSwitch C\nVlan-int100\n12.12.12.2/24\n \n \n \n \nVlan-int101\n24.24.24.2/24\n \n \n \n"
+        x = -410.0
+        y = 35.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "Loop0"
+        x = 200.0
+        y = -84.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "Loop0"
+        x = -522.0
+        y = -84.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "vlan-int200"
+        x = -349.0
+        y = -24.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "vlan-int200"
+        x = 42.0
+        y = -27.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "vlan-int101"
+        x = 117.0
+        y = -120.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "vlan-int101"
+        x = -68.0
+        y = -271.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "vlan-int100"
+        x = -438.0
+        y = -118.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "vlan-int100"
+        x = -235.0
+        y = -271.0
+        font = "Arial,8,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/2"
+        x = -92.9989421907
+        y = 25.2909013978
+        interface = B GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = -85.313178035
+        y = 1.42334787813
+        interface = B GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/2"
+        x = 57.313178035
+        y = 48.5766521219
+        interface = C GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = -85.4943590179
+        y = 48.3263077236
+        interface = C GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/2"
+        x = 64.9989421907
+        y = 24.7090986022
+        interface = A GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 15]]
+        text = "GE_0/1"
+        x = 57.4943590179
+        y = 1.67369227643
+        interface = A GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

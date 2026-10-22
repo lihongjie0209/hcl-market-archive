@@ -1,0 +1,24 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\hclhub\无线工程文件\通过telnet登录ac设备\telnetac\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 14-e0-55-55-01-00
+        slot0 = AC 768
+        GE_0/1 = AC_2 GE_0/1
+        x = -344.41176470588243
+        y = -147.07843137254906
+        z = 5.0
+    [[AC AC_2]]
+        device_id = 2
+        bridge_mac = 14-f5-62-4e-02-00
+        slot0 = AC 768
+        GE_0/1 = AC_1 GE_0/1
+        x = -83.23529411764706
+        y = -149.11764705882354
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

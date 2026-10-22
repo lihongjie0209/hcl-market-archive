@@ -1,0 +1,50 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\n21325\hcl\projects\ac的telnet用户的本地用户角色授权配置\telnetuser\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 72-0f-a2-f1-01-00
+        slot0 = AC 768
+        GE_0/2 = AC_2 GE_0/1
+        x = 42.0588235294117
+        y = -73.23529411764706
+        z = 5.0
+    [[AC AC_2]]
+        device_id = 2
+        bridge_mac = 72-10-c2-a4-02-00
+        slot0 = AC 768
+        GE_0/1 = AC_1 GE_0/2
+        x = -197.35294117647058
+        y = -73.23529411764704
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7
+    [[NOTE 1]]
+        text = "AC"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 47.76470588235294
+        y = -22.705882352941178
+        z = 6.0
+    [[NOTE 2]]
+        text = "Telnet user"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -228.11764705882354
+        y = -19.764705882352946
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = AC_2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 65.0
+        y = 25.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        interface = AC_1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -78.0
+        y = 25.0
+        z = 6.0

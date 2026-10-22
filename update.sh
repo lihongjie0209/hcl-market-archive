@@ -65,7 +65,10 @@ if ((unique != total)); then
 fi
 cp -- "$run_dir/catalog.json" catalog.json
 printf 'Catalog: %s projects (%s)\n' "$total" "$checked_at"
-((catalog_only == 0)) || exit 0
+if ((catalog_only != 0)); then
+  ./generate-index.sh
+  exit 0
+fi
 
 printf 'checked_at\tproject_id\tstatus\tcommit\n' >"$run_dir/state.tsv"
 success=0
@@ -129,6 +132,7 @@ while IFS=$'\t' read -r project_id raw_url branch; do
 done < <(jq -r '.rows[] | [.projectId,.gitHttpUrl,.defaultBranch] | @tsv' catalog.json)
 
 cp -- "$run_dir/state.tsv" state.tsv
+./generate-index.sh
 printf 'Completed: processed=%s success=%s failed=%s catalog_total=%s\n' \
   "$processed" "$success" "$failed" "$total"
 ((failed == 0))

@@ -1,0 +1,49 @@
+version = 5.2.0
+[vbox 127.0.0.1:16600]
+    workingdir = C:\Users\q20312\HCL\Projects\smartlink与track联动
+    udp = 16000
+    [[S6850 DeviceA]]
+        device_id = 1
+        bridge_mac = 5c-cd-c1-68-01-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceB GE_0/1
+        GE_0/2 = DeviceD GE_0/1
+        x = -100.0
+        y = -291.0
+        z = 5.0
+    [[S6850 DeviceB]]
+        device_id = 2
+        bridge_mac = 5c-cd-cb-e2-02-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceA GE_0/1
+        GE_0/2 = DeviceC GE_0/1
+        x = -297.0
+        y = -150.0
+        z = 5.0
+    [[S6850 DeviceC]]
+        device_id = 3
+        bridge_mac = 5c-cd-df-c8-03-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceB GE_0/2
+        GE_0/2 = DeviceD GE_0/2
+        x = -104.0
+        y = -48.0
+        z = 5.0
+    [[S6850 DeviceD]]
+        device_id = 4
+        bridge_mac = 5c-cd-e7-5c-04-00
+        slot0 = S5800 384
+        GE_0/1 = DeviceA GE_0/2
+        GE_0/2 = DeviceC GE_0/2
+        x = 74.0
+        y = -152.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 0.7000000000000001
+    m22 = 0.7000000000000001
+    [[NOTE 1]]
+        text = "Device C为Smart Link设备，Device A、\nDevice B和Device D为相关设备。Device C上VLAN 1～200\n的流量通过Device B和Device D双上行到Device A。"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 26.779942239884917
+        y = -354.9155839771196
+        z = 6.0

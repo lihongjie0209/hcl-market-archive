@@ -1,0 +1,43 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\l25813\hcl\projects\whitelist-1\working
+    udp = 10000
+    [[AC AC]]
+        device_id = 2
+        bridge_mac = 7a-97-22-3a-02-00
+        slot0 = AC 768
+        GE_0/0 = SW GE_0/1
+        x = -636.4117647058823
+        y = -69.0
+        z = 5.0
+    [[S6850 SW]]
+        device_id = 1
+        bridge_mac = 7a-97-14-d3-01-00
+        slot0 = S5800 512
+        GE_0/1 = AC GE_0/0
+        GE_0/2 = AP GE_0/0
+        x = -483.0
+        y = -69.0
+        z = 5.0
+    [[AP AP]]
+        device_id = 3
+        bridge_mac = 7a-97-2d-e7-03-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = SW GE_0/2
+        x = -349.0
+        y = -69.0
+        z = 5.0
+    [[Phone Client1]]
+        device_id = 4
+        bridge_mac = 7a-97-57-3f-04-00
+        slot0 = Phone 256
+        wifi_status = True
+        connected_aps = 7a97-2de7-0310
+        x = -187.0
+        y = -69.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.7
+    m22 = 1.7

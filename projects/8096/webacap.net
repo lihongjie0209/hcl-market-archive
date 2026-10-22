@@ -1,0 +1,60 @@
+version = 5.3.0
+[vbox 127.0.0.1:16600]
+    workingdir = c:\users\x29173\hcl\projects\webacap\working
+    udp = 10000
+    [[AC AC_1]]
+        device_id = 1
+        bridge_mac = 14-e0-55-55-01-00
+        slot0 = AC 768
+        GE_0/1 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/0 = AP_2 GE_0/0
+        x = -197.3529411764706
+        y = -171.19607843137254
+        z = 5.0
+    [[AP AP_2]]
+        device_id = 2
+        bridge_mac = 4a-85-ea-22-02-00
+        single_radius = 250
+        slot0 = AP 768
+        GE_0/0 = AC_1 GE_0/0
+        x = -197.94117647058826
+        y = 29.705882352941178
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.5999999999999999
+    m22 = 1.5999999999999999
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = AC_1 GE_0/1
+        x = 322.68627450980387
+        y = -171.1960784313725
+        z = 5.0
+    [[NOTE 1]]
+        text = "GE_0/0"
+        interface = AP_2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = -37.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        interface = AC_1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 25.0
+        y = 65.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = AC_1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 64.9883923386993
+        y = 24.036424280995192
+        z = 6.0
+    [[NOTE 4]]
+        text = "NIC:VirtualBox Host-Only Ethernet Adapter"
+        interface = Host_1 NIC:VirtualBox Host-Only Ethernet Adapter
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -331.98839233869927
+        y = 25.963575719004808
+        z = 6.0

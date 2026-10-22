@@ -1,0 +1,87 @@
+version = 5.1.0
+[vbox 127.0.0.1:16600]
+    workingdir = d:\h3cruanjian\hcl\gongcheng\lb-7-v4tov6chuan\working
+    udp = 10000
+    [[F1060 F1060_1]]
+        device_id = 1
+        bridge_mac = 0e-ab-c6-ce-01-00
+        slot0 = F1060 512
+        GE_0/2 = NIC:VirtualBox Host-Only Ethernet Adapter
+        GE_0/3 = F1060_2 GE_0/2
+        GE_0/4 = F1060_3 GE_0/2
+        x = -53.0
+        y = -93.0
+        z = 5.0
+    [[F1060 F1060_2]]
+        device_id = 2
+        bridge_mac = 0e-ac-05-b9-02-00
+        slot0 = F1060 512
+        GE_0/2 = F1060_1 GE_0/3
+        x = 337.0
+        y = -252.0
+        z = 5.0
+    [[F1060 F1060_3]]
+        device_id = 3
+        bridge_mac = 0e-ac-0a-17-03-00
+        slot0 = F1060 512
+        GE_0/2 = F1060_1 GE_0/4
+        x = 346.0
+        y = 83.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.5
+    m22 = 1.5
+    [[Cloud Host_1]]
+        symbol = Host
+        NIC:VirtualBox Host-Only Ethernet Adapter_0 = F1060_1 GE_0/2
+        x = -445.0
+        y = -93.0
+        z = 5.0
+    [[NOTE 1]]
+        text = ""
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -433.0
+        y = -158.0
+        z = 6.0
+    [[NOTE 2]]
+        text = "1.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -456.0
+        y = -136.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "1.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -172.0
+        y = -126.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "2002::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 299.0
+        y = -301.0
+        z = 6.0
+    [[NOTE 5]]
+        text = "2002::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -31.0
+        y = -142.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "2003::2/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -37.0
+        y = -23.0
+        z = 6.0
+    [[NOTE 7]]
+        text = "2003::1/96"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 317.0
+        y = 45.0
+        z = 6.0
+    [[NOTE 8]]
+        text = "VSIP 3.3.3.3\nSNAT 2000::1"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -113.0
+        y = -223.0
+        z = 6.0

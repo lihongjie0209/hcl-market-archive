@@ -1,0 +1,197 @@
+autostart = False
+version = 3.0.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 内网服务器]]
+        image = .
+        device_id = 5
+        bridge_mac = 7e-f2-62-ad-05-00
+        slot0 = MSR36 384
+        GE_0/1 = SW1 GE_0/5
+        x = 22.0
+        y = 199.0
+        z = 5.0
+    [[MSR36-20 公网服务器]]
+        image = .
+        device_id = 7
+        bridge_mac = 84-ac-ca-71-07-00
+        slot0 = MSR36 384
+        GE_0/0 = SW2 GE_0/4
+        x = -201.0
+        y = -532.0
+        z = 5.0
+    [[MSR36-20 主机]]
+        image = .
+        device_id = 4
+        bridge_mac = 7e-f2-5b-43-04-00
+        slot0 = MSR36 384
+        GE_0/1 = SW1 GE_0/4
+        x = -401.0
+        y = 203.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW1]]
+        image = .
+        device_id = 6
+        bridge_mac = 7e-f2-81-89-06-00
+        slot0 = S5800 384
+        GE_0/2 = FW1 GE_0/3
+        GE_0/3 = FW2 GE_0/3
+        GE_0/4 = 主机 GE_0/1
+        GE_0/5 = 内网服务器 GE_0/1
+        symbol = S5820V2-54QS-GE
+        x = -201.0
+        y = 47.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW2]]
+        image = .
+        device_id = 3
+        bridge_mac = 84-b7-b4-ae-03-00
+        slot0 = S5800 384
+        GE_0/2 = FW1 GE_0/2
+        GE_0/3 = FW2 GE_0/2
+        GE_0/4 = 公网服务器 GE_0/0
+        symbol = S5820V2-54QS-GE
+        x = -201.0
+        y = -387.0
+        z = 5.0
+    [[F1090 FW1]]
+        image = .
+        device_id = 1
+        bridge_mac = 7e-f1-cc-11-01-00
+        slot0 = F1060 800
+        GE_0/9 = FW2 GE_0/9
+        GE_0/2 = SW2 GE_0/2
+        GE_0/3 = SW1 GE_0/2
+        GE_0/10 = FW2 GE_0/10
+        symbol = F1090
+        x = -403.0
+        y = -186.0
+        z = 5.0
+    [[F1090 FW2]]
+        image = .
+        device_id = 2
+        bridge_mac = 7e-f1-d3-5b-02-00
+        slot0 = F1060 800
+        GE_0/9 = FW1 GE_0/9
+        GE_0/2 = SW2 GE_0/3
+        GE_0/3 = SW1 GE_0/3
+        GE_0/10 = FW1 GE_0/10
+        symbol = F1090
+        x = 22.0
+        y = -183.0
+        z = 5.0
+[GNS3-DATA]
+    m11 = 0.707106781187
+    m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "RAGG6:172.31.1.1"
+        x = -296.0
+        y = -112.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "RAGG2:61.1.1.2"
+        x = -279.0
+        y = -303.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "RAGG6:172.31.1.2"
+        x = -307.0
+        y = -40.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "11.1.1.2"
+        x = -176.0
+        y = -456.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.1.1.2"
+        x = -162.0
+        y = 136.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "192.168.10.1"
+        x = -358.0
+        y = 135.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "192.168.10.1"
+        x = -450.0
+        y = 277.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "10.1.1.1"
+        x = -10.0
+        y = 277.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "11.1.1.1"
+        x = -174.0
+        y = -425.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "内网"
+        x = -445.0
+        y = -35.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "RAGG5:61.1.1.1"
+        x = -278.0
+        y = -228.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[SHAPE 1]]
+        type = ellipse
+        x = -288.0
+        y = -55.0
+        width = 223.0
+        height = 66.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 2]]
+        type = ellipse
+        x = -344.0
+        y = -128.0
+        width = 350.0
+        height = 66.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 3]]
+        type = rectangle
+        x = -456.0
+        y = -154.0
+        width = 571.0
+        height = 472.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 4]]
+        type = ellipse
+        x = -281.0
+        y = -314.0
+        width = 223.0
+        height = 66.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0
+    [[SHAPE 5]]
+        type = ellipse
+        x = -347.0
+        y = -243.0
+        width = 350.0
+        height = 66.0
+        border_color = "#666666"
+        border_style = 2
+        z = 3.0

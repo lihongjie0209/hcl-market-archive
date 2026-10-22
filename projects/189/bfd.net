@@ -1,0 +1,138 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[S5820V2-54QS-GE L2-Switch]]
+        image = .
+        device_id = 4
+        bridge_mac = 2a-8b-34-be-04-00
+        slot0 = S5800 512
+        GE_0/1 = RouterA GE_0/0
+        GE_0/2 = RouterB GE_0/0
+        x = -155.0
+        y = -150.0
+        z = 5.0
+    [[MSR36-20 RouterB]]
+        image = .
+        device_id = 2
+        bridge_mac = 2a-8b-29-76-02-00
+        slot0 = MSR36 512
+        GE_0/0 = L2-Switch GE_0/2
+        GE_0/1 = RouterC GE_0/1
+        x = 52.0
+        y = -150.0
+        z = 5.0
+    [[MSR36-20 RouterC]]
+        image = .
+        device_id = 3
+        bridge_mac = 2a-8b-2c-16-03-00
+        slot0 = MSR36 512
+        GE_0/0 = RouterA GE_0/1
+        GE_0/1 = RouterB GE_0/1
+        x = -155.0
+        y = 18.0
+        z = 5.0
+    [[MSR36-20 RouterA]]
+        image = .
+        device_id = 1
+        bridge_mac = 2a-8b-14-50-01-00
+        slot0 = MSR36 512
+        GE_0/0 = L2-Switch GE_0/1
+        GE_0/1 = RouterC GE_0/0
+        x = -359.0
+        y = -150.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "静态路由与BFD联动（直连）配置"
+        x = -320.0
+        y = -259.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "120.1.1.0/24"
+        x = 101.0
+        y = -144.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "121.1.1.0/24"
+        x = -495.0
+        y = -143.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "11.1.1.0/24"
+        x = -91.0
+        y = -44.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "10.1.1.0/24"
+        x = -307.0
+        y = -40.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "12.1.1.0/24"
+        x = -187.0
+        y = -77.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/2"
+        x = 65.0
+        y = 25.0
+        interface = L2-Switch GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        x = -78.0
+        y = 25.0
+        interface = L2-Switch GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 53.9342217657
+        y = -33.0
+        interface = RouterC GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -68.8772094247
+        y = -33.0
+        interface = RouterC GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/1"
+        x = -66.9342217657
+        y = 52.6190298673
+        interface = RouterB GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/0"
+        x = -78.0
+        y = 25.0
+        interface = RouterB GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/1"
+        x = 55.8772094247
+        y = 50.4282901144
+        interface = RouterA GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 14]]
+        text = "GE_0/0"
+        x = 65.0
+        y = 25.0
+        interface = RouterA GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

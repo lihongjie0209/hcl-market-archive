@@ -1,0 +1,37 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[F1060 F1060_1]]
+        image = .
+        device_id = 1
+        bridge_mac = 3c-1e-18-58-01-00
+        slot0 = F1060 512
+        GE_0/0 = MSR36-20_2 GE_0/0
+        symbol = F1060
+        x = -323.0
+        y = -123.0
+        z = 5.0
+    [[MSR36-20 MSR36-20_2]]
+        image = .
+        device_id = 2
+        bridge_mac = 3c-1e-24-14-02-00
+        slot0 = MSR36 512
+        GE_0/0 = F1060_1 GE_0/0
+        x = 113.0
+        y = -122.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "2012::2"
+        x = 24.0
+        y = -126.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2012::1"
+        x = -266.0
+        y = -129.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0

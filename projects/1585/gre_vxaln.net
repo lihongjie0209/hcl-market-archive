@@ -1,0 +1,140 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 VTEP-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 72-60-c9-76-01-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/0
+        GE_0/1 = VM-1 GE_0/0
+        x = -326.0
+        y = -92.0
+        z = 5.0
+    [[MSR36-20 VTEP-2]]
+        image = .
+        device_id = 3
+        bridge_mac = 72-6f-4f-c7-03-00
+        slot0 = MSR36 512
+        GE_0/0 = P GE_0/1
+        GE_0/1 = VM-2 GE_0/0
+        x = 211.0
+        y = -100.0
+        z = 5.0
+    [[MSR36-20 VM-1]]
+        image = .
+        device_id = 4
+        bridge_mac = 72-e8-8c-77-04-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-1 GE_0/1
+        x = -473.0
+        y = 46.0
+        z = 5.0
+    [[MSR36-20 VM-2]]
+        image = .
+        device_id = 5
+        bridge_mac = 72-e8-97-de-05-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-2 GE_0/1
+        x = 343.0
+        y = 40.0
+        z = 5.0
+    [[MSR36-20 P]]
+        image = .
+        device_id = 2
+        bridge_mac = 72-60-d3-58-02-00
+        slot0 = MSR36 512
+        GE_0/0 = VTEP-1 GE_0/0
+        GE_0/1 = VTEP-2 GE_0/0
+        x = -75.0
+        y = -97.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "1.1.1.1/24"
+        x = -277.0
+        y = -104.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "2.1.1.2/24"
+        x = -26.0
+        y = -108.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "VXLAN Over GRE"
+        x = -136.0
+        y = -242.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "100.1.1.2"
+        x = 213.0
+        y = 21.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "100.1.1.1"
+        x = -346.0
+        y = 18.0
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = 64.997799585
+        y = 24.5804426617
+        interface = P GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/0"
+        x = -77.9920659792
+        y = 25.7966547008
+        interface = P GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/0"
+        x = -65.4405147476
+        y = -33.0
+        interface = VM-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/0"
+        x = 54.1629213151
+        y = -33.0
+        interface = VM-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/1"
+        x = 52.4405147476
+        y = 54.1035762474
+        interface = VTEP-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 11]]
+        text = "GE_0/0"
+        x = -77.997799585
+        y = 25.4195573383
+        interface = VTEP-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 12]]
+        text = "GE_0/1"
+        x = -67.1629213151
+        y = 52.3774363367
+        interface = VTEP-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 13]]
+        text = "GE_0/0"
+        x = 64.9920659792
+        y = 24.2033452992
+        interface = VTEP-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

@@ -1,0 +1,136 @@
+autostart = False
+version = 2.1.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 16000
+    [[MSR36-20 Relay]]
+        image = .
+        device_id = 3
+        bridge_mac = 78-73-10-c9-03-00
+        slot0 = MSR36 512
+        GE_0/0 = Server-1 GE_0/0
+        GE_0/1 = Server-2 GE_0/0
+        GE_0/2 = SW GE_0/1
+        x = -96.0
+        y = -155.0
+        z = 5.0
+    [[PC PC-1]]
+        image = .
+        device_id = 5
+        bridge_mac = 78-73-29-f2-05-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/2
+        symbol = PC
+        x = -246.0
+        y = 142.0
+        z = 5.0
+    [[PC PC-2]]
+        image = .
+        device_id = 6
+        bridge_mac = 78-73-2b-7d-06-00
+        slot0 = PC 250
+        GE_0/1 = SW GE_0/3
+        symbol = PC
+        x = 53.0
+        y = 142.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW]]
+        image = .
+        device_id = 4
+        bridge_mac = 78-73-20-99-04-00
+        slot0 = S5800 512
+        GE_0/1 = Relay GE_0/2
+        GE_0/2 = PC-1 GE_0/1
+        GE_0/3 = PC-2 GE_0/1
+        x = -97.0
+        y = 16.0
+        z = 5.0
+    [[MSR36-20 Server-2]]
+        image = .
+        device_id = 2
+        bridge_mac = 78-72-df-82-02-00
+        slot0 = MSR36 512
+        GE_0/0 = Relay GE_0/1
+        x = 53.0
+        y = -273.0
+        z = 5.0
+    [[MSR36-20 Server-1]]
+        image = .
+        device_id = 1
+        bridge_mac = 78-72-dc-8e-01-00
+        slot0 = MSR36 512
+        GE_0/0 = Relay GE_0/0
+        x = -246.0
+        y = -273.0
+        z = 5.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "GE_0/0"
+        x = 58.2820117735
+        y = 47.188007849
+        interface = Server-1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/0"
+        x = -71.611865929
+        y = 46.6850747929
+        interface = Server-2 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/3"
+        x = 58.215927486
+        y = 47.2868158616
+        interface = SW GE_0/3
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        x = -70.871901256
+        y = 47.7911848708
+        interface = SW GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        x = 25.0
+        y = -33.0
+        interface = SW GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        x = -71.215927486
+        y = 2.71318413845
+        interface = PC-2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 7]]
+        text = "GE_0/1"
+        x = 57.871901256
+        y = 2.20881512918
+        interface = PC-1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/2"
+        x = 25.0
+        y = 65.0
+        interface = Relay GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 9]]
+        text = "GE_0/1"
+        x = 58.611865929
+        y = 3.31492520712
+        interface = Relay GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0
+    [[NOTE 10]]
+        text = "GE_0/0"
+        x = -71.2820117735
+        y = 2.81199215099
+        interface = Relay GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        z = 6.0

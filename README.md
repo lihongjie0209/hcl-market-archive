@@ -1,12 +1,19 @@
 # HCL 市场工程快照
 
-`projects/<项目 ID>/` 是普通文件目录，不含内层 `.git`、submodule 或裸仓库。克隆本仓库即可拿到**已提交**的全部工程快照。外层 Git 保留归档的快照历史，但不保留各上游仓库的原始 Git 历史。
+`projects/<项目 ID>/` 是普通文件目录，不含内层 `.git`、submodule 或裸仓库。克隆本仓库即可拿到**已提交**的全部工程快照。外层 Git 保留归档的快照历史，但不保留各上游仓库的原始 Git 历史。ZIP、VDI、PNG、DOCX、HCL 和 MDB 二进制文件由 Git LFS 管理；克隆机需要安装 Git LFS 才能取得实际文件，而非指针。
 
 `update.sh` 从 HCLHub 公开市场 API 分页发现项目，浅克隆默认分支到临时目录，并将工作树同步到 `projects/`。市场下架的项目不会自动删除；重复运行可增量更新现有快照。`catalog.json` 为最近一次列表；`state.tsv` 与 `logs/` 是本地运行报告。脚本不读取 HCL 登录凭据，不修改 HCL 客户端工程。
 
-当前仅在本地保存，未配置远端，也未逐项核查市场工程的再分发条件；在公开推送整个归档前应先核对各项目的授权说明。
+工程来自 [HCLHub 公开市场](https://hclhub.h3c.com/)，按原样保存供实验检索；本归档没有给上游项目增加许可。各项目文件、图片和配置的权利归原作者或相关权利人。项目 3263 内含上游原有的演示证书及私钥，仅用于该实验，**不要在真实环境复用**。下载和克隆本归档可能消耗仓库所有者的 Git LFS 流量配额。
 
-依赖 Bash、curl、jq、Git、rsync、flock。Linux、WSL 和常见 CI runner 可运行：
+完整克隆：
+
+```bash
+git lfs install
+git clone https://github.com/lihongjie0209/hcl-market-archive.git
+```
+
+更新依赖 Bash、curl、jq、Git、Git LFS、rsync、flock。Linux、WSL 和常见 CI runner 可运行：
 
 ```bash
 ./update.sh --max-projects 1  # 小样本验证
